@@ -4,12 +4,7 @@
 
 El proyecto tiene como objetivo implementar un sistema de backups automatizados utilizando **TrueNAS** como servidor de almacenamiento local, **Docker** para facilitar la implementación y automatización, y **Duplicity** como herramienta de backups. Esta combinación ofrece una solución robusta y segura para respaldar grandes volúmenes de datos de manera eficiente.
 
-Duplicity es una herramienta clave en este sistema, ya que permite:
-
-- Realizar backups incrementales.
-- Cifrar los datos antes de ser enviados.
-- Optimizar el uso de espacio de almacenamiento y ancho de banda.
-- Soportar múltiples servicios en la nube y almacenamiento remoto.
+**TrueNAS** es un sistema operativo de código abierto basado en FreeBSD que permite configurar servidores de almacenamiento de alto rendimiento, ideal para gestionar grandes volúmenes de datos de manera segura y confiable. **Docker** se emplea para contenerizar las aplicaciones, lo que facilita su implementación, escalabilidad y mantenimiento, además de asegurar que el entorno de ejecución sea consistente y portátil. Por último, **Duplicity** es una herramienta de backup que soporta la creación de copias de seguridad cifradas y comprimidas, permitiendo realizar respaldos incrementales de manera eficiente, lo que optimiza el uso del espacio de almacenamiento y reduce el tiempo de ejecución de los backups. Esta combinación de tecnologías proporciona una solución robusta, escalable y segura para respaldar grandes volúmenes de datos de forma eficiente y automatizada
 
 ## Objetivos del Proyecto
 
