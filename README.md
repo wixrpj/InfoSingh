@@ -1,7 +1,26 @@
-# InfoSingh
-Proyecto Smx
-##**Briefing del Proyecto Actualizado: Servidor de Backups Automatizados con Docker, TrueNAS y Duplicity**
+# Briefing del Proyecto Actualizado: Servidor de Backups Automatizados con Docker, TrueNAS y Duplicity
+# Descripción General
 Servidor de Backups Automatizados con Docker, TrueNAS y Duplicity
+El proyecto tiene como objetivo implementar un sistema de backups automatizados utilizando TrueNAS como servidor de almacenamiento local, Docker para facilitar la implementación y automatización, y Duplicity como herramienta de backups. Esta combinación ofrece una solución robusta y segura para respaldar grandes volúmenes de datos de manera eficiente.
+
+**Duplicity es una herramienta clave en este sistema, ya que permite:**
+
+1. Realizar backups incrementales.
+2. Cifrar los datos antes de ser enviados.
+3. Optimizar el uso de espacio de almacenamiento y ancho de banda.
+4. Soportar múltiples servicios en la nube y almacenamiento remoto.
+
+# Objetivos del Proyecto
+## Objetivos Principales
+1. **Automatización de Backups:** Configurar un sistema que ejecute copias de seguridad de manera autónoma y programada, sincronizando los datos de TrueNAS con un servicio en la nube.
+2. **Seguridad de Datos:** Implementar cifrado de datos con Duplicity para garantizar su protección durante el almacenamiento y la transferencia.
+3. **Optimización de Recursos:** Reducir el uso de ancho de banda y espacio en la nube mediante backups incrementales.
+4. **Recuperación de Datos:** Establecer un proceso sencillo y eficiente para restaurar los datos en caso de pérdida
+
+## Objetivos Secundarios
+Monitorear los backups y configurar alertas en caso de fallos.
+Simplificar el proceso de restauración utilizando las capacidades de Duplicity.
+
 
 Elegimos Duplicity para realizar los backups automáticos por su capacidad para realizar backups incrementales y cifrado de los datos. Duplicity es ideal para usuarios que buscan una opción robusta y segura para respaldar grandes volúmenes de datos de manera eficiente y en la nube. A diferencia de otras herramientas, Duplicity permite que solo se respalden los archivos modificados desde el último backup, lo que optimiza el uso de ancho de banda y espacio de almacenamiento en la nube. Además, su soporte para múltiples servicios en la nube y almacenamiento remoto lo hace muy versátil.
 
