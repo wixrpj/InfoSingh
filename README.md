@@ -1,6 +1,6 @@
 # InfoSingh
 Proyecto Smx
-**Briefing del Proyecto Actualizado: Servidor de Backups Automatizados con Docker, TrueNAS y Duplicity**
+##**Briefing del Proyecto Actualizado: Servidor de Backups Automatizados con Docker, TrueNAS y Duplicity**
 Servidor de Backups Automatizados con Docker, TrueNAS y Duplicity
 
 Elegimos Duplicity para realizar los backups automáticos por su capacidad para realizar backups incrementales y cifrado de los datos. Duplicity es ideal para usuarios que buscan una opción robusta y segura para respaldar grandes volúmenes de datos de manera eficiente y en la nube. A diferencia de otras herramientas, Duplicity permite que solo se respalden los archivos modificados desde el último backup, lo que optimiza el uso de ancho de banda y espacio de almacenamiento en la nube. Además, su soporte para múltiples servicios en la nube y almacenamiento remoto lo hace muy versátil.
