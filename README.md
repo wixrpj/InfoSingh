@@ -1,3 +1,4 @@
+:EMOJICODE::poop:
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
 
 ## Descripción General
