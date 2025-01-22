@@ -67,6 +67,8 @@ El sistema se estructura en dos máquinas virtuales y una página web:
 - **TrueNAS:** Sistema operativo para gestionar los backups en la Máquina Virtual 2.
 - **HTML, CSS, JavaScript:** Para desarrollar la página web promocional.
 
+  # Roles del equipo
+
 ## Documentación y Recursos Adicionales
 
 - **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
