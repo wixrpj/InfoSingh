@@ -1,5 +1,5 @@
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
-![Logo de la empresa](imagenes\docker.jpg)
+![Mi imagen](https://files.oaiusercontent.com/file-AGHvbhnK382dVJziRaNJB1?se=2025-01-22T11%3A50%3A26Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D1964f77e-864e-4f45-bb15-31aad66509fc.webp&sig=KjInC32Xa3HB38PJdT3BLDMl6%2BW7fcG4aTrZ9c7Bun4%3D)
 ## Descripción General
 1. Este proyecto tiene como objetivo principal la implementación de un sistema de streaming para contenido multimedia (videos, imágenes, etc.) utilizando **Plex** en un entorno virtualizado, acompañado de una estrategia de backup con **TrueNAS** para garantizar la seguridad y disponibilidad de los datos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
 
