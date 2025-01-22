@@ -1,4 +1,3 @@
-:smoking:	
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
 
 ## Descripción General
@@ -60,13 +59,24 @@ El sistema se estructura en dos máquinas virtuales y una página web:
 - **Conexión a Internet:** Para garantizar un acceso fluido al servidor Plex y sincronización de backups con TrueNAS.
 
 ### Lógicos
-
 - **Linux (Distribución Ligera):** Base para la Máquina Virtual 1.
 - **Docker:** Para contenerizar Plex y facilitar su implementación.
 - **Plex Media Server:** Herramienta principal de transmisión de contenido.
 - **TrueNAS:** Sistema operativo para gestionar los backups en la Máquina Virtual 2.
 - **HTML, CSS, JavaScript:** Para desarrollar la página web promocional.
 ## Roles del equipo
+| Nombre del miembro |       Roles de equipo       |     Trabajo de cada miembro   |
+|:-------------------|:----------------------------|:------------------------------|
+|Raul                |Administrador de sistemas    | Experimentar con las maquinas e instalar maquinas nuevas y diseñar la pagina.  |
+|Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la pagina.|
+
+
+
+## Maquinas Virtuales
+|    Iso     | Almacenamiento |   CPU    |  RAM  | 
+|------------|----------------|----------|-------|
+|Ubuntu Sever|     128gb      |  2 cores |  3gb  |
+|Ubuntu Sever|     64gb       |  3 cores |  3gb  |
 
 ## Documentación y Recursos Adicionales
 
