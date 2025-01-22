@@ -1,5 +1,5 @@
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
-![Mi imagen](C:\Users\Alumno\Downloads\DALL·E 2025-01-22 12.45.35 - A conceptual digital illustration that combines the themes of Docker, Plex, and TrueNAS. The scene shows a modern server rack with glowing blue lights.webp)
+<img src="C:\Users\Alumno\Pictures\DALL·E 2025-01-22 12.45.35 - A conceptual digital illustration that combines the themes of Docker, Plex, and TrueNAS. The scene shows a modern server rack with glowing blue lights.jpg" />
 ## Descripción General
 
 1. Este proyecto tiene como objetivo principal la implementación de un sistema de streaming para contenido multimedia (videos, imágenes, etc.) utilizando **Plex** en un entorno virtualizado, acompañado de una estrategia de backup con **TrueNAS** para garantizar la seguridad y disponibilidad de los datos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
