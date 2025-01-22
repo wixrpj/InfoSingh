@@ -66,8 +66,7 @@ El sistema se estructura en dos máquinas virtuales y una página web:
 - **Plex Media Server:** Herramienta principal de transmisión de contenido.
 - **TrueNAS:** Sistema operativo para gestionar los backups en la Máquina Virtual 2.
 - **HTML, CSS, JavaScript:** Para desarrollar la página web promocional.
-
-  # Roles del equipo
+## Roles del equipo
 
 ## Documentación y Recursos Adicionales
 
