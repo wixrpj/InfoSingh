@@ -87,3 +87,4 @@ El sistema se estructura en dos máquinas virtuales y una página web:
 - **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
 - **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
+
