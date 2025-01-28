@@ -88,3 +88,5 @@ El sistema se estructura en dos máquinas virtuales y una página web:
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
 - **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
 
+## DIAGRAMA DE RED
+![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
