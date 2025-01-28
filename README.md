@@ -1,7 +1,7 @@
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
 
 ## 📚 Índice
-- Descripcion Gereral
+- Descripción Gereral
 - Objetivos del Proyecto
 - Estructura del Proyecto
 
@@ -71,8 +71,8 @@ El sistema se estructura en dos máquinas virtuales y una página web:
 ## Roles del equipo
 | Nombre del miembro |       Roles de equipo       |     Trabajo de cada miembro   |
 |:-------------------|:----------------------------|:------------------------------|
-|Raul                |Administrador de sistemas    | Experimentar con las maquinas e instalar maquinas nuevas y diseñar la pagina.  |
-|Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la pagina.|
+|Raul                |Administrador de sistemas    | Experimentar con las maquinas e instalar maquinas nuevas y diseñar la página.  |
+|Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la página.|
 
 
 
