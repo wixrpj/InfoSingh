@@ -38,7 +38,7 @@
 - **Docker:** Configuración de un contenedor que ejecute Plex para la transmisión de contenido multimedia.
 - **Almacenamiento:** Montaje de volúmenes en Docker para gestionar la carga y organización de los contenidos (videos, imágenes, etc.).
 
-### Máquina Virtual 2: TrueNAS
+### ☁️ Máquina Virtual 2: TrueNAS
 
 - **TrueNAS:** Configuración como servidor NAS para almacenar backups del sistema Plex.
 - **Backups Incrementales:** Implementación de un sistema automatizado para realizar copias de seguridad solo de los archivos modificados o añadidos recientemente.
