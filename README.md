@@ -3,7 +3,7 @@
 ## 📚 Índice
 - Descripción Gereral
 - Objetivos del Proyecto
-- Estructura del Proyecto
+- Estructura del Proyectox
 
 ## 📜 Descripción General
 1. Este proyecto tiene como objetivo principal la implementación de un sistema de streaming para contenido multimedia (videos, imágenes, etc.) utilizando **Plex** en un entorno virtualizado, acompañado de una estrategia de backup con **TrueNAS** para garantizar la seguridad y disponibilidad de los datos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
@@ -89,7 +89,7 @@
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
 - **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
 
-## DIAGRAMA DE RED
+## 🛜 DIAGRAMA DE RED
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
 
 ## Tegnologias Implementadas
@@ -111,7 +111,7 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 | Control de Versiones  | GitHub     | Plataforma para alojar repositorios Git y colaborar en proyectos.                                | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub">|
 
 
-## Especificaciones del Sistema
+## 👨🏽‍💻 Especificaciones del Sistema
 | COMPONENTE    | SO                  | ALMACENAMIENTO | CPU          | RAM  | IP                | GATEWAY      |
 |---------------|---------------------|----------------|--------------|------|-------------------|--------------|
 | MAQUINA HOST  | Proxmox             | 465 GB         | 4 Cores      | 8 GB |                   |              |
