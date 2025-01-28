@@ -90,3 +90,23 @@ El sistema se estructura en dos máquinas virtuales y una página web:
 
 ## DIAGRAMA DE RED
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
+
+## Tegnologias Implementadas
+El sistema **SPT** se basa en una variedad de tecnologías modernas para garantizar un rendimiento óptimo y una gestión eficiente de incidencias. A continuación se detallan las principales tecnologías utilizadas:
+
+| Categoría        | Tecnología  | Descripción                                                                                       | Icono                                                                                   |
+|------------------|-------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Infraestructura | Proxmox    | Plataforma de virtualización que permite gestionar máquinas virtuales y contenedores.            | <img src="https://img.icons8.com/color/48/000000/proxmox.png" width="50" height="50" alt="Proxmox">                       |
+|                  ||            ||
+|                  ||            ||
+| Desarrollo     | HTML       | Estructura básica de las páginas web.                                                            | <img src="https://img.icons8.com/color/48/000000/html-5.png" width="50" height="50" alt="HTML">                           |
+|                  ||            ||
+|                  | JavaScript | Interactividad y dinamismo en la interfaz del usuario.                                          | <img src="https://img.icons8.com/color/48/000000/javascript.png" width="50" height="50" alt="JavaScript">                 |
+|                  ||            ||
+| Base de Datos   | MySQL      | Sistema de gestión de bases de datos relacional utilizado para almacenar datos.                   | <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" width="50" height="50" alt="MySQL">                      |
+|                  ||            ||
+| Redes         | DHCP       | Protocolo utilizado para asignar dinámicamente direcciones IP a dispositivos en la red.          ||
+|                  | DNS        | Sistema de nombres de dominio que traduce nombres legibles por humanos a direcciones IP.        ||
+| Control de Versiones  | GitHub     | Plataforma para alojar repositorios Git y colaborar en proyectos.                                | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub">|
+
+---
