@@ -3,7 +3,13 @@
 ## 📚 Índice
 - Descripción Gereral
 - Objetivos del Proyecto
+- Diagrama de Red
 - Estructura del Proyecto
+- Materiales Requeridos
+- Roles del equipo
+- Tegnologias Implementadas
+- Especificaciones del Sistema
+- Documentación y Recursos Adicionales
 
 ## 📜 Descripción General
 El objetivo de este proyecto es crear un sistema de streaming multimedia eficiente y seguro, utilizando Plex en un entorno virtualizado para gestionar contenido como videos, imágenes y más. Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de backups automatizados con TrueNAS, que realizará copias incrementales a medida que se añadan nuevos contenidos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
@@ -35,7 +41,7 @@ Contenedores:
 - Configurar alertas en TrueNAS para notificar posibles problemas en los backups.
 - Proveer un diseño atractivo y responsive en la página web para mejorar la experiencia de usuario.
   
-## 🛜 DIAGRAMA DE RED
+## 🛜 Diagrama de Red
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
 ## 🏗️ Estructura del Proyecto
 
