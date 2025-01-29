@@ -13,9 +13,13 @@ El objetivo de este proyecto es crear un sistema de streaming multimedia eficien
 Maquinas Virtuales:
 - **Máquina Virtual 1 (Linux + Docker):** Alojamiento del servidor de streaming con Plex, configurado dentro de un contenedor Docker.
 - **Máquina Virtual 2 (TrueNAS):** Almacenamiento seguro de los datos con backups automáticos e incrementales.
-- **Máquina Virtual 3 (Servidor Web):** 
-Pagina Web:
-- **Página Web Promocional:** Información del proyecto, características de Plex y enlaces a redes sociales.
+- **Máquina Virtual 3 (Servidor Web):**
+  
+Contenedores:
+**Contenedor 1 (Plex):** 
+**Contenedor 2 (MySQL + PHP):**
+**Contenedor 3 (WEB):**
+
 
 ## :dart: Objetivos del Proyecto
 
