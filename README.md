@@ -30,7 +30,9 @@ Pagina Web:
 - Optimizar el rendimiento del servidor Plex dentro de Docker para garantizar una experiencia fluida de streaming.
 - Configurar alertas en TrueNAS para notificar posibles problemas en los backups.
 - Proveer un diseño atractivo y responsive en la página web para mejorar la experiencia de usuario.
-
+  
+## 🛜 DIAGRAMA DE RED
+![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
 ## 🏗️ Estructura del Proyecto
 
 ### 🐋 Máquina Virtual 1: Sistema Operativo Linux + Docker
@@ -82,9 +84,6 @@ Pagina Web:
 - **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
 - **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
-
-## 🛜 DIAGRAMA DE RED
-![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
 
 ## Tegnologias Implementadas
 El sistema **SPT** se basa en una variedad de tecnologías modernas para garantizar un rendimiento óptimo y una gestión eficiente de incidencias. A continuación se detallan las principales tecnologías utilizadas:
