@@ -6,14 +6,15 @@
 - Estructura del Proyectox
 
 ## 📜 Descripción General
-1. Este proyecto tiene como objetivo principal la implementación de un sistema de streaming para contenido multimedia (videos, imágenes, etc.) utilizando **Plex** en un entorno virtualizado, acompañado de una estrategia de backup con **TrueNAS** para garantizar la seguridad y disponibilidad de los datos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
+El objetivo de este proyecto es crear un sistema de streaming multimedia eficiente y seguro, utilizando Plex en un entorno virtualizado para gestionar contenido como videos, imágenes y más. Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de backups automatizados con TrueNAS, que realizará copias incrementales a medida que se añadan nuevos contenidos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
 
-2. El objetivo de este proyecto es crear un sistema de streaming multimedia eficiente y seguro, utilizando Plex en un entorno virtualizado para gestionar contenido como videos, imágenes y más. Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de backups automatizados con TrueNAS, que realizará copias incrementales a medida que se añadan nuevos contenidos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
+:computer: Estructura del Proyecto:
 
-:computer: El sistema se estructura en dos máquinas virtuales y una página web:
-
+Maquinas Virtuales:
 - **Máquina Virtual 1 (Linux + Docker):** Alojamiento del servidor de streaming con Plex, configurado dentro de un contenedor Docker.
 - **Máquina Virtual 2 (TrueNAS):** Almacenamiento seguro de los datos con backups automáticos e incrementales.
+- **Máquina Virtual 3 (Servidor Web):** 
+Pagina Web:
 - **Página Web Promocional:** Información del proyecto, características de Plex y enlaces a redes sociales.
 
 ## :dart: Objetivos del Proyecto
@@ -75,13 +76,6 @@
 |Raul                |Administrador de sistemas    | Experimentar con las maquinas e instalar maquinas nuevas y diseñar la página.  |
 |Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la página.|
 
-
-
-## Maquinas Virtuales
-|    Iso     | Almacenamiento |   CPU    |  RAM  | 
-|------------|----------------|----------|-------|
-|Ubuntu Sever|     20gb       |  1 cores |  3gb  |
-|Ubuntu Sever|     20gb       |  1 cores |  3gb  |
 
 ## Documentación y Recursos Adicionales
 
