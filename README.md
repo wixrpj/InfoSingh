@@ -180,9 +180,10 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 
 
 ## 👨🏽‍💻 Especificaciones del Sistema
+A continuación, se detallan las especificaciones de los componentes del sistema:
+Máquina Host: Es el equipo principal que tiene un Sistema Operativo Windows 11 y tiene una configuración de red DHCP con la IP 100.77.20.65.
+DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está configurado con la IP 10.1.2.10 y un gateway 10.1.2.1. Hemos elegido porque Pi-Hole es comúnmente utilizado para bloquear anuncios y rastreos a nivel de red.
 | COMPONENTE    | SO                  | ALMACENAMIENTO | CPU          | RAM  | IP                | GATEWAY      |
 |---------------|---------------------|----------------|--------------|------|-------------------|--------------|
-| MAQUINA HOST  |                     | 465 GB         | 4 Cores      | 8 GB | 100.77.20.29      | 100.77.20.1  |
-| CLIENTE       |                     |                |              |      |                   |              |
-| ROUTER / DHCP | Ubuntu 22.04.01     | 14 GB          | 1            | 2 GB |                   |              |
-| DNS           | Ubuntu 22.04.01     | 14 GB          | 1            | 2 GB |                   |              |
+| MAQUINA HOST  | Windows 11          | 465 GB         | 4 Cores      | 8 GB | 100.77.20.65      | 100.77.20.1  |
+| DNS(Pi-Hole)  | Ubuntu SV 22.04.01  | 25 GB          | 2            | 2 GB | 10.1.2.10         | 10.1.2.1     |
