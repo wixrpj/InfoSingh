@@ -14,6 +14,76 @@
 ## 📜 Descripción General
 El objetivo de este proyecto es crear un sistema de streaming multimedia eficiente y seguro, utilizando Plex en un entorno virtualizado para gestionar contenido como videos, imágenes y más. Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de backups automatizados con TrueNAS, que realizará copias incrementales a medida que se añadan nuevos contenidos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
 
+## 📌 Paso a Paso: Implementación del Sistema de Streaming
+
+### 🖥️ Infraestructura del Proyecto
+✅ **Máquinas Virtuales con Ubuntu Server:**
+- **VM 1:** Docker con contenedores (Plex, MySQL + PHP, Web)
+- **VM 2:** Pi-hole (Servidor DNS y bloqueador de publicidad)
+- **VM 3:** pfSense (Firewall y servidor DHCP)
+
+## 🚀 1. Configuración de la VM con Docker
+### 1.1. Instalación de Docker y Docker Compose
+- [ ] Instalar Docker en Ubuntu Server
+- [ ] Instalar Docker Compose
+- [ ] Crear una red de Docker para comunicación entre los contenedores
+
+### 1.2. Implementación de Contenedores
+#### 🟠 **Contenedor 1: Plex (Servidor de Streaming)**
+- [ ] Descargar la imagen oficial de Plex
+- [ ] Configurar volúmenes para almacenamiento de medios
+- [ ] Asignar puertos para acceso web y streaming
+- [ ] Probar la reproducción de contenido en la red local
+
+#### 🟡 **Contenedor 2: MySQL + PHP (Base de Datos y Backend)**
+- [ ] Descargar la imagen de MySQL
+- [ ] Configurar usuarios y permisos en la base de datos
+- [ ] Descargar la imagen de PHP y phpMyAdmin
+- [ ] Configurar conexión entre PHP y MySQL
+- [ ] Verificar acceso a la base de datos desde otros contenedores
+
+#### 🔵 **Contenedor 3: Página Web Promocional (HTML, CSS, JavaScript)**
+- [ ] Elegir y configurar el servidor web (Nginx o Apache)
+- [ ] Crear y desplegar la página web con HTML, CSS y JavaScript
+- [ ] Configurar el acceso desde la red local
+- [ ] Implementar medidas básicas de seguridad (HTTPS, firewall, etc.)
+
+---
+
+## 🌐 2. Configuración de Infraestructura Adicional
+### 2.1. **VM con Pi-hole (Servidor DNS y Bloqueador de Publicidad)**
+- [ ] Instalar Pi-hole en Ubuntu Server
+- [ ] Configurar como servidor DNS de la red
+- [ ] Establecer reglas de bloqueo de anuncios
+- [ ] Verificar que los dispositivos de la red usan Pi-hole
+
+### 2.2. **VM con pfSense (Firewall y Servidor DHCP)**
+- [ ] Instalar pfSense en Ubuntu Server
+- [ ] Configurar interfaces de red
+- [ ] Activar y configurar el servidor DHCP
+- [ ] Definir reglas de firewall para permitir tráfico a los servicios necesarios
+- [ ] Habilitar NAT si es necesario
+
+---
+
+## ✅ 3. Pruebas y Ajustes Finales
+✅ **Verificar que cada servicio funciona correctamente:**
+- [ ] Probar la reproducción de medios en Plex
+- [ ] Acceder a la base de datos desde la web
+- [ ] Asegurar que la web promocional carga sin problemas
+- [ ] Comprobar que Pi-hole bloquea anuncios y funciona como DNS
+- [ ] Probar conectividad a internet y filtrado de tráfico con pfSense
+
+---
+
+## 🔥 4. Opcional (Mejoras y Optimización)
+- [ ] Configurar backups automáticos en TrueNAS
+- [ ] Implementar HTTPS con Let's Encrypt en la web
+- [ ] Crear reglas avanzadas en pfSense para mayor seguridad
+- [ ] Optimizar rendimiento de Docker con ajuste de recursos
+
+
+
 :computer: Estructura del Proyecto:
 
 Maquinas Virtuales:
@@ -21,11 +91,6 @@ Maquinas Virtuales:
 - **Máquina Virtual 2 (TrueNAS):** Almacenamiento seguro de los datos con backups automáticos e incrementales.
 - **Máquina Virtual 3 (Servidor Web):**
   
-Contenedores:
-**Contenedor 1 (Plex):** 
-**Contenedor 2 (MySQL + PHP):**
-**Contenedor 3 (WEB):**
-
 
 ## :dart: Objetivos del Proyecto
 
@@ -117,7 +182,7 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 ## 👨🏽‍💻 Especificaciones del Sistema
 | COMPONENTE    | SO                  | ALMACENAMIENTO | CPU          | RAM  | IP                | GATEWAY      |
 |---------------|---------------------|----------------|--------------|------|-------------------|--------------|
-| MAQUINA HOST  | Proxmox             | 465 GB         | 4 Cores      | 8 GB |                   |              |
-|               |                     |                |              |      |                   |              |
-| ROUTER / DHCP | Ubuntu 22.04.01     |                |              | 2 GB |                   |              |
-|               |                     |                |              |      |                   |              |
+| MAQUINA HOST  |                     | 465 GB         | 4 Cores      | 8 GB | 100.77.20.29      | 100.77.20.1  |
+| CLIENTE       |                     |                |              |      |                   |              |
+| ROUTER / DHCP | Ubuntu 22.04.01     | 14 GB          | 1            | 2 GB |                   |              |
+| DNS           | Ubuntu 22.04.01     | 14 GB          | 1            | 2 GB |                   |              |
