@@ -196,9 +196,18 @@ El **Sistema de Nombres de Dominio (DNS, Domain Name System)** es un sistema que
 - Facilita la integración de **Pi-hole** como bloqueador de publicidad y filtrado DNS, mejorando la experiencia de navegación en la red.
 - Optimiza la administración de servicios internos, asegurando que cada componente (Plex, base de datos, web) sea accesible fácilmente sin necesidad de configurar direcciones IP estáticas manualmente.
 
+### Instalacion DNS:
+La instalacion de DNS ha sido a base de comandos en ubuntu server, y a partir de ahi se ha configurado todo con interfaz grafica poniendo la ip del ordenador anfitrion y configurar un renvio de puertos para poder entrar a la interfaz grafica con la red nat.
+
+### Pasos a seguir
+Primero, me informé a través de la guía oficial de Pi-hole. Luego, descargué e instalé una **OVA** de Ubuntu Server. Siguiendo las instrucciones de la guía, fui ejecutando los comandos necesarios hasta completar la instalación. Una vez finalizada, pude acceder al menú gráfico, desde donde es posible conectarse a la interfaz gráfica para configurar tanto el DNS como el DHCP.
+
+### Incidencias
+Hemos tenido una incidencia en la que perdimos la contraseña de acceso a la interfaz gráfica de Pi-hole. Sin embargo, en la guía oficial de Pi-hole encontré comandos útiles para solucionar este problema. Descubrí el comando sudo pihole -a -p, que me permitió restablecer la contraseña y así poder continuar trabajando con esa máquina virtual.
+
 ---
-### DHCP
-#### ¿Qué es DHCP?
+## DHCP
+### ¿Qué es DHCP?
 El **Protocolo de Configuración Dinámica de Host (DHCP, Dynamic Host Configuration Protocol)** es un protocolo que asigna automáticamente direcciones IP y otros parámetros de configuración de red (como la máscara de subred y la puerta de enlace) a los dispositivos en una red.
 
 #### ¿Por qué es necesario DHCP?
@@ -207,8 +216,11 @@ El **Protocolo de Configuración Dinámica de Host (DHCP, Dynamic Host Configura
 - Ayuda a la integración de **Pi-hole**, asegurando que todos los dispositivos usen el servidor DNS correcto para el filtrado de publicidad y seguridad.
 - Garantiza una gestión dinámica y escalable de la red sin necesidad de configuración manual de IPs en cada dispositivo.
 
+### Instalacion DHCP:
+La instalación del DHCP ha sido muy sencilla, ya que venía preinstalado junto con Pi-hole. Lo único que he tenido que hacer fue configurar un rango de IPs compatibles.
 
-
+### Incidencias
+Las incidencias que hemos tenido han sido muy leves y se deben principalmente a falta de atención. El problema ocurrió porque, aunque configuramos el rango de IPs, al conectar el dominio se asignó un rango de IP diferente. Esto sucedió porque no habíamos activado correctamente el rango de IP configurado.
 
 
 ## 💼 Documentación y Recursos Adicionales
@@ -216,4 +228,4 @@ El **Protocolo de Configuración Dinámica de Host (DHCP, Dynamic Host Configura
 - **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
 - **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
-
+- **Pi-Hole:** [Documentacion Pi-hole](https://pi-hole.net/)
