@@ -217,7 +217,7 @@ El **Protocolo de Configuración Dinámica de Host (DHCP, Dynamic Host Configura
 - Garantiza una gestión dinámica y escalable de la red sin necesidad de configuración manual de IPs en cada dispositivo.
 
 ### Instalacion DHCP:
-La instalación del DHCP ha sido muy sencilla, ya que venía preinstalado junto con Pi-hole. Lo único que he tenido que hacer fue configurar un rango de IPs compatibles.
+La instalación del DHCP ha sido muy sencilla, ya que venía preinstalado junto con **Pi-hole**. Lo único que he tenido que hacer fue configurar un rango de IPs compatibles.
 
 ### Incidencias
 Las incidencias que hemos tenido han sido muy leves y se deben principalmente a falta de atención. El problema ocurrió porque, aunque configuramos el rango de IPs, al conectar el dominio se asignó un rango de IP diferente. Esto sucedió porque no habíamos activado correctamente el rango de IP configurado.
