@@ -154,12 +154,6 @@ Maquinas Virtuales:
 |Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la página.|
 
 
-## 💼 Documentación y Recursos Adicionales
-
-- **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
-- **Docker:** [Documentación oficial](https://docs.docker.com/)
-- **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
-
 ## 🧑🏽‍💻 Tegnologias Implementadas
 El sistema **SPT** se basa en una variedad de tecnologías modernas para garantizar un rendimiento óptimo y una gestión eficiente de incidencias. A continuación se detallan las principales tecnologías utilizadas:
 
@@ -191,4 +185,35 @@ DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está con
 ## 📅 Diagrama de GANT
 Este es nuestro diagrama de Gantt, un cronograma del proyecto. En él se detallan las tareas y su duración. Cada barra horizontal representa una actividad, y su longitud indica el tiempo estimado para su ejecución. Dentro de cada rango he especificado el rango de fecha en el que se va a trabajar aproximadamente.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-02-05%20125028.png)
+
+## Guías de uso
+### DNS 
+#### ¿Qué es DNS?
+El **Sistema de Nombres de Dominio (DNS, Domain Name System)** es un sistema que traduce los nombres de dominio de Internet (como www.google.com) en direcciones IP (como 192.168.1.2). Esto permite que los usuarios accedan a sitios web y otros servicios sin necesidad de recordar direcciones IP numéricas.
+
+#### ¿Por qué es necesario DNS en este proyecto?
+- Permite que los usuarios accedan al servidor **Plex** y a la **página web promocional** mediante nombres de dominio personalizados en lugar de direcciones IP.
+- Facilita la integración de **Pi-hole** como bloqueador de publicidad y filtrado DNS, mejorando la experiencia de navegación en la red.
+- Optimiza la administración de servicios internos, asegurando que cada componente (Plex, base de datos, web) sea accesible fácilmente sin necesidad de configurar direcciones IP estáticas manualmente.
+
+---
+### DHCP
+#### ¿Qué es DHCP?
+El **Protocolo de Configuración Dinámica de Host (DHCP, Dynamic Host Configuration Protocol)** es un protocolo que asigna automáticamente direcciones IP y otros parámetros de configuración de red (como la máscara de subred y la puerta de enlace) a los dispositivos en una red.
+
+#### ¿Por qué es necesario DHCP?
+- Asigna automáticamente direcciones IP a las máquinas virtuales y contenedores en la red, evitando conflictos y asegurando conectividad eficiente.
+- Permite que **pfSense** administre la distribución de IPs en la red, organizando el tráfico entre los dispositivos y aplicando reglas de firewall según sea necesario.
+- Ayuda a la integración de **Pi-hole**, asegurando que todos los dispositivos usen el servidor DNS correcto para el filtrado de publicidad y seguridad.
+- Garantiza una gestión dinámica y escalable de la red sin necesidad de configuración manual de IPs en cada dispositivo.
+
+
+
+
+
+## 💼 Documentación y Recursos Adicionales
+
+- **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
+- **Docker:** [Documentación oficial](https://docs.docker.com/)
+- **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
 
