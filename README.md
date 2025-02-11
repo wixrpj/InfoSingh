@@ -203,7 +203,7 @@ La instalacion de DNS ha sido a base de comandos en ubuntu server, y a partir de
 Primero, me informé a través de la guía oficial de Pi-hole. Luego, descargué e instalé una **OVA** de Ubuntu Server. Siguiendo las instrucciones de la guía, fui ejecutando los comandos necesarios hasta completar la instalación. Una vez finalizada, pude acceder al menú gráfico, desde donde es posible conectarse a la interfaz gráfica para configurar tanto el DNS como el DHCP.
 
 ### Incidencias
-Hemos tenido una incidencia en la que perdimos la contraseña de acceso a la interfaz gráfica de Pi-hole. Sin embargo, en la guía oficial de Pi-hole encontré comandos útiles para solucionar este problema. Descubrí el comando sudo pihole -a -p, que me permitió restablecer la contraseña y así poder continuar trabajando con esa máquina virtual.
+Tuvimos una incidencia en la que perdimos la contraseña de acceso a la interfaz gráfica de Pi-hole. Afortunadamente, consultando la guía oficial de Pi-hole, encontré comandos útiles para resolver el problema. En particular, el comando sudo pihole -a -p me permitió restablecer la contraseña y continuar trabajando sin interrupciones en la máquina virtual.
 
 #### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
 ---
@@ -221,7 +221,7 @@ El **Protocolo de Configuración Dinámica de Host (DHCP, Dynamic Host Configura
 La instalación del DHCP ha sido muy sencilla, ya que venía preinstalado junto con **Pi-hole**. Lo único que he tenido que hacer fue configurar un rango de IPs compatibles.
 
 ### Incidencias
-Las incidencias que hemos tenido han sido muy leves y se deben principalmente a falta de atención. El problema ocurrió porque, aunque configuramos el rango de IPs, al conectar el dominio se asignó un rango de IP diferente. Esto sucedió porque no habíamos activado correctamente el rango de IP configurado.
+Las incidencias que hemos experimentado han sido mínimas y se han debido principalmente a una falta de atención. El problema surgió porque, aunque configuramos el rango de IPs, al conectar el dominio se asignó un rango distinto. Esto ocurrió porque no activamos correctamente el rango de IP previamente configurado
 
 #### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026)
 
