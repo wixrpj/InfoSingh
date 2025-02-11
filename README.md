@@ -205,6 +205,7 @@ Primero, me informé a través de la guía oficial de Pi-hole. Luego, descargué
 ### Incidencias
 Hemos tenido una incidencia en la que perdimos la contraseña de acceso a la interfaz gráfica de Pi-hole. Sin embargo, en la guía oficial de Pi-hole encontré comandos útiles para solucionar este problema. Descubrí el comando sudo pihole -a -p, que me permitió restablecer la contraseña y así poder continuar trabajando con esa máquina virtual.
 
+### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
 ---
 ## DHCP
 ### ¿Qué es DHCP?
@@ -222,6 +223,7 @@ La instalación del DHCP ha sido muy sencilla, ya que venía preinstalado junto 
 ### Incidencias
 Las incidencias que hemos tenido han sido muy leves y se deben principalmente a falta de atención. El problema ocurrió porque, aunque configuramos el rango de IPs, al conectar el dominio se asignó un rango de IP diferente. Esto sucedió porque no habíamos activado correctamente el rango de IP configurado.
 
+### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026)
 
 ## 💼 Documentación y Recursos Adicionales
 
