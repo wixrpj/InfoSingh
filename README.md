@@ -224,6 +224,27 @@ La instalación del DHCP ha sido muy sencilla, ya que venía preinstalado junto 
 Las incidencias que hemos experimentado han sido mínimas y se han debido principalmente a una falta de atención. El problema surgió porque, aunque configuramos el rango de IPs, al conectar el dominio se asignó un rango distinto. Esto ocurrió porque no activamos correctamente el rango de IP previamente configurado
 
 #### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026)
+---
+## Apache
+### ¿Qué es Apache?
+Apache es un servidor web de código abierto que se usa para alojar sitios y aplicaciones en Internet. Básicamente, es el software que se encarga de recibir las peticiones de los usuarios (cuando alguien entra a un sitio web) y responder enviando la información correspondiente (como páginas HTML, imágenes o archivos). Es uno de los servidores web más utilizados en el mundo por su flexibilidad, seguridad y estabilidad.  
+
+## ¿Por qué es necesario?
+Si quieres poner un sitio web en línea, necesitas un servidor web que gestione las conexiones entre los usuarios y el contenido del sitio. Apache es una de las mejores opciones porque:  
+
+- **Es gratuito y de código abierto**, lo que significa que cualquiera puede usarlo y modificarlo según sus necesidades.  
+- **Es compatible con múltiples sistemas operativos**, como Linux, Windows y macOS.  
+- **Es muy flexible**, gracias a su sistema de módulos que permiten agregar funciones según lo que necesites.  
+- **Soporta diferentes tecnologías**, como PHP, Python y Perl, lo que lo hace ideal para una gran variedad de proyectos.  
+- **Es seguro y confiable**, con actualizaciones constantes y una gran comunidad que lo respalda.  
+
+## ¿Dónde encontrar información oficial?
+Si quieres aprender más o necesitas documentación oficial sobre Apache, aquí tienes algunas fuentes útiles:  
+
+
+#### Manual [Guía oficial](https://www.php.net/manual/es/book.apache.php)
+
+
 
 ## 💼 Documentación y Recursos Adicionales
 
