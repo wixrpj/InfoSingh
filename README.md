@@ -238,6 +238,104 @@ Si quieres poner un sitio web en línea, necesitas un servidor web que gestione 
 - **Soporta diferentes tecnologías**, como PHP, Python y Perl, lo que lo hace ideal para una gran variedad de proyectos.  
 - **Es seguro y confiable**, con actualizaciones constantes y una gran comunidad que lo respalda.  
 
+## Pasos de instalación
+## Paso 1: Actualizar los paquetes del sistema
+Antes de instalar Apache, es recomendable actualizar el sistema:
+
+```bash
+sudo apt update
+```
+
+---
+## Paso 2: Instalar Apache2
+Ejecuta el siguiente comando para instalar Apache:
+
+```bash
+sudo apt install apache2 -y
+```
+
+---
+## Paso 3: Verificar el estado de Apache
+Para verificar si Apache está corriendo:
+
+```bash
+sudo systemctl status apache2
+```
+
+---
+## Paso 4: Abrir el puerto en el firewall (opcional)
+Si **UFW (Uncomplicated Firewall)** está activado, permite tráfico HTTP y HTTPS:
+
+```bash
+sudo ufw allow 'Apache Full'
+```
+
+Verifica las reglas del firewall:
+
+```bash
+sudo ufw status
+```
+
+---
+## Paso 5: Probar Apache en el navegador
+Abre un navegador y accede a la dirección IP del servidor o al localhost:
+
+```
+http://IP_DEL_SERVIDOR
+```
+
+Si Apache está funcionando, verás la página de bienvenida "It works!".
+
+---
+## Paso 6: Administrar Apache2
+
+### Reiniciar Apache
+```bash
+sudo systemctl restart apache2
+```
+
+### Recargar configuración sin interrumpir el servicio
+```bash
+sudo systemctl reload apache2
+```
+
+### Detener Apache
+```bash
+sudo systemctl stop apache2
+```
+
+### Deshabilitar Apache en el arranque
+```bash
+sudo systemctl disable apache2
+```
+
+---
+## Paso 7: Configuración básica de Apache
+Los archivos de configuración principales están en:
+
+- **`/etc/apache2/apache2.conf`** → Archivo principal de configuración.
+- **`/etc/apache2/sites-available/`** → Configuraciones de sitios disponibles.
+- **`/etc/apache2/sites-enabled/`** → Enlaces a los sitios activos.
+- **`/var/www/html/`** → Carpeta donde se almacenan los archivos web.
+
+Para habilitar un sitio web personalizado, crea un archivo en `/etc/apache2/sites-available/`, habilítalo con `a2ensite` y recarga Apache.
+
+---
+## Paso 8: Desinstalar Apache (si es necesario)
+Si deseas eliminar Apache:
+
+```bash
+sudo apt remove apache2 -y
+sudo apt autoremove -y
+```
+
+---
+## Conclusión
+Con estos pasos, Apache2 quedará instalado y funcionando en **Ubuntu Server**. Ahora puedes alojar sitios web o configurarlo con módulos adicionales como **PHP, MySQL, SSL, Virtual Hosts**, etc. 
+
+
+
+
 ## ¿Dónde encontrar información oficial?
 Si quieres aprender más o necesitas documentación oficial sobre Apache, aquí tienes algunas fuentes útiles:  
 
@@ -252,3 +350,4 @@ Si quieres aprender más o necesitas documentación oficial sobre Apache, aquí 
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
 - **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
 - **Pi-Hole:** [Documentacion Pi-hole](https://pi-hole.net/)
+- **DigitalOcean:** [Guía intalación de Apache](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es)
