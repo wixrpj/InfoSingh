@@ -330,12 +330,6 @@ sudo apt autoremove -y
 ```
 
 ---
-## Conclusión
-Con estos pasos, Apache2 quedará instalado y funcionando en **Ubuntu Server**. Ahora puedes alojar sitios web o configurarlo con módulos adicionales como **PHP, MySQL, SSL, Virtual Hosts**, etc. 
-
-
-
-
 ## ¿Dónde encontrar información oficial?
 Si quieres aprender más o necesitas documentación oficial sobre Apache, aquí tienes algunas fuentes útiles:  
 
