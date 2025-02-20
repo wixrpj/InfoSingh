@@ -199,6 +199,10 @@ El **Sistema de Nombres de Dominio (DNS, Domain Name System)** es un sistema que
 ### Instalacion DNS:
 La instalacion de DNS ha sido a base de comandos en ubuntu server, y a partir de ahi se ha configurado todo con interfaz grafica poniendo la ip del ordenador anfitrion y configurar un renvio de puertos para poder entrar a la interfaz grafica con la red nat.
 
+Para configurar DNS en Pi-hole, lo primero que hice fue acceder a la interfaz web de administración de Pi-hole. Una vez dentro, navegué hasta la sección "Settings" (Configuración) y seleccioné la pestaña "DNS". En esta sección, elegí los servidores DNS que mejor se adaptaban a mis necesidades, como Google DNS, Cloudflare u OpenDNS. También activé la opción de DNS sobre HTTPS (DoH) para cifrar las consultas DNS y mejorar la privacidad de la red.
+
+Después de seleccionar los servidores DNS, guardé los cambios y reinicié el servicio de Pi-hole para aplicar la configuración. Para asegurarme de que todo funcionaba correctamente, realicé algunas consultas DNS desde dispositivos conectados a la red. Una vez confirmado que los DNS estaban operativos, Pi-hole comenzó a filtrar las solicitudes DNS según las listas de bloqueo que había definido. Estas listas las personalicé para adaptar el filtrado a mis necesidades específicas. La combinación de Pi-hole con servidores DNS confiables no solo mejoró la seguridad de la red, sino que también optimizó la navegación al reducir el tiempo de resolución de dominios.
+
 ### Pasos a seguir
 Primero, me informé a través de la guía oficial de Pi-hole. Luego, descargué e instalé una **OVA** de Ubuntu Server. Siguiendo las instrucciones de la guía, fui ejecutando los comandos necesarios hasta completar la instalación. Una vez finalizada, pude acceder al menú gráfico, desde donde es posible conectarse a la interfaz gráfica para configurar tanto el DNS como el DHCP.
 
