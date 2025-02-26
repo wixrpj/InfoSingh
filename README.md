@@ -22,6 +22,8 @@ El objetivo de este proyecto es crear un sistema de streaming multimedia eficien
 - **VM 2:** Pi-hole (Servidor DNS y bloqueador de publicidad)
 - **VM 3:** pfSense (Firewall y servidor DHCP)
 
+
+
 ## 🚀 1. Configuración de la VM con Docker
 ### 1.1. Instalación de Docker y Docker Compose
 - [ ] Instalar Docker en Ubuntu Server
