@@ -1,13 +1,13 @@
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
 
 ## 📚 Índice
-- Descripción Gereral
+- Descripción General
 - Objetivos del Proyecto
 - Diagrama de Red
 - Estructura del Proyecto
 - Materiales Requeridos
-- Roles del equipo
-- Tegnologias Implementadas
+- Roles del Equipo
+- Tecnologías Implementadas
 - Especificaciones del Sistema
 - Documentación y Recursos Adicionales
 
