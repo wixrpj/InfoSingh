@@ -19,8 +19,11 @@ El objetivo de este proyecto es crear un sistema de streaming multimedia eficien
 ### 🖥️ Infraestructura del Proyecto
 ✅ **Máquinas Virtuales con Ubuntu Server:**
 - **VM 1:** Docker con contenedores (Plex, MySQL + PHP, Web)
+  - Hostea aplicaciones en contenedores Docker, incluyendo Plex para streaming multimedia y un servidor web para aplicaciones.
 - **VM 2:** Pi-hole (Servidor DNS y bloqueador de publicidad)
+  - Funciona como servidor DNS y bloquea anuncios no deseados en toda la red, mejorando la seguridad y el rendimiento.
 - **VM 3:** pfSense (Firewall y servidor DHCP)
+  - Aloja aplicaciones web con Apache, PHP para el backend y MySQL para la gestión de bases de datos.
 
 
 
@@ -245,7 +248,22 @@ Si quieres poner un sitio web en línea, necesitas un servidor web que gestione 
 - **Es compatible con múltiples sistemas operativos**, como Linux, Windows y macOS.  
 - **Es muy flexible**, gracias a su sistema de módulos que permiten agregar funciones según lo que necesites.  
 - **Soporta diferentes tecnologías**, como PHP, Python y Perl, lo que lo hace ideal para una gran variedad de proyectos.  
-- **Es seguro y confiable**, con actualizaciones constantes y una gran comunidad que lo respalda.  
+- **Es seguro y confiable**, con actualizaciones constantes y una gran comunidad que lo respalda.
+
+## ¿Qué es UFW y por qué no lo estamos utilizando?
+UFW (Uncomplicated Firewall) es una herramienta de cortafuegos diseñada para simplificar la gestión de iptables en sistemas basados en Linux, como Ubuntu. Su objetivo es proporcionar una interfaz fácil de usar para configurar reglas de firewall y proteger el sistema controlando el tráfico de red entrante y saliente.
+
+**Razones por las que no estamos utilizando UFW por el momento:**
+- Facilitar la instalación y configuración de otros servicios:
+  - En esta fase inicial del proyecto, priorizamos la instalación y puesta en marcha de servicios críticos como Apache, MySQL, Docker, Pi-hole y pfSense. Evitar UFW en esta etapa nos permite agilizar el proceso y evitar complicaciones innecesarias.
+- Conflictos de puertos:
+  - UFW podría bloquear puertos esenciales utilizados por servicios como Apache, MySQL, Docker o Pi-hole, lo que generaría problemas de conectividad y accesibilidad en la red.
+- Complejidad en la gestión de reglas:
+  - Al tener múltiples servicios (Plex, Apache, MySQL, Pi-hole, pfSense, etc.), la configuración de reglas en UFW se volvería compleja y propensa a errores, especialmente si no se recuerda qué reglas se han implementado.
+
+
+**Plan a futuro:**
+Aunque por el momento no estamos utilizando UFW para dar mayor facilidad a la instalación y configuración de los servicios, planeamos implementarlo en una fase posterior del proyecto. Una vez que todos los servicios estén funcionando de manera estable, UFW se añadirá como una capa adicional de seguridad para proteger cada máquina virtual individualmente. Esto nos permitirá gestionar el tráfico de red con mayor precisión, optimizando y fortaleciendo la seguridad del sistema en su conjunto.
 
 ## Pasos de instalación
 ## Paso 1: Actualizar los paquetes del sistema
@@ -307,50 +325,16 @@ sudo systemctl restart apache2
 ```bash
 sudo systemctl reload apache2
 ```
-
-### Detener Apache
-```bash
-sudo systemctl stop apache2
-```
-
-### Deshabilitar Apache en el arranque
-```bash
-sudo systemctl disable apache2
-```
-
 ---
-## Paso 7: Configuración básica de Apache
-Los archivos de configuración principales están en:
-
-- **`/etc/apache2/apache2.conf`** → Archivo principal de configuración.
-- **`/etc/apache2/sites-available/`** → Configuraciones de sitios disponibles.
-- **`/etc/apache2/sites-enabled/`** → Enlaces a los sitios activos.
-- **`/var/www/html/`** → Carpeta donde se almacenan los archivos web.
-
-Para habilitar un sitio web personalizado, crea un archivo en `/etc/apache2/sites-available/`, habilítalo con `a2ensite` y recarga Apache.
-
----
-## Paso 8: Desinstalar Apache (si es necesario)
-Si deseas eliminar Apache:
-
-```bash
-sudo apt remove apache2 -y
-sudo apt autoremove -y
-```
-
----
-## ¿Dónde encontrar información oficial?
-Si quieres aprender más o necesitas documentación oficial sobre Apache, aquí tienes algunas fuentes útiles:  
-
-
 #### Manual [Guía oficial](https://www.php.net/manual/es/book.apache.php)
 
 --
 ## PFSense
 ### ¿Qué es pfSense?
+pfSense es un programa de código abierto que funciona como un firewall de alto nivel, diseñado para proteger redes y dispositivos de amenazas externas. Se puede instalar en una máquina virtual, descargándolo directamente desde su página oficial, o adquirir como un dispositivo físico (appliance) que ya viene con el sistema preconfigurado y listo para usar. Su principal función es actuar como un cortafuegos, ubicándose entre internet y nuestros dispositivos para detectar y bloquear actividades sospechosas. Esto lo convierte en una herramienta esencial para mantener la seguridad, ya sea en entornos empresariales o incluso para uso personal.
 
 #### ¿Por qué es necesario pfSense?
-
+pfSense es una herramienta muy util para la seguridad y gestión de redes, especialmente en entornos donde proteger datos y optimizar el tráfico son prioritarios. Con un firewall robusto, protege contra intrusiones, malware y otras amenazas cibernéticas, además de permitir la creación de redes privadas virtuales (VPN) para conectar oficinas remotas o usuarios móviles de forma segura. También optimiza el rendimiento de la red con funciones como balanceo de carga y gestión de ancho de banda, útiles en entornos con muchos usuarios o servicios en línea. Su facilidad de uso y capacidad para simplificar la administración de redes lo convierten en una solución eficiente, aunque su interfaz grafica deja mucho que desear.
 
 
 ## 💼 Documentación y Recursos Adicionales
@@ -360,3 +344,5 @@ Si quieres aprender más o necesitas documentación oficial sobre Apache, aquí 
 - **TrueNAS:** [Manual oficial](https://www.truenas.com/docs/)
 - **Pi-Hole:** [Documentacion Pi-hole](https://pi-hole.net/)
 - **DigitalOcean:** [Guía intalación de Apache](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es)
+- **pfSense:** [Explicación sobre pfsense](https://keepcoding.io/blog/que-es-pfsense/#%C2%BFQue_es_pfSense)
+- **pfSense:** [Explicación sobre pfsense](https://www.youtube.com/watch?v=UIDzzufhNlw)
