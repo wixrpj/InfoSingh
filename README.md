@@ -161,18 +161,17 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 
 | Categoría        | Tecnología  | Descripción                                                                                       | Icono                                                                                   |
 |------------------|-------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| Infraestructura | Proxmox    | Plataforma de virtualización que permite gestionar máquinas virtuales y contenedores.            | <img src="https://img.icons8.com/color/48/000000/proxmox.png" width="50" height="50" alt="Proxmox">                       |
+| Infraestructura | Proxmox    | Plataforma de virtualización que permite gestionar máquinas virtuales y contenedores.               | <img src="https://img.icons8.com/color/48/000000/proxmox.png" width="50" height="50" alt="Proxmox">|
 |                  ||            ||
+| Desarrollo      | HTML       | Estructura básica de las páginas web.                                                               | <img src="https://img.icons8.com/color/48/000000/html-5.png" width="50" height="50" alt="HTML">|
+|                 | CSS        | Estilos y diseño visual para una experiencia de usuario atractiva.                                  | <img src="https://img.icons8.com/color/48/000000/css3.png" width="50" height="50" alt="CSS">|
+|                 | JavaScript | Interactividad y dinamismo en la interfaz del usuario.                                              | <img src="https://img.icons8.com/color/48/000000/javascript.png" width="50" height="50" alt="JavaScript">|
 |                  ||            ||
-| Desarrollo     | HTML       | Estructura básica de las páginas web.                                                            | <img src="https://img.icons8.com/color/48/000000/html-5.png" width="50" height="50" alt="HTML">                           |
-|                | CSS        | Estilos y diseño visual para una experiencia de usuario atractiva.                               | <img src="https://img.icons8.com/color/48/000000/css3.png" width="50" height="50" alt="CSS">                             |
-|                  | JavaScript | Interactividad y dinamismo en la interfaz del usuario.                                          | <img src="https://img.icons8.com/color/48/000000/javascript.png" width="50" height="50" alt="JavaScript">                 |
+| Base de Datos   | MySQL      | Sistema de gestión de bases de datos relacional utilizado para almacenar datos.                     | <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" width="50" height="50" alt="MySQL">|
 |                  ||            ||
-| Base de Datos   | MySQL      | Sistema de gestión de bases de datos relacional utilizado para almacenar datos.                   | <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" width="50" height="50" alt="MySQL">                      |
-|                  ||            ||
-| Redes         | DHCP       | Protocolo utilizado para asignar dinámicamente direcciones IP a dispositivos en la red.          |<img src= "https://github.com/wixrpj/InfoSingh/blob/main/dhcp.png" width="50" height="50" alt="DHCP">|
-|                  | DNS        | Sistema de nombres de dominio que traduce nombres legibles por humanos a direcciones IP.        |<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf3nc9CLvb2mKqLziw76kewntr4O8SYG5sR-
-| Control de Versiones  | GitHub     | Plataforma para alojar repositorios Git y colaborar en proyectos.                                | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub">|
+| Redes           | DHCP       | Protocolo utilizado para asignar dinámicamente direcciones IP a dispositivos en la red.             | <img src= "https://github.com/wixrpj/InfoSingh/blob/main/dhcp.png" width="50" height="50" alt="DHCP">|
+|                 | DNS        | Sistema de nombres de dominio que traduce nombres legibles por humanos a direcciones IP.            | <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf3nc9CLvb2mKqLziw76kewntr4O8SYG5sR->|
+| Control de Versiones  | GitHub     | Plataforma para alojar repositorios Git y colaborar en proyectos.                             | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub">|
 
 
 ## 👨🏽‍💻 Especificaciones del Sistema
