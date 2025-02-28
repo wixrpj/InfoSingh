@@ -343,7 +343,7 @@ Si quieres aprender más o necesitas documentación oficial sobre Apache, aquí 
 #### Manual [Guía oficial](https://www.php.net/manual/es/book.apache.php)
 
 --
-## pfSense
+## PFSense
 ### ¿Qué es pfSense?
 
 #### ¿Por qué es necesario pfSense?
