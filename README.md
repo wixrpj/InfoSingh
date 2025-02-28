@@ -149,6 +149,7 @@ Maquinas Virtuales:
 - **Plex Media Server:** Herramienta principal de transmisión de contenido.
 - **TrueNAS:** Sistema operativo para gestionar los backups en la Máquina Virtual 2.
 - **HTML, CSS, JavaScript:** Para desarrollar la página web promocional.
+- **Apache:** Para hostear la pagina web del proyecto, con dominio personalizado.
 ## 🪪 Roles del equipo
 | Nombre del miembro |       Roles de equipo       |     Trabajo de cada miembro   |
 |:-------------------|:----------------------------|:------------------------------|
