@@ -372,4 +372,4 @@ Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda ac
 - **pfSense:** [Explicación sobre pfsense](https://keepcoding.io/blog/que-es-pfsense/#%C2%BFQue_es_pfSense)
 - **pfSense:** [Explicación sobre pfsense](https://www.youtube.com/watch?v=UIDzzufhNlw)
 - **pfSense:** [Explicación sobre pfsense](https://www.openitnet.com/index.php/software/inst-software-libre/pfsense1#:~:text=Las%20principales%20caracter%C3%ADsticas%20incluyen%20detecci%C3%B3n,y%20OpenVPN%2C%20filtrado%20de%20contenido)
-- **port forward:** [Explicacion y configuracion](https://nordvpn.com/es/blog/que-es-port-forwarding/)
+- **Port forward:** [Explicacion y configuracion](https://nordvpn.com/es/blog/que-es-port-forwarding/)
