@@ -327,7 +327,7 @@ sudo systemctl reload apache2
 ### ¿Qué es pfSense?
 pfSense es un programa de código abierto que funciona como un firewall de alto nivel, diseñado para proteger redes y dispositivos de amenazas externas. Se puede instalar en una máquina virtual, descargándolo directamente desde su página oficial, o adquirir como un dispositivo físico (appliance) que ya viene con el sistema preconfigurado y listo para usar. Su principal función es actuar como un cortafuegos, ubicándose entre internet y nuestros dispositivos para detectar y bloquear actividades sospechosas. Esto lo convierte en una herramienta esencial para mantener la seguridad, ya sea en entornos empresariales o incluso para uso personal.
 
-#### ¿Por qué es necesario pfSense?
+### ¿Por qué es necesario pfSense?
 pfSense es una herramienta muy util para la seguridad y gestión de redes, especialmente en entornos donde proteger datos y optimizar el tráfico son prioritarios. Con un firewall robusto, protege contra intrusiones, malware y otras amenazas cibernéticas, además de permitir la creación de redes privadas virtuales (VPN) para conectar oficinas remotas o usuarios móviles de forma segura. También optimiza el rendimiento de la red con funciones como balanceo de carga y gestión de ancho de banda, útiles en entornos con muchos usuarios o servicios en línea. Su facilidad de uso y capacidad para simplificar la administración de redes lo convierten en una solución eficiente, aunque su interfaz grafica deja mucho que desear.
 
 ### ¿En qué sistema se basa?
@@ -347,7 +347,7 @@ pfSense se basa en el sistema operativo FreeBSD, un sistema de alto rendimiento 
 ### ¿Es pfSense una opción viable para empresas y redes domésticas?
 pfSense es una excelente opción tanto para empresas como para redes domésticas por su versatilidad y relación calidad-precio. Para las empresas, ofrece funciones avanzadas como un firewall robusto, VPN para conexiones seguras, balanceo de carga para optimizar el tráfico y gestión del ancho de banda. Además, es personalizable, permitiendo añadir funciones específicas como filtrado de contenido, lo que lo hace ideal para adaptarse a las necesidades de cada organización.
 
-En el ámbito doméstico, pfSense también es muy útil, especialmente si tienes varios dispositivos conectados o quieres mejorar la seguridad de tu red. Aunque puede parecer un poco complicado al principio, su interfaz web es intuitiva y fácil de manejar una vez que te familiarizas con ella. Y al ser de código abierto, no requiere licencias costosas, lo que lo convierte en una opción accesible para usuarios particulares.
+En el ámbito doméstico, pfSense también es muy útil, especialmente si hay varios dispositivos conectados o quieres mejorar la seguridad de tu red. Aunque puede parecer un poco complicado al principio, su interfaz web es intuitiva y fácil de manejar una vez que te familiarizas con ella. Y al ser de código abierto, no requiere licencias costosas, lo que lo convierte en una opción accesible para usuarios particulares.
 
 En definitiva, pfSense es una solución completa que funciona bien tanto en entornos empresariales como en redes caseras, ofreciendo seguridad, rendimiento y flexibilidad sin necesidad de invertir grandes cantidades de dinero.
 
@@ -355,6 +355,15 @@ En definitiva, pfSense es una solución completa que funciona bien tanto en ento
 El port forwarding (o reenvío de puertos) es una técnica que permite redirigir el tráfico de internet que llega a un puerto específico de un router o firewall hacia un dispositivo o servicio dentro de una red local. Esto es útil cuando necesitas que un servicio, como un servidor web, un juego en línea o una cámara IP, sea accesible desde fuera de tu red.
 
 Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda acceder a él desde internet, configuras el port forwarding para que el tráfico que llega al puerto 80 (el puerto usado para HTTP) de tu router se redirija hacia la dirección IP local de tu servidor. Sin esta configuración, el router no sabría a qué dispositivo enviar el tráfico, y el servicio no sería accesible desde fuera.
+
+## Sophos
+### ¿Que es sophos?
+
+### ¿Por qué es necesario pfSense?
+
+### ¿En qué sistema se basa?
+
+### ¿Cuáles son las principales características?
 
 ## 💼 Documentación y Recursos Adicionales
 
@@ -367,3 +376,4 @@ Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda ac
 - **pfSense:** [Explicación sobre pfsense](https://www.youtube.com/watch?v=UIDzzufhNlw)
 - **pfSense:** [Explicación sobre pfsense](https://www.openitnet.com/index.php/software/inst-software-libre/pfsense1#:~:text=Las%20principales%20caracter%C3%ADsticas%20incluyen%20detecci%C3%B3n,y%20OpenVPN%2C%20filtrado%20de%20contenido)
 - **Port forward:** [Explicacion y configuracion](https://nordvpn.com/es/blog/que-es-port-forwarding/)
+- **Sophos:** [Páguina oficial](https://www.sophos.com/es-es)
