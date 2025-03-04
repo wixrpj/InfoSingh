@@ -242,13 +242,7 @@ Las incidencias que hemos experimentado han sido mínimas y se han debido princi
 Apache es un servidor web de código abierto que se usa para alojar sitios y aplicaciones en Internet. Básicamente, es el software que se encarga de recibir las peticiones de los usuarios (cuando alguien entra a un sitio web) y responder enviando la información correspondiente (como páginas HTML, imágenes o archivos). Es uno de los servidores web más utilizados en el mundo por su flexibilidad, seguridad y estabilidad.  
 
 ## ¿Por qué es necesario?
-Si quieres poner un sitio web en línea, necesitas un servidor web que gestione las conexiones entre los usuarios y el contenido del sitio. Apache es una de las mejores opciones porque:  
-
-- **Es gratuito y de código abierto**, lo que significa que cualquiera puede usarlo y modificarlo según sus necesidades.  
-- **Es compatible con múltiples sistemas operativos**, como Linux, Windows y macOS.  
-- **Es muy flexible**, gracias a su sistema de módulos que permiten agregar funciones según lo que necesites.  
-- **Soporta diferentes tecnologías**, como PHP, Python y Perl, lo que lo hace ideal para una gran variedad de proyectos.  
-- **Es seguro y confiable**, con actualizaciones constantes y una gran comunidad que lo respalda.
+Apache es necesario en mi proyecto porque es el servidor web que se encargará de entregar el contenido multimedia, como películas y series, a los usuarios registrados. Sin un servidor como Apache, no tendría una forma eficiente de servir los archivos y páginas web que componen mi plataforma. Además, Apache es compatible con múltiples tecnologías y lenguajes, lo que me permitirá integrar funcionalidades dinámicas, como la autenticación de usuarios, la gestión de perfiles y la reproducción de contenido. Su flexibilidad y capacidad de configuración lo hacen ideal para adaptarse a las necesidades específicas de mi proyecto.
 
 ## ¿Qué es UFW y por qué no lo estamos utilizando?
 UFW (Uncomplicated Firewall) es una herramienta de cortafuegos diseñada para simplificar la gestión de iptables en sistemas basados en Linux, como Ubuntu. Su objetivo es proporcionar una interfaz fácil de usar para configurar reglas de firewall y proteger el sistema controlando el tráfico de red entrante y saliente.
