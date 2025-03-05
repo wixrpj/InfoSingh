@@ -444,7 +444,7 @@ En esos instantes, ya podremos acceder vía web a la configuración del pfSense,
 | Description   | regla NAT en WAN para SSH        |
 
 ### Reglas Adicionales PfSense
-En este apartado voy a ofreceros 2 reglas adcionales para que podais mejorar vuestro server PfSenseç
+En este apartado voy a ofreceros 2 reglas adcionales para que podais mejorar vuestro server PfSense
 #### Puerto HTTP
 | Opcion        | Descripcion         |
 |---------------|---------------------|
@@ -456,6 +456,7 @@ En este apartado voy a ofreceros 2 reglas adcionales para que podais mejorar vue
 | Redirect target ip|Address or Alias (Ip de la maquina que quieras añadir esta opcion)|
 | Description   |Mi Regla NAT - acceso HTTP|
 #### Puerto SSH
+Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual para que te sea mas accesible la transmision de textos y las configuraciones.
 | Opcion        | Descripcion         |
 |---------------|---------------------|
 | Interfaz      | WAN                 |
