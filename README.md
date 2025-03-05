@@ -420,7 +420,17 @@ Por supuesto, debemos realizar la configuración desde cero, asignando la interf
 
 En esos instantes, ya podremos acceder vía web a la configuración del pfSense, a través de https://10.20.30.1 con nombre de usuario «admin» y contraseña «pfsense».
 
-
+# Reglas Wan recomendables
+| Opcion        | Descripcion         |
+|---------------|---------------------|
+| Action        |Pass                 |
+| Interface     | WAN                 |
+| Protocol      | UDP                 |
+| Source        | Any                 |
+| Destination   | Any                 |
+| Destination port range|5194         |
+| Logs          | Seleccionamos la opción de guardar|
+| Description   | OPENVPN:RULE        |
 
 
 ## Diagrama de Red
