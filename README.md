@@ -364,18 +364,18 @@ Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda ac
   # Comprobaciones
   - Vamos al equipo cliente y en el navegador escribir la ip de WAN, que te aparece en la interfaz del servidor de pfsense.
 ## Instalacion PfSense:
-# Instalacion ISO de la pagina oficial de PFSENSE
+## Instalacion ISO de la pagina oficial de PFSENSE
 ```
 https://www.pfsense.org/download/
 ```
-# Diagrama de Red
+## Diagrama de Red
 
-# Pasos de Instalacion
+## Pasos de Instalacion
 Despues de haber seguido los pasos de instalacon con una maquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
 ```
 http://IP.DE.TU.SERVER
 ```
-# Incidencias Comunes
+## Incidencias Comunes
 - Si no consigues conectarte a la interfaz grafica de PfSense asegurate de estar en la misma red y que puedes interactuar con el comando ping con la maquina server.
 - A la hora de instalar PfSense por via de VirtualBox/Maquina virtual asegurate de poner en sistema "FREEBSD 64"
 - En el direccionamiento de ip cuando estas configurando la Wan puede hacerse complicado pero intenta leer todas las eplicaciones que te dice la maquina y si no conoces alguna funcion buscarla para no cometer fallos en el server.
