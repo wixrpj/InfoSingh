@@ -184,9 +184,9 @@ Máquina Host: Es el equipo principal que tiene un Sistema Operativo Windows 11 
 DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está configurado con la IP 10.1.2.10 y un gateway 10.1.2.1. Hemos elegido porque Pi-Hole es comúnmente utilizado para bloquear anuncios y rastreos a nivel de red.
 | COMPONENTE    | SO                  | ALMACENAMIENTO | CPU          | RAM  | IP                | GATEWAY      |
 |---------------|---------------------|----------------|--------------|------|-------------------|--------------|
-| MAQUINA HOST  | Windows 11          | 465 GB         | 4 Cores      | 8 GB | 100.77.20.65      | 100.77.20.1  |
+| MAQUINA HOST  | Windows 11          | 465 GB         | 4            | 8 GB | 100.77.20.65      | 100.77.20.1  |
 | DNS(Pi-Hole)  | Ubuntu SV 22.04.01  | 25 GB          | 2            | 2 GB | 10.20.30.101      | 10.20.30.100 |
-| PFSENSE       | FREEBSD 64bit       | 25 GB          | 1            | 1 GB | 10.20.30.100      | 10.20.30.100 |
+| PFSENSE       | FREEBSD 64bit       | 16 GB          | 1            | 1 GB | 10.20.30.100      | 10.20.30.100 |
 | Apache        | Ubuntu SV 22.04.01  | 25 GB          | 2            | 3 GB | 10.20.30.105      | 10.20.30.100 |
 | Docker SV     | Ubuntu SV 22.04.01  | 25 GB          | 2            | 2 GB | 10.20.30.110      | 10.20.30.100 |
 
@@ -355,6 +355,26 @@ En definitiva, pfSense es una solución completa que funciona bien tanto en ento
 El port forwarding (o reenvío de puertos) es una técnica que permite redirigir el tráfico de internet que llega a un puerto específico de un router o firewall hacia un dispositivo o servicio dentro de una red local. Esto es útil cuando necesitas que un servicio, como un servidor web, un juego en línea o una cámara IP, sea accesible desde fuera de tu red.
 
 Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda acceder a él desde internet, configuras el port forwarding para que el tráfico que llega al puerto 80 (el puerto usado para HTTP) de tu router se redirija hacia la dirección IP local de tu servidor. Sin esta configuración, el router no sabría a qué dispositivo enviar el tráfico, y el servicio no sería accesible desde fuera.
+
+## Objetivos del Port Forward
+- Permitir el acceso desde el exterior (WAN) a la página web de la LAN y por SSH.
+
+## Instalacion PfSense:
+# Instalacion ISO de la pagina oficial de PFSENSE
+```
+https://www.pfsense.org/download/
+```
+# Diagrama de Red
+
+# Pasos de Instalacion
+Despues de haber seguido los pasos de instalacon con una maquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
+```
+http://IP.DE.TU.SERVER
+```
+# Incidencias Comunes
+- Si no consigues conectarte a la interfaz grafica de PfSense asegurate de estar en la misma red y que puedes interactuar con el comando ping con la maquina server.
+- A la hora de instalar PfSense por via de VirtualBox/Maquina virtual asegurate de poner en sistema "FREEBSD 64"
+- En el direccionamiento de ip cuando estas configurando la Wan puede hacerse complicado pero intenta leer todas las eplicaciones que te dice la maquina y si no conoces alguna funcion buscarla para no cometer fallos en el server.
 
 ## Sophos
 ### ¿Que es sophos?
