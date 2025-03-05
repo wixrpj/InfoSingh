@@ -420,7 +420,7 @@ Por supuesto, debemos realizar la configuración desde cero, asignando la interf
 
 En esos instantes, ya podremos acceder vía web a la configuración del pfSense, a través de https://10.20.30.1 con nombre de usuario «admin» y contraseña «pfsense».
 
-# Reglas Wan recomendables
+### Reglas Wan recomendables
 | Opcion        | Descripcion         |
 |---------------|---------------------|
 | Action        |Pass                 |
@@ -432,7 +432,7 @@ En esos instantes, ya podremos acceder vía web a la configuración del pfSense,
 | Logs          | Seleccionamos la opción de guardar|
 | Description   | OPENVPN:RULE        |
 
-# Reglas Port Forward recomendables
+### Reglas Port Forward recomendables
 | Opcion        | Descripcion         |
 |---------------|---------------------|
 | Interfaz      | WAN                 |
@@ -443,8 +443,31 @@ En esos instantes, ya podremos acceder vía web a la configuración del pfSense,
 | Redirect target port|SSH (puerto 22 por defecto)|
 | Description   | regla NAT en WAN para SSH        |
 
+### Reglas Adicionales PfSense
+En este apartado voy a ofreceros 2 reglas adcionales para que podais mejorar vuestro server PfSenseç
+#### Puerto HTTP
+| Opcion        | Descripcion         |
+|---------------|---------------------|
+| Interfaz      | WAN                 |
+| Address family| IPv4                |
+| Protocol      | TCP/UDP             |
+| Destination   | WAN address         |
+| Destination port|HTTP (puerto 80 por defecto) |
+| Redirect target ip|Address or Alias (Ip de la maquina que quieras añadir esta opcion)|
+| Description   |Mi Regla NAT - acceso HTTP|
+#### Puerto SSH
+| Opcion        | Descripcion         |
+|---------------|---------------------|
+| Interfaz      | WAN                 |
+| Address family| IPv4                |
+| Protocol      | TCP                 |
+| Destination   | WAN address         |
+| Destination port|SSH (puerto 22 por defecto)|
+| Redirect target port|Address or Alias (Ip de la maquina que quieras añadir esta opcion)|
+| Description   |Mi Regla NAT - acceso SSH|
 
 ## Diagrama de Red
+Falta poner algo aqui
 
 ## Pasos de Instalacion
 Despues de haber seguido los pasos de instalacon con una maquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
