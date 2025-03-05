@@ -358,7 +358,11 @@ Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda ac
 
 ## Objetivos del Port Forward
 - Permitir el acceso desde el exterior (WAN) a la página web de la LAN y por SSH.
-
+## Pasos a seguir para el Port Forward
+- Comprobar la existencia de las reglas de salida
+- Crear las reglas de entrada - Puerto 80, consiste en crear una regla de entrada a traves de la interfaz de la red WAN en el firewall que permita redirigir el trafico web por el puerto 80 hacia el servidor apache que contiene la Web en la Lan
+  # Comprobaciones
+  - Vamos al equipo cliente y en el navegador escribir la ip de WAN, que te aparece en la interfaz del servidor de pfsense.
 ## Instalacion PfSense:
 # Instalacion ISO de la pagina oficial de PFSENSE
 ```
