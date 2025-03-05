@@ -432,6 +432,17 @@ En esos instantes, ya podremos acceder vía web a la configuración del pfSense,
 | Logs          | Seleccionamos la opción de guardar|
 | Description   | OPENVPN:RULE        |
 
+# Reglas Port Forward recomendables
+| Opcion        | Descripcion         |
+|---------------|---------------------|
+| Interfaz      | WAN                 |
+| Address family| IPv4                |
+| Protocol      | TCP                 |
+| Destination   | WAN address         |
+| Destination port|SSH (puerto 22 por defecto) |
+| Redirect target port|SSH (puerto 22 por defecto)|
+| Description   | regla NAT en WAN para SSH        |
+
 
 ## Diagrama de Red
 
