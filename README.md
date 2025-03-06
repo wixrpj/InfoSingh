@@ -319,10 +319,9 @@ sudo systemctl restart apache2
 ```bash
 sudo systemctl reload apache2
 ```
----
 #### Manual [Guía oficial](https://www.php.net/manual/es/book.apache.php)
 
---
+---
 ## PFSense
 ## ¿Qué es pfSense?
 pfSense es una distribución personalizada de FreeBSD adaptado para su uso como firewall y enrutador. Aparte es un programa de código abierto que funciona como un firewall de alto nivel, diseñado para proteger redes y dispositivos de amenazas externas. Se puede instalar en una máquina virtual, descargándolo directamente desde su página oficial, o adquirir como un dispositivo físico (appliance) que ya viene con el sistema preconfigurado y listo para usar. Su principal función es actuar como un cortafuegos, ubicándose entre internet y nuestros dispositivos para detectar y bloquear actividades sospechosas. Esto lo convierte en una herramienta esencial para mantener la seguridad, ya sea en entornos empresariales o incluso para uso personal.
@@ -351,6 +350,80 @@ En el ámbito doméstico, pfSense también es muy útil, especialmente si hay va
 
 En definitiva, pfSense es una solución completa que funciona bien tanto en entornos empresariales como en redes caseras, ofreciendo seguridad, rendimiento y flexibilidad sin necesidad de invertir grandes cantidades de dinero.
 
+## Descarga e instalacion PfSense:
+La descarga y uso de pfSense CE es completamente gratuita, basta con entrar en la web oficial (https://www.pfsense.org/) e irnos directamente a la pestaña de «Download».
+```
+https://www.pfsense.org/download/
+```
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121359.png)
+
+----
+
+También tenemos que seleccionar el tipo de imagen, si queremos una imagen ISO para copiar en un DVD o pendrive, o directamente una imagen USB, nosotros hemos seleccionado la imagen ISO DVD. A continuación, deberemos elegir el servidor desde donde realizar la descarga, es recomendable que siempre sea el más cercano físicamente de tu ubicación actual.
+
+Una vez que hayamos descargado la imagen, deberemos descomprimirla ya que viene en formato iso.gz, y deberemos extraer la imagen ISO directamente.
+
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121757.png)
+
+----
+
+Una vez que lo hayamos descargado, podremos guardarlo en un disco duro o en una carpeta segura para que no lo eliminen. Vamos a instalar pfSense en una máquina virtual con Oracle VM VirtualBox. La máquina server tiene que crear dos tarjetas de red, REVISAR!!!!!! una en modo bridge y otra en modo host-only para poder acceder vía web desde nuestro ordenador, sin depender de la red local.
+
+Configuración de la máquina virtual:
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20123034.png)
+
+----
+
+Instalación de pfSense en VM
+Cuando arrancamos la máquina virtual, podremos ver un menú con varias opciones de arranque, no debemos tocar nada y esperar a que pasen los segundos. Posteriormente cargará, y ya podremos ver las diferentes opciones que nos brinda la imagen ISO para la instalación de pfSense.
+
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121834.png)
+
+----
+
+Una vez que arranque la instalación de este sistema operativo, que aceptar el copyright que nos muestra. En el siguiente menú podremos instalar, recuperar el sistema operativo en caso de fallo catastrófico, y también recuperar el archivo de configuración config.xml de una instalación anterior. Nosotros pincharemos en «Install» para instalar el sistema operativo desde cero. En el siguiente menú tendremos que configurar el teclado, eligiendo nuestro idioma y distribución de teclado.
+Después nos preguntará cómo queremos instalar el sistema operativo, si con UFS para BIOS o UEFI, de forma manual para expertos, abrir la consola para hacer todo manualmente, o utilizar ZFS como sistema de archivos. En nuestro caso, hemos elegido la primera de todas, Auto (UFS) BIOS y procedemos con la instalación. La instalación tardará un minuto aproximadamente, aunque dependerá del hardware que tengas, cuando finalice nos preguntará si queremos lanzar una consola para hacer configuraciones específicas, pinchamos en «No» y posteriormente nos preguntará si queremos reiniciar el sistema operativo, y aceptamos.
+Si después de reiniciar te pide que vuelvas a instalar la iso lo que hacemos es apagar la máquina y quitar la iso para que se solucione el error y volvemos a arrancar-la.
+
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121847.png)
+
+----
+
+En cuanto se inicie nuevamente pfSense, podemos ver que se le ha asignado correctamente una IP a la WAN de Internet y otra a la LAN.
+
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121900.png)
+
+En el menú de administración por consola podremos realizar las siguientes acciones:
+- Cerrar sesión a SSH
+- Asignar interfaces físicas a la WAN o LAN, permite configurar también VLANs para la conexión a Internet e incluso de cara a la LAN.
+- Configurar la dirección IP de las diferentes interfaces configuradas anteriormente.
+- Resetear la contraseña de administrador para entrar vía web.
+- Restaurar pfSense a valores de fábrica.
+- Reiniciar el sistema operativo.
+- Apagar el sistema operativo.
+- Hacer ping a un host.
+- Lanzar una consola para tareas de administración avanzadas por comandos.
+- Lanzar pfTop para ver todas las conexiones actuales.
+- Ver los logs del sistema operativo de filtrado.
+- Reiniciar el servidor web.
+- Lanzar consola con utilidades pfSense para configuraciones rápidas.
+- Actualizar desde consola.
+- Habilitar SSH en el sistema operativo.
+- Restaurar una configuración reciente.
+- Reiniciar PHP-FPM por si tenemos problemas de acceso vía web al sistema operativo.
+
+----
+
+Por supuesto, debemos realizar la configuración desde cero, asignando la interfaz correspondiente a la WAN y a la LAN:
+
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121916.png)
+
+----
+Despues de haber seguido los pasos de instalacon con una maquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
+```
+http://IP.DE.TU.SERVER (10.20.30.1)
+```
+
 ## ¿Qué es el port forward?
 El port forwarding (o reenvío de puertos) es una técnica que permite redirigir el tráfico de internet que llega a un puerto específico de un router o firewall hacia un dispositivo o servicio dentro de una red local. Esto es útil cuando necesitas que un servicio, como un servidor web, un juego en línea o una cámara IP, sea accesible desde fuera de tu red.
 
@@ -363,87 +436,28 @@ En el caso de SSH, el port forwarding se utiliza para establecer túneles seguro
 
 ## Pasos a seguir para el Port Forward
 
-![]https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20115239.png
-
-1. **Acceder a la configuración de pfSense:** Ingresar a la interfaz web de administración de pfSense a través de su dirección IP (en mi caso es el 10.20.30.1).
+- **Acceder a la configuración de pfSense:** Ingresar a la interfaz web de administración de pfSense a través de su dirección IP (en mi caso es el 10.20.30.1).
    
-3. **Identificar la sección de Port Forwarding:** Navegar a Firewall > NAT y seleccionar la pestaña Port Forward.
+- **Identificar la sección de Port Forwarding:** Navegar a Firewall > NAT y seleccionar la pestaña Port Forward.
    
-5. **Comprobar la existencia de las reglas de salida:** Asegurarse de que las reglas de salida permitan la conexión desde la red interna hacia el exterior, revisando en Firewall > Rules > LAN que existan reglas que permitan el tráfico saliente.
+- **Comprobar la existencia de las reglas de salida:** Asegurarse de que las reglas de salida permitan la conexión desde la red interna hacia el exterior, revisando en Firewall > Rules > LAN que existan reglas que permitan el tráfico saliente.
    
-7. **Crear las reglas de entrada - Puerto 80:** Ir a Firewall > NAT > Port Forward, hacer clic en Add y configurar la regla con los siguientes parámetros:
+- **Crear las reglas de entrada - Puerto 80:** Ir a Firewall > NAT > Port Forward, hacer clic en Add y configurar la regla con los siguientes parámetros:
    - **Interface:** WAN
    - **Protocol:** TCP
    - **Destination Port Range:** 80 (HTTP)
-   - **Redirect Target IP:** Dirección IP del servidor Apache en la LAN
+   - **Redirect Target IP:** 10.20.30.100
    - **Redirect Target Port:** 80
-   - **Description:** Permitir tráfico HTTP hacia servidor web
+   - **Description:** Mi regla NAT en WAN - acceso por HTTP
      
-8. **Guardar la configuración:** Aplicar los cambios y asegurarse de que la regla aparezca en la lista.
+- **Guardar la configuración:** Aplicar los cambios y asegurarse de que la regla aparezca en la lista.
    
-10. **Crear la regla de firewall:** Automáticamente, pfSense ofrece la opción de crear la regla de firewall asociada. Asegúrate de seleccionar esta opción para permitir el tráfico entrante.
-    
-12. **Probar la conexión:** Verificar desde el exterior si el servicio es accesible a través de la dirección IP pública de pfSense y el puerto configurado.
-- Comprobar la existencia de las reglas de salida
-- Crear las reglas de entrada - Puerto 80, consiste en crear una regla de entrada a traves de la interfaz de la red WAN en el firewall que permita redirigir el trafico web por el puerto 80 hacia el servidor apache que contiene la Web en la Lan
+- **Crear la regla de firewall:** Automáticamente, pfSense ofrece la opción de crear la regla de firewall asociada. Seleccioné esta opción para permitir el tráfico entrante.
 
-
-  ### Comprobaciones
-  - Vamos al equipo cliente y en el navegador escribir la ip de WAN, que te aparece en la interfaz del servidor de pfsense.
-## Descarga e instalacion PfSense:
-La descarga y uso de pfSense CE es completamente gratuita, basta con entrar en la web oficial (https://www.pfsense.org/) e irnos directamente a la pestaña de «Download».
-```
-https://www.pfsense.org/download/
-```
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121359.png)
-
-También tenemos que seleccionar el tipo de imagen, si queremos una imagen ISO para copiar en un DVD o pendrive, o directamente una imagen USB, nosotros hemos seleccionado la imagen ISO DVD. A continuación, deberemos elegir el servidor desde donde realizar la descarga, es recomendable que siempre sea el más cercano físicamente de tu ubicación actual.
-
-Una vez que hayamos descargado la imagen, deberemos descomprimirla ya que viene en formato iso.gz, y deberemos extraer la imagen ISO directamente.
-
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121757.png)
-
-Una vez que lo hayamos descargado, podremos guardarlo en un disco duro o en una carpeta segura para que no lo eliminen. Vamos a instalar pfSense en una máquina virtual con Oracle VM VirtualBox. La máquina server tiene que crear dos tarjetas de red, REVISAR!!!!!! una en modo bridge para que se conecte a la red local real, y otra en modo host-only para poder acceder vía web desde nuestro ordenador, sin depender de la red local.
-
-Configuración de la máquina virtual:
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20123034.png)
-
-Instalación de pfSense en VM
-Cuando arrancamos la máquina virtual, podremos ver un menú con varias opciones de arranque, no debemos tocar nada y esperar a que pasen los segundos. Posteriormente cargará, y ya podremos ver las diferentes opciones que nos brinda la imagen ISO para la instalación de pfSense.
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121834.png)
-
-Una vez que arranque la instalación de este sistema operativo, que aceptar el copyright que nos muestra. En el siguiente menú podremos instalar, recuperar el sistema operativo en caso de fallo catastrófico, y también recuperar el archivo de configuración config.xml de una instalación anterior. Nosotros pincharemos en «Install» para instalar el sistema operativo desde cero. En el siguiente menú tendremos que configurar el teclado, eligiendo nuestro idioma y distribución de teclado.
-Después nos preguntará cómo queremos instalar el sistema operativo, si con UFS para BIOS o UEFI, de forma manual para expertos, abrir la consola para hacer todo manualmente, o utilizar ZFS como sistema de archivos. En nuestro caso, hemos elegido la primera de todas, Auto (UFS) BIOS y procedemos con la instalación. La instalación tardará un minuto aproximadamente, aunque dependerá del hardware que tengas, cuando finalice nos preguntará si queremos lanzar una consola para hacer configuraciones específicas, pinchamos en «No» y posteriormente nos preguntará si queremos reiniciar el sistema operativo, y aceptamos.
-Si después de reiniciar te pide que vuelvas a instalar la iso lo que hacemos es apagar la máquina y quitar la iso para que se solucione el error y volvemos a arrancar-la.
-
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121847.png)
-
-En cuanto se inicie nuevamente pfSense, podemos ver que se le ha asignado correctamente una IP a la WAN de Internet y otra a la LAN.
-
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121900.png)
-
-En el menú de administración por consola podremos realizar las siguientes acciones:
-Cerrar sesión a SSH
-Asignar interfaces físicas a la WAN o LAN, permite configurar también VLANs para la conexión a Internet e incluso de cara a la LAN.
-Configurar la dirección IP de las diferentes interfaces configuradas anteriormente
-Resetear la contraseña de administrador para entrar vía web
-Restaurar pfSense a valores de fábrica
-Reiniciar el sistema operativo
-Apagar el sistema operativo
-Hacer ping a un host
-Lanzar una consola para tareas de administración avanzadas por comandos
-Lanzar pfTop para ver todas las conexiones actuales
-Ver los logs del sistema operativo de filtrado
-Reiniciar el servidor web
-Lanzar consola con utilidades pfSense para configuraciones rápidas
-Actualizar desde consola
-Habilitar SSH en el sistema operativo
-Restaurar una configuración reciente
-Reiniciar PHP-FPM por si tenemos problemas de acceso vía web al sistema operativo.
-
-Por supuesto, debemos realizar la configuración desde cero, asignando la interfaz correspondiente a la WAN y a la LAN:
-
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121916.png)
+- **Probar la conexión:** Verificar desde el exterior si el servicio es accesible a través de la dirección IP pública de pfSense y el puerto configurado.
+  
+Crear las reglas de entrada - Puerto 80, consiste en crear una regla de entrada a traves de la interfaz de la red WAN en el firewall que permita redirigir el trafico web por el puerto 80 hacia el servidor apache que contiene la Web en la Lan
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20115239.png)
 
 En esos instantes, ya podremos acceder vía web a la configuración del pfSense, a través de https://10.20.30.1 con nombre de usuario «admin» y contraseña «pfsense».
 
@@ -495,19 +509,16 @@ Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual 
 | Description   |Mi Regla NAT - acceso SSH|
 
 ## Diagrama de Red
+Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha contruido con esta instalacion de firewall.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20122451.png)
-
-## Pasos de Instalacion
-Despues de haber seguido los pasos de instalacon con una maquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
-```
-http://IP.DE.TU.SERVER
-```
 
 
 ## Incidencias Comunes
 - Si no consigues conectarte a la interfaz grafica de PfSense asegurate de estar en la misma red y que puedes interactuar con el comando ping con la maquina server.
-- A la hora de instalar PfSense por via de VirtualBox/Maquina virtual asegurate de poner en sistema "FREEBSD 64"
+- A la hora de instalar PfSense por via de VirtualBox/Maquina virtual asegurate de poner en sistema "FREEBSD 64" ya que con otra version podrias tener mcuhas limitacions o fallos.
 - En el direccionamiento de ip cuando estas configurando la Wan puede hacerse complicado pero intenta leer todas las eplicaciones que te dice la maquina y si no conoces alguna funcion buscarla para no cometer fallos en el server.
+- Muy importante quitar el adaptardor puente en la maquina cliente, solo tiene que tener un adaptador y es el de la "RED interna"
+- Hay que instalarse el "openssh.server" en la amquijna cliente para que pueda funcionar el "SSH" correctamente. 
 
 ## Sophos
 ### ¿Que es sophos?
