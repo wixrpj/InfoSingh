@@ -356,11 +356,32 @@ El port forwarding (o reenvío de puertos) es una técnica que permite redirigir
 
 Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda acceder a él desde internet, configuras el port forwarding para que el tráfico que llega al puerto 80 (el puerto usado para HTTP) de tu router se redirija hacia la dirección IP local de tu servidor. Sin esta configuración, el router no sabría a qué dispositivo enviar el tráfico, y el servicio no sería accesible desde fuera.
 
-## Objetivos del Port Forward
-- Permitir el acceso desde el exterior (WAN) a la página web de la LAN y por SSH.
+### Objetivos del Port Forward
+El objetivo principal del port forwarding es permitir el acceso remoto a servicios alojados dentro de una red local desde cualquier ubicación externa. Esta técnica facilita la publicación de páginas web, la conexión remota por SSH para la administración de servidores y el acceso a otros servicios internos sin comprometer la seguridad general de la red.
+
+En el caso de SSH, el port forwarding se utiliza para establecer túneles seguros que permiten evadir bloqueos de puertos o restricciones de firewall. Gracias a este mecanismo, es posible garantizar la confidencialidad e integridad de los datos transmitidos, ofreciendo una solución eficiente para la administración remota y la comunicación segura entre redes diferentes.
+
 ## Pasos a seguir para el Port Forward
+
+https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20115239.png
+
+1. **Acceder a la configuración de pfSense:** Ingresar a la interfaz web de administración de pfSense a través de su dirección IP (por ejemplo, https://192.168.1.1).
+2. **Identificar la sección de Port Forwarding:** Navegar a Firewall > NAT y seleccionar la pestaña Port Forward.
+3. **Comprobar la existencia de las reglas de salida:** Asegurarse de que las reglas de salida permitan la conexión desde la red interna hacia el exterior, revisando en Firewall > Rules > LAN que existan reglas que permitan el tráfico saliente.
+4. **Crear las reglas de entrada - Puerto 80:** Ir a `Firewall > NAT > Port Forward`, hacer clic en Add y configurar la regla con los siguientes parámetros:
+   - **Interface:** WAN
+   - **Protocol:** TCP
+   - **Destination Port Range:** 80 (HTTP)
+   - **Redirect Target IP:** Dirección IP del servidor Apache en la LAN
+   - **Redirect Target Port:** 80
+   - **Description:** Permitir tráfico HTTP hacia servidor web
+5. **Guardar la configuración:** Aplicar los cambios y asegurarse de que la regla aparezca en la lista.
+6. **Crear la regla de firewall:** Automáticamente, pfSense ofrece la opción de crear la regla de firewall asociada. Asegúrate de seleccionar esta opción para permitir el tráfico entrante.
+7. **Probar la conexión:** Verificar desde el exterior si el servicio es accesible a través de la dirección IP pública de pfSense y el puerto configurado.
 - Comprobar la existencia de las reglas de salida
 - Crear las reglas de entrada - Puerto 80, consiste en crear una regla de entrada a traves de la interfaz de la red WAN en el firewall que permita redirigir el trafico web por el puerto 80 hacia el servidor apache que contiene la Web en la Lan
+
+
   ### Comprobaciones
   - Vamos al equipo cliente y en el navegador escribir la ip de WAN, que te aparece en la interfaz del servidor de pfsense.
 ## Descarga e instalacion PfSense:
@@ -468,7 +489,7 @@ Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual 
 | Description   |Mi Regla NAT - acceso SSH|
 
 ## Diagrama de Red
-Falta poner algo aqui
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20122451.png)
 
 ## Pasos de Instalacion
 Despues de haber seguido los pasos de instalacon con una maquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
@@ -502,4 +523,7 @@ http://IP.DE.TU.SERVER
 - **pfSense:** [Explicación sobre pfsense](https://www.youtube.com/watch?v=UIDzzufhNlw)
 - **pfSense:** [Explicación sobre pfsense](https://www.openitnet.com/index.php/software/inst-software-libre/pfsense1#:~:text=Las%20principales%20caracter%C3%ADsticas%20incluyen%20detecci%C3%B3n,y%20OpenVPN%2C%20filtrado%20de%20contenido)
 - **Port forward:** [Explicacion y configuracion](https://nordvpn.com/es/blog/que-es-port-forwarding/)
+- **Port forward:** [Explicacion y configuracion](https://surfshark.com/es/blog/vpn-port-forwarding)
+- **Port forward:** [Explicacion y configuracion](https://testpurposes.net/2016/02/23/ssh-port-forwarding/)
 - **Sophos:** [Páguina oficial](https://www.sophos.com/es-es)
+- 
