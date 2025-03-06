@@ -324,16 +324,16 @@ sudo systemctl reload apache2
 
 --
 ## PFSense
-### ¿Qué es pfSense?
+## ¿Qué es pfSense?
 pfSense es una distribución personalizada de FreeBSD adaptado para su uso como firewall y enrutador. Aparte es un programa de código abierto que funciona como un firewall de alto nivel, diseñado para proteger redes y dispositivos de amenazas externas. Se puede instalar en una máquina virtual, descargándolo directamente desde su página oficial, o adquirir como un dispositivo físico (appliance) que ya viene con el sistema preconfigurado y listo para usar. Su principal función es actuar como un cortafuegos, ubicándose entre internet y nuestros dispositivos para detectar y bloquear actividades sospechosas. Esto lo convierte en una herramienta esencial para mantener la seguridad, ya sea en entornos empresariales o incluso para uso personal.
 
-### ¿Por qué es necesario pfSense?
+## ¿Por qué es necesario pfSense?
 pfSense es una herramienta muy util para la seguridad y gestión de redes, especialmente en entornos donde proteger datos y optimizar el tráfico son prioritarios. Con un firewall robusto, protege contra intrusiones, malware y otras amenazas cibernéticas, además de permitir la creación de redes privadas virtuales (VPN) para conectar oficinas remotas o usuarios móviles de forma segura. También optimiza el rendimiento de la red con funciones como balanceo de carga y gestión de ancho de banda, útiles en entornos con muchos usuarios o servicios en línea. Su facilidad de uso y capacidad para simplificar la administración de redes lo convierten en una solución eficiente, aunque su interfaz grafica deja mucho que desear.
 
-### ¿En qué sistema se basa?
+## ¿En qué sistema se basa?
 pfSense se basa en el sistema operativo FreeBSD, un sistema de alto rendimiento en entornos de red. FreeBSD proporciona la base sobre la cual pfSense construye sus funciones avanzadas de firewall, enrutamiento, VPN y gestión de tráfico, lo que lo convierte en una solución confiable y eficiente para la seguridad y administración de redes.
 
-### ¿Cuáles son las principales características de pfSense?
+## ¿Cuáles son las principales características de pfSense?
 - **Firewall avanzado:** Protege la red bloqueando intrusiones, malware y otras amenazas externas.
 - **Enrutamiento:** Permite gestionar el tráfico entre diferentes redes de manera eficiente.
 - **VPN (Red Privada Virtual):** Facilita conexiones seguras para usuarios remotos o entre oficinas.
@@ -344,40 +344,46 @@ pfSense se basa en el sistema operativo FreeBSD, un sistema de alto rendimiento 
 - **Interfaz web intuitiva:** Facilita la configuración y el monitoreo sin necesidad de conocimientos técnicos avanzados.
 - **Personalización:** Admite la instalación de paquetes adicionales para añadir funcionalidades específicas.
 
-### ¿Es pfSense una opción viable para empresas y redes domésticas?
+## ¿Es pfSense una opción viable para empresas y redes domésticas?
 pfSense es una excelente opción tanto para empresas como para redes domésticas por su versatilidad y relación calidad-precio. Para las empresas, ofrece funciones avanzadas como un firewall robusto, VPN para conexiones seguras, balanceo de carga para optimizar el tráfico y gestión del ancho de banda. Además, es personalizable, permitiendo añadir funciones específicas como filtrado de contenido, lo que lo hace ideal para adaptarse a las necesidades de cada organización.
 
 En el ámbito doméstico, pfSense también es muy útil, especialmente si hay varios dispositivos conectados o quieres mejorar la seguridad de tu red. Aunque puede parecer un poco complicado al principio, su interfaz web es intuitiva y fácil de manejar una vez que te familiarizas con ella. Y al ser de código abierto, no requiere licencias costosas, lo que lo convierte en una opción accesible para usuarios particulares.
 
 En definitiva, pfSense es una solución completa que funciona bien tanto en entornos empresariales como en redes caseras, ofreciendo seguridad, rendimiento y flexibilidad sin necesidad de invertir grandes cantidades de dinero.
 
-### ¿Qué es el port forward?
+## ¿Qué es el port forward?
 El port forwarding (o reenvío de puertos) es una técnica que permite redirigir el tráfico de internet que llega a un puerto específico de un router o firewall hacia un dispositivo o servicio dentro de una red local. Esto es útil cuando necesitas que un servicio, como un servidor web, un juego en línea o una cámara IP, sea accesible desde fuera de tu red.
 
 Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda acceder a él desde internet, configuras el port forwarding para que el tráfico que llega al puerto 80 (el puerto usado para HTTP) de tu router se redirija hacia la dirección IP local de tu servidor. Sin esta configuración, el router no sabría a qué dispositivo enviar el tráfico, y el servicio no sería accesible desde fuera.
 
-### Objetivos del Port Forward
+## Objetivos del Port Forward
 El objetivo principal del port forwarding es permitir el acceso remoto a servicios alojados dentro de una red local desde cualquier ubicación externa. Esta técnica facilita la publicación de páginas web, la conexión remota por SSH para la administración de servidores y el acceso a otros servicios internos sin comprometer la seguridad general de la red.
 
 En el caso de SSH, el port forwarding se utiliza para establecer túneles seguros que permiten evadir bloqueos de puertos o restricciones de firewall. Gracias a este mecanismo, es posible garantizar la confidencialidad e integridad de los datos transmitidos, ofreciendo una solución eficiente para la administración remota y la comunicación segura entre redes diferentes.
 
 ## Pasos a seguir para el Port Forward
 
-https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20115239.png
+![]https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20115239.png
 
-1. **Acceder a la configuración de pfSense:** Ingresar a la interfaz web de administración de pfSense a través de su dirección IP (por ejemplo, https://192.168.1.1).
-2. **Identificar la sección de Port Forwarding:** Navegar a Firewall > NAT y seleccionar la pestaña Port Forward.
-3. **Comprobar la existencia de las reglas de salida:** Asegurarse de que las reglas de salida permitan la conexión desde la red interna hacia el exterior, revisando en Firewall > Rules > LAN que existan reglas que permitan el tráfico saliente.
-4. **Crear las reglas de entrada - Puerto 80:** Ir a `Firewall > NAT > Port Forward`, hacer clic en Add y configurar la regla con los siguientes parámetros:
+1. **Acceder a la configuración de pfSense:** Ingresar a la interfaz web de administración de pfSense a través de su dirección IP (en mi caso es el 10.20.30.1).
+   
+3. **Identificar la sección de Port Forwarding:** Navegar a Firewall > NAT y seleccionar la pestaña Port Forward.
+   
+5. **Comprobar la existencia de las reglas de salida:** Asegurarse de que las reglas de salida permitan la conexión desde la red interna hacia el exterior, revisando en Firewall > Rules > LAN que existan reglas que permitan el tráfico saliente.
+   
+7. **Crear las reglas de entrada - Puerto 80:** Ir a Firewall > NAT > Port Forward, hacer clic en Add y configurar la regla con los siguientes parámetros:
    - **Interface:** WAN
    - **Protocol:** TCP
    - **Destination Port Range:** 80 (HTTP)
    - **Redirect Target IP:** Dirección IP del servidor Apache en la LAN
    - **Redirect Target Port:** 80
    - **Description:** Permitir tráfico HTTP hacia servidor web
-5. **Guardar la configuración:** Aplicar los cambios y asegurarse de que la regla aparezca en la lista.
-6. **Crear la regla de firewall:** Automáticamente, pfSense ofrece la opción de crear la regla de firewall asociada. Asegúrate de seleccionar esta opción para permitir el tráfico entrante.
-7. **Probar la conexión:** Verificar desde el exterior si el servicio es accesible a través de la dirección IP pública de pfSense y el puerto configurado.
+     
+8. **Guardar la configuración:** Aplicar los cambios y asegurarse de que la regla aparezca en la lista.
+   
+10. **Crear la regla de firewall:** Automáticamente, pfSense ofrece la opción de crear la regla de firewall asociada. Asegúrate de seleccionar esta opción para permitir el tráfico entrante.
+    
+12. **Probar la conexión:** Verificar desde el exterior si el servicio es accesible a través de la dirección IP pública de pfSense y el puerto configurado.
 - Comprobar la existencia de las reglas de salida
 - Crear las reglas de entrada - Puerto 80, consiste en crear una regla de entrada a traves de la interfaz de la red WAN en el firewall que permita redirigir el trafico web por el puerto 80 hacia el servidor apache que contiene la Web en la Lan
 
