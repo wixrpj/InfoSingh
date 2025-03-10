@@ -2,13 +2,25 @@
 
 ## 📚 Índice
 - Descripción General
+- Paso a Paso: Implementación del Sistema de Streaming
+  - Infraestructura del Proyecto
+- Configuración de la VM con Docker
 - Objetivos del Proyecto
+  - Objetivos Principales
+  - Objetivos Secundarios
 - Diagrama de Red
 - Estructura del Proyecto
 - Materiales Requeridos
 - Roles del Equipo
 - Tecnologías Implementadas
 - Especificaciones del Sistema
+- Diagrama de GANT
+- Guías de uso
+  - DNS
+  - DHCP
+  - APACHE
+  - PFSENCE
+- Diagrama de Red
 - Documentación y Recursos Adicionales
 
 ## 📜 Descripción General
@@ -160,7 +172,7 @@ Maquinas Virtuales:
 |Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la página.|
 
 
-## 🧑🏽‍💻 Tegnologias Implementadas
+## 🧑🏽‍💻 Tegnologías Implementadas
 El sistema **SPT** se basa en una variedad de tecnologías modernas para garantizar un rendimiento óptimo y una gestión eficiente de incidencias. A continuación se detallan las principales tecnologías utilizadas:
 
 | Categoría        | Tecnología  | Descripción                                                                                       | Icono                                                                                   |
