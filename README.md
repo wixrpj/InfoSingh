@@ -542,5 +542,4 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - **Port forward:** [Explicacion y configuracion](https://nordvpn.com/es/blog/que-es-port-forwarding/)
 - **Port forward:** [Explicacion y configuracion](https://surfshark.com/es/blog/vpn-port-forwarding)
 - **Port forward:** [Explicacion y configuracion](https://testpurposes.net/2016/02/23/ssh-port-forwarding/)
-- **Sophos:** [Páguina oficial](https://www.sophos.com/es-es)
-- 
+- **Sophos:** [Páguina oficial](https://www.sophos.com/es-es) 
