@@ -206,8 +206,8 @@ DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está con
 Este es nuestro diagrama de Gantt, un cronograma del proyecto. En él se detallan las tareas y su duración. Cada barra horizontal representa una actividad, y su longitud indica el tiempo estimado para su ejecución. Dentro de cada rango he especificado el rango de fecha en el que se va a trabajar aproximadamente.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-02-05%20125028.png)
 
-## Guías de uso
-### DNS 
+# Guías de uso
+## DNS 
 #### ¿Qué es DNS?
 El **Sistema de Nombres de Dominio (DNS, Domain Name System)** es un sistema que traduce los nombres de dominio de Internet (como www.google.com) en direcciones IP (como 192.168.1.2). Esto permite que los usuarios accedan a sitios web y otros servicios sin necesidad de recordar direcciones IP numéricas. Además, el DNS permite mejorar la privacidad y seguridad de tu red al bloquear solicitudes de dominios maliciosos o no deseados. Pi-hole actúa como un agujero negro para anuncios y rastreadores, filtrando las solicitudes DNS antes de que lleguen a servidores externos.
 
@@ -529,6 +529,15 @@ Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual 
 Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha contruido con esta instalacion de firewall.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20122451.png)
 
+## Truenas
+#### ¿Qué es el Truenas?
+
+
+#### ¿Por qué es necesario elTruenas en este proyecto?
+
+
+### Instalacion Truenas
+
 
 ## Incidencias Comunes
 - Si no consigues conectarte a la interfaz gráfica de pfSense, asegúrate de estar en la misma red y que puedes interactuar con el comando ping con la máquina servidor.
@@ -536,6 +545,8 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - En el direccionamiento de IP cuando estás configurando la WAN puede hacerse complicado, pero intenta leer todas las explicaciones que te da la máquina y si no conoces alguna función, búscala para no cometer fallos en el servidor.
 - Muy importante: quita el adaptador puente en la máquina cliente; solo tiene que tener un adaptador y es el de la "RED interna".
 - Hay que instalar el "openssh.server" en la máquina cliente para que pueda funcionar el "SSH" correctamente.
+
+
 
 ## Sophos
 #### ¿Que es sophos?
@@ -559,4 +570,7 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - **Port forward:** [Explicacion y configuracion](https://nordvpn.com/es/blog/que-es-port-forwarding/)
 - **Port forward:** [Explicacion y configuracion](https://surfshark.com/es/blog/vpn-port-forwarding)
 - **Port forward:** [Explicacion y configuracion](https://testpurposes.net/2016/02/23/ssh-port-forwarding/)
-- **Sophos:** [Páguina oficial](https://www.sophos.com/es-es) 
+- **Sophos:** [Páguina oficial](https://www.sophos.com/es-es)
+- **Truenas:** [Explicación y configuración](https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/)
+- **Truenas:** [Información](https://www.neoteo.com/truenas-la-mejor-herramienta-para-almacenar-y-gestionar-datos-en-tu-red/)
+- **Truenas:** [Información](https://www.itelca.com.co/truenas-vs-freenas-y-por-que-deberia-actualizar/)
