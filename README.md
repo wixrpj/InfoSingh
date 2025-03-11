@@ -250,13 +250,13 @@ Las incidencias que hemos experimentado han sido mínimas y se han debido princi
 #### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026)
 ---
 ## Apache
-### ¿Qué es Apache?
+#### ¿Qué es Apache?
 Apache es un servidor web de código abierto que se usa para alojar sitios y aplicaciones en Internet. Básicamente, es el software que se encarga de recibir las peticiones de los usuarios (cuando alguien entra a un sitio web) y responder enviando la información correspondiente (como páginas HTML, imágenes o archivos). Es uno de los servidores web más utilizados en el mundo por su flexibilidad, seguridad y estabilidad.  
 
-## ¿Por qué es necesario?
+#### ¿Por qué es necesario?
 Apache es necesario en mi proyecto porque es el servidor web que se encargará de entregar el contenido multimedia, como películas y series, a los usuarios registrados. Sin un servidor como Apache, no tendría una forma eficiente de servir los archivos y páginas web que componen mi plataforma. Además, Apache es compatible con múltiples tecnologías y lenguajes, lo que me permitirá integrar funcionalidades dinámicas, como la autenticación de usuarios, la gestión de perfiles y la reproducción de contenido. Su flexibilidad y capacidad de configuración lo hacen ideal para adaptarse a las necesidades específicas de mi proyecto.
 
-## ¿Qué es UFW y por qué no lo estamos utilizando?
+### ¿Qué es UFW y por qué no lo estamos utilizando?
 UFW (Uncomplicated Firewall) es una herramienta de cortafuegos diseñada para simplificar la gestión de iptables en sistemas basados en Linux, como Ubuntu. Su objetivo es proporcionar una interfaz fácil de usar para configurar reglas de firewall y proteger el sistema controlando el tráfico de red entrante y saliente.
 
 **Razones por las que no estamos utilizando UFW por el momento:**
@@ -272,7 +272,7 @@ UFW (Uncomplicated Firewall) es una herramienta de cortafuegos diseñada para si
 Aunque por el momento no estamos utilizando UFW para dar mayor facilidad a la instalación y configuración de los servicios, planeamos implementarlo en una fase posterior del proyecto. Una vez que todos los servicios estén funcionando de manera estable, UFW se añadirá como una capa adicional de seguridad para proteger cada máquina virtual individualmente. Esto nos permitirá gestionar el tráfico de red con mayor precisión, optimizando y fortaleciendo la seguridad del sistema en su conjunto.
 
 ## Pasos de instalación
-## Paso 1: Actualizar los paquetes del sistema
+### Paso 1: Actualizar los paquetes del sistema
 Antes de instalar Apache, es recomendable actualizar el sistema:
 
 ```bash
@@ -280,7 +280,7 @@ sudo apt update
 ```
 
 ---
-## Paso 2: Instalar Apache2
+### Paso 2: Instalar Apache2
 Ejecuta el siguiente comando para instalar Apache:
 
 ```bash
@@ -288,7 +288,7 @@ sudo apt install apache2 -y
 ```
 
 ---
-## Paso 3: Verificar el estado de Apache
+### Paso 3: Verificar el estado de Apache
 Para verificar si Apache está corriendo:
 
 ```bash
@@ -296,7 +296,7 @@ sudo systemctl status apache2
 ```
 
 ---
-## Paso 4: Abrir el puerto en el firewall (opcional)
+### Paso 4: Abrir el puerto en el firewall (opcional)
 Si **UFW (Uncomplicated Firewall)** está activado, permite tráfico HTTP y HTTPS:
 
 ```bash
@@ -310,7 +310,7 @@ sudo ufw status
 ```
 
 ---
-## Paso 5: Probar Apache en el navegador
+### Paso 5: Probar Apache en el navegador
 Abre un navegador y accede a la dirección IP del servidor o al localhost:
 
 ```
@@ -335,16 +335,16 @@ sudo systemctl reload apache2
 
 ---
 ## PFSense
-## ¿Qué es pfSense?
+#### ¿Qué es pfSense?
 pfSense es una distribución personalizada de FreeBSD adaptado para su uso como firewall y enrutador. Aparte es un programa de código abierto que funciona como un firewall de alto nivel, diseñado para proteger redes y dispositivos de amenazas externas. Se puede instalar en una máquina virtual, descargándolo directamente desde su página oficial, o adquirir como un dispositivo físico (appliance) que ya viene con el sistema preconfigurado y listo para usar. Su principal función es actuar como un cortafuegos, ubicándose entre internet y nuestros dispositivos para detectar y bloquear actividades sospechosas. Esto lo convierte en una herramienta esencial para mantener la seguridad, ya sea en entornos empresariales o incluso para uso personal.
 
-## ¿Por qué es necesario pfSense?
+#### ¿Por qué es necesario pfSense?
 pfSense es una herramienta muy util para la seguridad y gestión de redes, especialmente en entornos donde proteger datos y optimizar el tráfico son prioritarios. Con un firewall robusto, protege contra intrusiones, malware y otras amenazas cibernéticas, además de permitir la creación de redes privadas virtuales (VPN) para conectar oficinas remotas o usuarios móviles de forma segura. También optimiza el rendimiento de la red con funciones como balanceo de carga y gestión de ancho de banda, útiles en entornos con muchos usuarios o servicios en línea. Su facilidad de uso y capacidad para simplificar la administración de redes lo convierten en una solución eficiente, aunque su interfaz grafica deja mucho que desear.
 
-## ¿En qué sistema se basa?
+### ¿En qué sistema se basa?
 pfSense se basa en el sistema operativo FreeBSD, un sistema de alto rendimiento en entornos de red. FreeBSD proporciona la base sobre la cual pfSense construye sus funciones avanzadas de firewall, enrutamiento, VPN y gestión de tráfico, lo que lo convierte en una solución confiable y eficiente para la seguridad y administración de redes.
 
-## ¿Cuáles son las principales características de pfSense?
+### ¿Cuáles son las principales características de pfSense?
 - **Firewall avanzado:** Protege la red bloqueando intrusiones, malware y otras amenazas externas.
 - **Enrutamiento:** Permite gestionar el tráfico entre diferentes redes de manera eficiente.
 - **VPN (Red Privada Virtual):** Facilita conexiones seguras para usuarios remotos o entre oficinas.
@@ -355,7 +355,7 @@ pfSense se basa en el sistema operativo FreeBSD, un sistema de alto rendimiento 
 - **Interfaz web intuitiva:** Facilita la configuración y el monitoreo sin necesidad de conocimientos técnicos avanzados.
 - **Personalización:** Admite la instalación de paquetes adicionales para añadir funcionalidades específicas.
 
-## ¿Es pfSense una opción viable para empresas y redes domésticas?
+### ¿Es pfSense una opción viable para empresas y redes domésticas?
 pfSense es una excelente opción tanto para empresas como para redes domésticas por su versatilidad y relación calidad-precio. Para las empresas, ofrece funciones avanzadas como un firewall robusto, VPN para conexiones seguras, balanceo de carga para optimizar el tráfico y gestión del ancho de banda. Además, es personalizable, permitiendo añadir funciones específicas como filtrado de contenido, lo que lo hace ideal para adaptarse a las necesidades de cada organización.
 
 En el ámbito doméstico, pfSense también es muy útil, especialmente si hay varios dispositivos conectados o quieres mejorar la seguridad de tu red. Aunque puede parecer un poco complicado al principio, su interfaz web es intuitiva y fácil de manejar una vez que te familiarizas con ella. Y al ser de código abierto, no requiere licencias costosas, lo que lo convierte en una opción accesible para usuarios particulares.
@@ -435,8 +435,8 @@ Despues de haber seguido los pasos de instalacon con una maquina cliente accedem
 ```
 http://IP.DE.TU.SERVER (10.20.30.1)
 ```
-
-## ¿Qué es el port forward?
+## Port forward
+#### ¿Qué es el port forward?
 El port forwarding (o reenvío de puertos) es una técnica que permite redirigir el tráfico de internet que llega a un puerto específico de un router o firewall hacia un dispositivo o servicio dentro de una red local. Esto es útil cuando necesitas que un servicio, como un servidor web, un juego en línea o una cámara IP, sea accesible desde fuera de tu red.
 
 Por ejemplo, si tienes un servidor web en tu casa y quieres que alguien pueda acceder a él desde internet, configuras el port forwarding para que el tráfico que llega al puerto 80 (el puerto usado para HTTP) de tu router se redirija hacia la dirección IP local de tu servidor. Sin esta configuración, el router no sabría a qué dispositivo enviar el tráfico, y el servicio no sería accesible desde fuera.
@@ -446,7 +446,7 @@ El objetivo principal del port forwarding es permitir el acceso remoto a servici
 
 En el caso de SSH, el port forwarding se utiliza para establecer túneles seguros que permiten evadir bloqueos de puertos o restricciones de firewall. Gracias a este mecanismo, es posible garantizar la confidencialidad e integridad de los datos transmitidos, ofreciendo una solución eficiente para la administración remota y la comunicación segura entre redes diferentes.
 
-## Pasos a seguir para el Port Forward
+### Pasos a seguir para el Port Forward
 
 - **Acceder a la configuración de pfSense:** Ingresar a la interfaz web de administración de pfSense a través de su dirección IP (en mi caso es el 10.20.30.1).
    
@@ -473,6 +473,8 @@ Crear las reglas de entrada - Puerto 80, consiste en crear una regla de entrada 
 
 En esos instantes, ya podremos acceder vía web a la configuración del pfSense, a través de https://10.20.30.1 con nombre de usuario «admin» y contraseña «pfsense».
 
+---
+
 ### Reglas Wan recomendables
 | Opcion        | Descripcion         |
 |---------------|---------------------|
@@ -498,6 +500,7 @@ En esos instantes, ya podremos acceder vía web a la configuración del pfSense,
 
 ### Reglas Adicionales PfSense
 En este apartado voy a ofreceros 2 reglas adcionales para que podais mejorar vuestro server PfSense
+
 #### Puerto HTTP
 | Opcion        | Descripcion         |
 |---------------|---------------------|
@@ -508,6 +511,8 @@ En este apartado voy a ofreceros 2 reglas adcionales para que podais mejorar vue
 | Destination port|HTTP (puerto 80 por defecto) |
 | Redirect target ip|Address or Alias (Ip de la maquina que quieras añadir esta opcion)|
 | Description   |Mi Regla NAT - acceso HTTP|
+
+
 #### Puerto SSH
 Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual para que te sea mas accesible la transmision de textos y las configuraciones.
 | Opcion        | Descripcion         |
@@ -533,13 +538,13 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - Hay que instalar el "openssh.server" en la máquina cliente para que pueda funcionar el "SSH" correctamente.
 
 ## Sophos
-### ¿Que es sophos?
+#### ¿Que es sophos?
 
-### ¿Por qué es necesario pfSense?
+#### ¿Por qué es necesario pfSense?
 
-### ¿En qué sistema se basa?
+#### ¿En qué sistema se basa?
 
-### ¿Cuáles son las principales características?
+#### ¿Cuáles son las principales características?
 
 ## 💼 Documentación y Recursos Adicionales
 
