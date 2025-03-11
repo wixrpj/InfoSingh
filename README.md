@@ -164,7 +164,7 @@ Maquinas Virtuales:
 - **Plex Media Server:** Herramienta principal de transmisión de contenido.
 - **TrueNAS:** Sistema operativo para gestionar los backups en la Máquina Virtual 2.
 - **HTML, CSS, JavaScript:** Para desarrollar la página web promocional.
-- **Apache:** Para hostear la pagina web del proyecto, con dominio personalizado.
+- **Apache:** Para hostear la página web del proyecto, con dominio personalizado.
 ## 🪪 Roles del equipo
 | Nombre del miembro |       Roles de equipo       |     Trabajo de cada miembro   |
 |:-------------------|:----------------------------|:------------------------------|
@@ -172,7 +172,7 @@ Maquinas Virtuales:
 |Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la página.|
 
 
-## 🧑🏽‍💻 Tegnologías Implementadas
+## 🧑🏽‍💻 Tecnologías Implementadas
 El sistema **SPT** se basa en una variedad de tecnologías modernas para garantizar un rendimiento óptimo y una gestión eficiente de incidencias. A continuación se detallan las principales tecnologías utilizadas:
 
 | Categoría        | Tecnología  | Descripción                                                                                       | Icono                                                                                   |
@@ -193,7 +193,7 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 ## 👨🏽‍💻 Especificaciones del Sistema
 A continuación, se detallan las especificaciones de los componentes del sistema:
 Máquina Host: Es el equipo principal que tiene un Sistema Operativo Windows 11 y tiene una configuración de red DHCP con la IP 100.77.20.65.
-DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está configurado con la IP 10.1.2.10 y un gateway 10.1.2.1. Hemos elegido porque Pi-Hole es comúnmente utilizado para bloquear anuncios y rastreos a nivel de red.
+DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está configurado con la IP 10.1.2.10 y un gateway 10.1.2.1. Lo hemos elegido porque Pi-Hole es comúnmente utilizado para bloquear anuncios y rastreos a nivel de red.
 | COMPONENTE    | SO                  | ALMACENAMIENTO | CPU          | RAM  | IP                | GATEWAY      |
 |---------------|---------------------|----------------|--------------|------|-------------------|--------------|
 | MAQUINA HOST  | Windows 11          | 465 GB         | 4            | 8 GB | 100.77.20.65      | 100.77.20.1  |
@@ -526,11 +526,11 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 
 
 ## Incidencias Comunes
-- Si no consigues conectarte a la interfaz grafica de PfSense asegurate de estar en la misma red y que puedes interactuar con el comando ping con la maquina server.
-- A la hora de instalar PfSense por via de VirtualBox/Maquina virtual asegurate de poner en sistema "FREEBSD 64" ya que con otra version podrias tener mcuhas limitacions o fallos.
-- En el direccionamiento de ip cuando estas configurando la Wan puede hacerse complicado pero intenta leer todas las eplicaciones que te dice la maquina y si no conoces alguna funcion buscarla para no cometer fallos en el server.
-- Muy importante quitar el adaptardor puente en la maquina cliente, solo tiene que tener un adaptador y es el de la "RED interna"
-- Hay que instalarse el "openssh.server" en la amquijna cliente para que pueda funcionar el "SSH" correctamente. 
+- Si no consigues conectarte a la interfaz gráfica de pfSense, asegúrate de estar en la misma red y que puedes interactuar con el comando ping con la máquina servidor.
+- A la hora de instalar pfSense vía VirtualBox/Máquina virtual, asegúrate de poner en el sistema "FREEBSD 64", ya que con otra versión podrías tener muchas limitaciones o fallos.
+- En el direccionamiento de IP cuando estás configurando la WAN puede hacerse complicado, pero intenta leer todas las explicaciones que te da la máquina y si no conoces alguna función, búscala para no cometer fallos en el servidor.
+- Muy importante: quita el adaptador puente en la máquina cliente; solo tiene que tener un adaptador y es el de la "RED interna".
+- Hay que instalar el "openssh.server" en la máquina cliente para que pueda funcionar el "SSH" correctamente.
 
 ## Sophos
 ### ¿Que es sophos?
