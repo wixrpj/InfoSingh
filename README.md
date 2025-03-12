@@ -547,15 +547,42 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - Hay que instalar el "openssh.server" en la máquina cliente para que pueda funcionar el "SSH" correctamente.
 
 
+TrueNAS es un sistema operativo especializado en proporcionar servicios de almacenamiento en red (NAS) de manera segura y escalable. Originalmente conocido como FreeNAS, está diseñado para convertir hardware estándar en servidores de almacenamiento profesionales con funciones avanzadas. A continuación, se detallan sus aspectos clave:
+## TrueNAS
+### ¿Qué es TrueNAS?
+Es una plataforma de código abierto basada en FreeBSD que permite crear servidores NAS para almacenamiento masivo, backups automatizados y acceso remoto a archivos. Su versión gratuita (TrueNAS CORE) ofrece herramientas empresariales como cifrado nativo, replicación de datos y soporte para protocolos múltiples.
 
-## Sophos
-#### ¿Que es sophos?
+### ¿Por qué es necesario?
+- **Centralización de datos**: Permite almacenar y acceder a información desde cualquier dispositivo conectado a la red (PCs, móviles, tablets).
+- **Seguridad reforzada**: Usa el sistema de archivos ZFS con protección contra corrupción de datos y opciones de cifrado AES-XTS.
+- **Reducción de costos**: Elimina la necesidad de software pago para gestión NAS y aprovecha hardware existente.
+- **Escalabilidad**: Admite desde configuraciones domésticas hasta empresariales con RAID-Z (hasta triple paridad) y expansión mediante discos adicionales.
 
-#### ¿Por qué es necesario pfSense?
+### Base del sistema
+TrueNAS CORE se fundamenta en:
+- **FreeBSD**: Sistema operativo base que garantiza estabilidad y compatibilidad con hardware x64.
+- **OpenZFS**: Sistema de archivos que ofrece integridad de datos mediante checksums, snapshots y reparación automática de errores.
 
-#### ¿En qué sistema se basa?
+### Principales características
+**Almacenamiento y seguridad:**
+- Configuración de pools híbridos (HDD + SSD) para optimizar velocidad y costo.
+- Cifrado nativo a nivel de dataset con contraseñas o claves.
+- RAID-X  con tolerancia a fallos de hasta 3 discos.
 
-#### ¿Cuáles son las principales características?
+**Conectividad y servicios:**
+- Protocolos multi-plataforma: SMB (Windows), AFP (macOS), NFS (Unix), FTP, Rsync.
+- Servicios integrados: OpenVPN (cliente/servidor), DNS dinámico, LDAP, Active Directory.
+- Soporte para máquinas virtuales y contenedores via bhyve.
+
+**Automatización y gestión:**
+- Copias de seguridad programables con replicación local/remota.
+- Monitoreo SMART de discos y alertas por email.
+- Interfaz web con actualizaciones en un clic y plugins preconfigurados (Ej: Transmission para Torrents).
+
+**Adaptabilidad empresarial:**
+- Claves API para integración con herramientas de monitorización como TrueCommand.
+- Compatibilidad con estándares empresariales: Kerberos, SNMP, iSCSI.
+
 
 ## 💼 Documentación y Recursos Adicionales
 
@@ -574,3 +601,4 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - **Truenas:** [Explicación y configuración](https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/)
 - **Truenas:** [Información](https://www.neoteo.com/truenas-la-mejor-herramienta-para-almacenar-y-gestionar-datos-en-tu-red/)
 - **Truenas:** [Información](https://www.itelca.com.co/truenas-vs-freenas-y-por-que-deberia-actualizar/)
+- **Truenas:** [Configuración completa](https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/)
