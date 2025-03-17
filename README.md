@@ -583,6 +583,11 @@ TrueNAS CORE se fundamenta en:
 - Claves API para integración con herramientas de monitorización como TrueCommand.
 - Compatibilidad con estándares empresariales: Kerberos, SNMP, iSCSI.
 
+## PHP Y MYSQL
+
+### ¿Qué és?
+
+### ¿Por qué es necesario?
 
 ## 💼 Documentación y Recursos Adicionales
 
@@ -602,3 +607,6 @@ TrueNAS CORE se fundamenta en:
 - **Truenas:** [Información](https://www.neoteo.com/truenas-la-mejor-herramienta-para-almacenar-y-gestionar-datos-en-tu-red/)
 - **Truenas:** [Información](https://www.itelca.com.co/truenas-vs-freenas-y-por-que-deberia-actualizar/)
 - **Truenas:** [Configuración completa](https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/)
+- **LAMP:** [Configuración completa](https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu#step-6-%E2%80%94-testing-database-connection-from-php-(optional))
+- **LAMP:** [Configuración completa](https://www.hostinger.com/es/tutoriales/como-instalar-lamp-en-ubuntu)
+- **:** []()
