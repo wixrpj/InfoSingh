@@ -587,7 +587,37 @@ TrueNAS CORE se fundamenta en:
 
 ### ¿Qué és?
 
+**PHP**
+PHP (Hypertext Preprocessor) es un lenguaje de programación del lado del servidor ampliamente utilizado en el desarrollo web. Se ejecuta en el servidor y genera HTML dinámico que se envía al navegador del usuario. Es ideal para crear aplicaciones web interactivas, manejar formularios, gestionar sesiones y conectarse a bases de datos.
+
+**MySQL**
+MySQL es un sistema de gestión de bases de datos relacionales (RDBMS) de código abierto. Utiliza el lenguaje SQL (Structured Query Language) para almacenar, organizar y recuperar datos de manera eficiente. Es una de las bases de datos más populares en aplicaciones web.
+
+**PHP y MySQL juntos**
+La combinación de PHP y MySQL es una de las más comunes en el desarrollo web. PHP se encarga de la lógica del servidor y la interacción con el usuario, mientras que MySQL gestiona el almacenamiento y la recuperación de datos. Juntos, permiten crear aplicaciones web dinámicas y escalables, como sistemas de gestión de contenido (CMS), tiendas en línea, y plataformas de autenticación.
+
 ### ¿Por qué es necesario?
+
+### Características
+Características principales de PHP:
+
+- Fácil de aprender y usar, especialmente para principiantes.
+- Compatible con la mayoría de servidores web (Apache, Nginx, etc.).
+- Soporte para una amplia variedad de bases de datos, incluyendo MySQL, PostgreSQL, SQLite, y más.
+- Gran cantidad de frameworks y librerías disponibles (Laravel, Symfony, CodeIgniter, etc.).
+-Comunidad activa y extensa documentación.
+
+
+Características principales de MySQL:
+
+- Alto rendimiento y escalabilidad.
+- Soporte para transacciones ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad).
+- Fácil integración con lenguajes de programación como PHP, Python, Java, y más.
+- Herramientas de administración gráfica como phpMyAdmin y MySQL Workbench.
+- Comunidad activa y amplia documentación.
+
+### Instalación
+
 
 ## 💼 Documentación y Recursos Adicionales
 
