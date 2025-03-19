@@ -529,16 +529,6 @@ Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual 
 Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha contruido con esta instalacion de firewall.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20122451.png)
 
-## Truenas
-#### ¿Qué es el Truenas?
-
-
-#### ¿Por qué es necesario elTruenas en este proyecto?
-
-
-### Instalacion Truenas
-
-
 ## Incidencias Comunes
 - Si no consigues conectarte a la interfaz gráfica de pfSense, asegúrate de estar en la misma red y que puedes interactuar con el comando ping con la máquina servidor.
 - A la hora de instalar pfSense vía VirtualBox/Máquina virtual, asegúrate de poner en el sistema "FREEBSD 64", ya que con otra versión podrías tener muchas limitaciones o fallos.
@@ -546,10 +536,12 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - Muy importante: quita el adaptador puente en la máquina cliente; solo tiene que tener un adaptador y es el de la "RED interna".
 - Hay que instalar el "openssh.server" en la máquina cliente para que pueda funcionar el "SSH" correctamente.
 
+---
 
-TrueNAS es un sistema operativo especializado en proporcionar servicios de almacenamiento en red (NAS) de manera segura y escalable. Originalmente conocido como FreeNAS, está diseñado para convertir hardware estándar en servidores de almacenamiento profesionales con funciones avanzadas. A continuación, se detallan sus aspectos clave:
 ## TrueNAS
 ### ¿Qué es TrueNAS?
+TrueNAS es un sistema operativo especializado en proporcionar servicios de almacenamiento en red (NAS) de manera segura y escalable. Originalmente conocido como FreeNAS, está diseñado para convertir hardware estándar en servidores de almacenamiento profesionales con funciones avanzadas.
+
 Es una plataforma de código abierto basada en FreeBSD que permite crear servidores NAS para almacenamiento masivo, backups automatizados y acceso remoto a archivos. Su versión gratuita (TrueNAS CORE) ofrece herramientas empresariales como cifrado nativo, replicación de datos y soporte para protocolos múltiples.
 
 ### ¿Por qué es necesario?
@@ -582,6 +574,11 @@ TrueNAS CORE se fundamenta en:
 **Adaptabilidad empresarial:**
 - Claves API para integración con herramientas de monitorización como TrueCommand.
 - Compatibilidad con estándares empresariales: Kerberos, SNMP, iSCSI.
+  
+### Instalacion Truenas
+
+
+---
 
 ## PHP Y MYSQL
 
