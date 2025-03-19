@@ -698,10 +698,6 @@ sudo apt install mysql-workbench -y
 
 ## Instalación de PHP
 
-En este apartado documentaré los pasos para instalar PHP en Ubuntu 22.04.
-
-### Instalación de PHP
-
 Para mostrar contenido web dinámico, instalé **Apache** para servir las páginas y **MySQL** para gestionar los datos. Ahora, necesito instalar **PHP**, que será el encargado de procesar el código para generar contenido interactivo.
 
 Además del paquete `php`, también es necesario instalar `php-mysql`, un módulo que permite a PHP comunicarse con bases de datos MySQL. También es recomendable instalar `libapache2-mod-php`, que permite a Apache interpretar archivos PHP. Los paquetes básicos de PHP se instalarán automáticamente como dependencias.
@@ -739,6 +735,92 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 ```
 
 En este punto, la pila LAMP está plenamente operativa. Sin embargo, para probar la configuración con un script PHP, voy a configurar un host virtual de Apache para alojar los archivos del sitio web.
+
+---
+
+## Crear un host virtual para el sitio web
+
+Al utilizar el servidor web **Apache**, se pueden crear **hosts virtuales** (similares a los bloques de servidor en Nginx) para encapsular configuraciones y alojar varios dominios en un solo servidor. En este caso, configuraré un dominio llamado `tu_dominio`, pero es necesario reemplazarlo con el dominio real.
+
+Ubuntu tiene un **bloque de servidor predeterminado** en `/var/www/html`. Si bien funciona bien para un solo sitio, puede ser complicado manejar múltiples sitios en el mismo servidor. Para solucionar esto, en lugar de modificar `/var/www/html`, crearé un **directorio dedicado dentro de `/var/www`** para el nuevo sitio.
+
+### **1. Crear el directorio del sitio web**
+Ejecuta el siguiente comando para crear el directorio del dominio:
+```bash
+sudo mkdir /var/www/your_domain
+```
+
+Luego, asigna la propiedad del directorio a tu usuario actual:
+```bash
+sudo chown -R $USER:$USER /var/www/your_domain
+```
+
+### **2. Crear un archivo de configuración en Apache**
+Abre un nuevo archivo de configuración en el directorio `sites-available` de Apache:
+```bash
+sudo nano /etc/apache2/sites-available/your_domain.conf
+```
+
+Dentro del archivo, pega la siguiente configuración básica:
+```apache
+<VirtualHost *:80>
+    ServerName your_domain
+    ServerAlias www.your_domain
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/your_domain
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+Este bloque de configuración le indica a Apache que sirva `your_domain` desde el directorio `/var/www/your_domain`.  
+Si solo deseas probar Apache sin un dominio personalizado, puedes comentar (`#`) las líneas `ServerName` y `ServerAlias`.
+
+### **3. Habilitar el nuevo host virtual**
+Para activar la nueva configuración, usa el comando:
+```bash
+sudo a2ensite your_domain
+```
+
+Opcionalmente, deshabilita el sitio predeterminado de Apache:
+```bash
+sudo a2dissite 000-default
+```
+
+### **4. Verificar la configuración de Apache**
+Antes de aplicar los cambios, asegúrate de que la configuración es correcta:
+```bash
+sudo apache2ctl configtest
+```
+Si todo está bien, deberías ver un mensaje similar a:
+```
+Syntax OK
+```
+
+### **5. Reiniciar Apache para aplicar cambios**
+Recarga Apache con el siguiente comando:
+```bash
+sudo systemctl reload apache2
+```
+
+### **6. Crear una página de prueba**
+El directorio `/var/www/your_domain` aún está vacío. Para verificar que el **host virtual** funciona correctamente, crea un archivo `index.html` de prueba:
+```bash
+nano /var/www/your_domain/index.html
+```
+Añadí el siguiente contenido:
+FOTO
+
+### **7. Probar el sitio en el navegador**
+En la máquina clinete habres el navegador y accedes a la **IP del servidor**:
+```
+http://10.20.30.106
+```
+Si todo está configurado correctamente, deberías ver la página de prueba con el mensaje:
+
+FOTO
+
+Puedes mantener este archivo como una página de prueba temporal hasta que subas el contenido real del sitio.  
+Si luego agregas un `index.php`, recuerda **eliminar o renombrar `index.html`**, ya que Apache le da prioridad al archivo HTML sobre PHP por defecto.
 
 ---
 
