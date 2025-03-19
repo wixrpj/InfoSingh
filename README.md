@@ -772,6 +772,8 @@ Dentro del archivo, pega la siguiente configuración básica:
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-19%20123137.png)
+
 Este bloque de configuración le indica a Apache que sirva `your_domain` desde el directorio `/var/www/your_domain`.  
 Si solo deseas probar Apache sin un dominio personalizado, puedes comentar (`#`) las líneas `ServerName` y `ServerAlias`.
 
@@ -808,7 +810,7 @@ El directorio `/var/www/your_domain` aún está vacío. Para verificar que el **
 nano /var/www/your_domain/index.html
 ```
 Añadí el siguiente contenido:
-FOTO
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-19%20123855.png)
 
 ### **7. Probar el sitio en el navegador**
 En la máquina clinete habres el navegador y accedes a la **IP del servidor**:
@@ -817,7 +819,7 @@ http://10.20.30.106
 ```
 Si todo está configurado correctamente, deberías ver la página de prueba con el mensaje:
 
-FOTO
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-19%20124040.png)
 
 Puedes mantener este archivo como una página de prueba temporal hasta que subas el contenido real del sitio.  
 Si luego agregas un `index.php`, recuerda **eliminar o renombrar `index.html`**, ya que Apache le da prioridad al archivo HTML sobre PHP por defecto.
