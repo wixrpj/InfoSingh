@@ -618,9 +618,127 @@ Además, PHP y MySQL son ideales para mi proyecto debido a su facilidad de uso y
 - Herramientas de administración gráfica como phpMyAdmin y MySQL Workbench.
 - Comunidad activa y amplia documentación.
 
-### Instalación
+## Instalación
 
+### Instalación de MySQL
 
+En este apartado documentaré los pasos para instalar MySQL.
+
+#### 1. Actualizar el sistema
+Antes de instalar MySQL, es recomendable actualizar los paquetes del sistema:
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+#### 2. Instalar el servidor MySQL
+Para instalar MySQL en Ubuntu, simplemente ejecuto:
+
+```bash
+sudo apt install mysql-server -y
+```
+
+#### 3. Verificar el estado del servicio
+Una vez instalado, verifico si el servicio de MySQL está en ejecución:
+
+```bash
+sudo systemctl status mysql
+```
+
+Si el servicio no está activo, lo inicio con:
+
+```bash
+sudo systemctl start mysql
+```
+
+#### 4. Configurar la seguridad de MySQL
+MySQL proporciona un script de seguridad que ayuda a reforzar la configuración predeterminada:
+
+```bash
+sudo mysql_secure_installation
+```
+
+Durante la ejecución, respondo a las siguientes preguntas:
+- **Configurar la contraseña de root**: En Ubuntu, MySQL usa autenticación Unix por defecto.
+- **Eliminar usuarios anónimos**: Recomiendo elegir "Sí" (`Y`).
+- **Deshabilitar acceso remoto del usuario root**: Es más seguro elegir "Sí" (`Y`).
+- **Eliminar la base de datos de prueba**: También es recomendable elegir "Sí" (`Y`).
+- **Recargar privilegios**: Elegir "Sí" (`Y`).
+
+#### 5. Acceder a MySQL
+Para conectarme a MySQL, utilizo:
+
+```bash
+sudo mysql
+```
+
+Si prefiero usar una contraseña en lugar de la autenticación Unix, cambio el método de autenticación:
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mi_contraseña_segura';
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+Luego, ingreso con:
+
+```bash
+mysql -u root -p
+```
+
+ingresando la contraseña cuando se me solicite.
+
+#### 6. (Opcional) Instalar MySQL Workbench
+Si quiero una interfaz gráfica para gestionar MySQL, instalo **MySQL Workbench**:
+
+```bash
+sudo apt install mysql-workbench -y
+```
+---
+
+## Instalación de PHP
+
+En este apartado documentaré los pasos para instalar PHP en Ubuntu 22.04.
+
+### Instalación de PHP
+
+Para mostrar contenido web dinámico, instalé **Apache** para servir las páginas y **MySQL** para gestionar los datos. Ahora, necesito instalar **PHP**, que será el encargado de procesar el código para generar contenido interactivo.
+
+Además del paquete `php`, también es necesario instalar `php-mysql`, un módulo que permite a PHP comunicarse con bases de datos MySQL. También es recomendable instalar `libapache2-mod-php`, que permite a Apache interpretar archivos PHP. Los paquetes básicos de PHP se instalarán automáticamente como dependencias.
+
+Para instalar estos paquetes, ejecuté el siguiente comando:
+
+```bash
+sudo apt install php libapache2-mod-php php-mysql
+```
+
+PHP es el componente que procesará el código y generará contenido dinámico para los usuarios. Además del paquete principal de PHP, se requiere instalar:
+- `php-mysql`: Permite la comunicación entre PHP y MySQL.
+- `libapache2-mod-php`: Habilita Apache para gestionar archivos PHP.
+
+Para instalar estos paquetes, ejecuto:
+
+```bash
+sudo apt install php libapache2-mod-php php-mysql -y
+```
+
+#### 2. Verificar la instalación de PHP
+Para confirmar que PHP se instaló correctamente, ejecuto:
+
+```bash
+php -v
+```
+
+Ejemplo de salida esperada:
+
+```
+PHP 7.4.3 (cli) (built: Mar 26 2020 20:24:23) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
+```
+
+En este punto, la pila LAMP está plenamente operativa. Sin embargo, para probar la configuración con un script PHP, voy a configurar un host virtual de Apache para alojar los archivos del sitio web.
 
 ---
 
