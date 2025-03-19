@@ -539,23 +539,23 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 ---
 
 ## TrueNAS
-### ¿Qué es TrueNAS?
+#### ¿Qué es TrueNAS?
 TrueNAS es un sistema operativo especializado en proporcionar servicios de almacenamiento en red (NAS) de manera segura y escalable. Originalmente conocido como FreeNAS, está diseñado para convertir hardware estándar en servidores de almacenamiento profesionales con funciones avanzadas.
 
 Es una plataforma de código abierto basada en FreeBSD que permite crear servidores NAS para almacenamiento masivo, backups automatizados y acceso remoto a archivos. Su versión gratuita (TrueNAS CORE) ofrece herramientas empresariales como cifrado nativo, replicación de datos y soporte para protocolos múltiples.
 
-### ¿Por qué es necesario?
+#### ¿Por qué es necesario?
 - **Centralización de datos**: Permite almacenar y acceder a información desde cualquier dispositivo conectado a la red (PCs, móviles, tablets).
 - **Seguridad reforzada**: Usa el sistema de archivos ZFS con protección contra corrupción de datos y opciones de cifrado AES-XTS.
 - **Reducción de costos**: Elimina la necesidad de software pago para gestión NAS y aprovecha hardware existente.
 - **Escalabilidad**: Admite desde configuraciones domésticas hasta empresariales con RAID-Z (hasta triple paridad) y expansión mediante discos adicionales.
 
-### Base del sistema
+#### Base del sistema
 TrueNAS CORE se fundamenta en:
 - **FreeBSD**: Sistema operativo base que garantiza estabilidad y compatibilidad con hardware x64.
 - **OpenZFS**: Sistema de archivos que ofrece integridad de datos mediante checksums, snapshots y reparación automática de errores.
 
-### Principales características
+#### Principales características
 **Almacenamiento y seguridad:**
 - Configuración de pools híbridos (HDD + SSD) para optimizar velocidad y costo.
 - Cifrado nativo a nivel de dataset con contraseñas o claves.
@@ -582,7 +582,7 @@ TrueNAS CORE se fundamenta en:
 
 ## PHP Y MYSQL
 
-### ¿Qué és?
+#### ¿Qué és?
 
 **PHP**
 PHP (Hypertext Preprocessor) es un lenguaje de programación del lado del servidor ampliamente utilizado en el desarrollo web. Se ejecuta en el servidor y genera HTML dinámico que se envía al navegador del usuario. Es ideal para crear aplicaciones web interactivas, manejar formularios, gestionar sesiones y conectarse a bases de datos.
@@ -593,14 +593,14 @@ MySQL es un sistema de gestión de bases de datos relacionales (RDBMS) de códig
 **PHP y MySQL juntos**
 La combinación de PHP y MySQL es una de las más comunes en el desarrollo web. PHP se encarga de la lógica del servidor y la interacción con el usuario, mientras que MySQL gestiona el almacenamiento y la recuperación de datos. Juntos, permiten crear aplicaciones web dinámicas y escalables, como sistemas de gestión de contenido (CMS), tiendas en línea, y plataformas de autenticación.
 
----
-### ¿Por qué es necesario?
+
+#### ¿Por qué es necesario?
 En mi proyecto de creación de una página web, PHP y MySQL son esenciales porque me permiten construir una plataforma dinámica y funcional. PHP, como lenguaje del lado del servidor, me ayuda a generar contenido que se adapta a las interacciones del usuario, como mostrar información personalizada o procesar datos de formularios. MySQL, por su parte, me permite almacenar y gestionar datos de manera organizada, como los registros de usuarios, productos o cualquier otro contenido relevante. Juntos, estas tecnologías me ofrecen las herramientas necesarias para crear una página web interactiva y escalable.
 
 Además, PHP y MySQL son ideales para mi proyecto debido a su facilidad de uso y flexibilidad. PHP es un lenguaje accesible, perfecto para alguien como yo que está aprendiendo y desarrollando habilidades en el desarrollo web. MySQL, al ser una base de datos confiable y eficiente, me asegura que la información de mi página esté bien estructurada y sea fácil de recuperar. Su combinación no solo reduce costos, al ser tecnologías de código abierto, sino que también me permite enfocarme en crear una experiencia de usuario atractiva y funcional para mi página web.
 
----
-### Características
+
+#### Características
 **Características principales de PHP:**
 
 - Fácil de aprender y usar, especialmente para principiantes.
@@ -618,9 +618,11 @@ Además, PHP y MySQL son ideales para mi proyecto debido a su facilidad de uso y
 - Herramientas de administración gráfica como phpMyAdmin y MySQL Workbench.
 - Comunidad activa y amplia documentación.
 
----
 ### Instalación
 
+
+
+---
 
 ## 💼 Documentación y Recursos Adicionales
 
