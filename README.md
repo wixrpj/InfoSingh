@@ -577,7 +577,6 @@ TrueNAS CORE se fundamenta en:
   
 ### Instalacion Truenas
 
-
 ---
 
 ## PHP Y MYSQL
