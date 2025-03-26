@@ -862,7 +862,9 @@ phpinfo();
 ```
 
 Cuando termine, guarde y cierre el archivo.
-Para probar esta secuencia de comandos, diríjase a su navegador web y y escriba la dirección IP de su servidor, seguido del nombre de la secuencia de comandos, que en este caso es info.php:
+Para probar esta secuencia de comandos, diríjase a su navegador web y y escriba la dirección IP de su servidor, seguido del nombre de la secuencia de comandos, que en este caso es info.php
+
+#### 3.Buscar en el navegador web
 ```bash
 http://server_domain_or_IP/info.php
 ```
@@ -870,6 +872,62 @@ http://server_domain_or_IP/info.php
 En esta página, se proporciona información básica sobre su servidor desde la perspectiva de PHP. Es útil para la depuración y para asegurarse de que sus ajustes se apliquen correctamente.
 
 ## Probar la conexión con la base de datos desde PHP
+Si quiere comprobar que PHP puede conectarse a MySQL y ejecutar consultas correctamente, puede hacerlo creando una tabla de prueba con datos ficticios y utilizando un script PHP para interactuar con ella. Para lograrlo, primero debemos configurar una base de datos de prueba y un usuario de MySQL con los permisos adecuados.
+
+Actualmente, la biblioteca nativa de PHP para MySQL, mysqlnd, no es compatible con caching_sha2_authentication, que es el método de autenticación predeterminado en MySQL 8. Por esta razón, debemos crear un nuevo usuario con mysql_native_password para que PHP pueda conectarse correctamente a la base de datos.
+
+En este ejemplo, utilizaremos una base de datos llamada example_database y un usuario example_user, aunque puede personalizar estos nombres según sus necesidades.
+
+#### 1. Establezer conexión con la consola de MySQL
+```bash
+sudo mysql
+```
+#### 2. Crear una base de datos nueva
+```bash
+CREATE DATABASE example_database;
+```
+Ahora puede crear un nuevo usuario y concederle privilegios completos sobre la base de datos personalizada que acaba de crear.
+
+#### 3. Usuario nuevo
+El siguiente comando crea un usuario nuevo llamado example_user, que utiliza mysql_native_password como método de autenticación predeterminado. Definimos la contraseña de este usuario como password, pero debe sustituir este valor por una contraseña segura de su elección.
+
+```bash
+CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
+#### 4. Darle permiso a este usuario a la base de datos
+```bash
+GRANT ALL ON example_database.* TO 'example_user'@'%';
+```
+Esto proporcionará al usuario example_user privilegios completos sobre la base de datos example_database y, al mismo tiempo, evitará que este usuario cree o modifique otras bases de datos en su servidor.
+
+#### 5. Cierre el shell de MySQL
+```bash
+exit
+```
+
+#### 6. Verificar si el usuario nuevo tiene permisos
+Puede verificar si el usuario nuevo tiene los permisos adecuados al volver a iniciar sesión en la consola de MySQL, esta vez, con las credenciales de usuario personalizadas:
+```bash
+mysql -u example_user -p
+```
+Observe el indicador -p en este comando, que le solicitará la contraseña que utilizó cuando creó el usuario example_user. Después de iniciar sesión en la consola de MySQL
+
+#### 7. Confirme que tenga acceso a la base de datos example_database
+```bash
+SHOW DATABASES;
+```
+![](https://github.com/wixrpj/InfoSingh/blob/main/example_database.png)
+
+#### 8. Cree una tabla de prueba denominada todo_list
+
+![](https://github.com/wixrpj/InfoSingh/blob/main/todo_list.png)
+
+
+
+
+
+
 
 
 
