@@ -923,6 +923,8 @@ SHOW DATABASES;
 
 ![](https://github.com/wixrpj/InfoSingh/blob/main/todo_list.png)
 
+#### 9. Inserte algunas filas de contenido en la tabla de prueba. (Es posible que quiera repetir el siguiente comando algunas veces, usando valores diferentes)
+
 
 
 
