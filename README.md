@@ -846,6 +846,34 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 ```bash
 sudo systemctl reload apache2
 ```
+## Paso 4: Probar el procesamiento de PHP en su servidor web
+Ahora que dispone de una ubicación personalizada para alojar los archivos y las carpetas de su sitio web, crearemos una secuencia de comandos PHP de prueba para verificar que Apache pueda gestionar solicitudes y procesar solicitudes de archivos PHP.
+
+#### 1.Crear un archivo nuevo llamado info.php dentro de la carpeta web personalizada:
+```bash
+nano /var/www/your_domain/info.php
+```
+Con esto se abrirá un archivo vacío
+
+#### 2.Añada el siguiente texto, que es el código PHP válido, dentro del archivo:
+```bash
+<?php
+phpinfo();
+```
+
+Cuando termine, guarde y cierre el archivo.
+Para probar esta secuencia de comandos, diríjase a su navegador web y y escriba la dirección IP de su servidor, seguido del nombre de la secuencia de comandos, que en este caso es info.php:
+```bash
+http://server_domain_or_IP/info.php
+```
+![](https://github.com/wixrpj/InfoSingh/blob/main/phpinfo.png)
+En esta página, se proporciona información básica sobre su servidor desde la perspectiva de PHP. Es útil para la depuración y para asegurarse de que sus ajustes se apliquen correctamente.
+
+## Probar la conexión con la base de datos desde PHP
+
+
+
+
 
 ---
 
