@@ -743,7 +743,7 @@ Al utilizar el servidor web **Apache**, se pueden crear **hosts virtuales** (sim
 
 Ubuntu tiene un **bloque de servidor predeterminado** en `/var/www/html`. Si bien funciona bien para un solo sitio, puede ser complicado manejar múltiples sitios en el mismo servidor. Para solucionar esto, en lugar de modificar `/var/www/html`, crearé un **directorio dedicado dentro de `/var/www`** para el nuevo sitio.
 
-### **1. Crear el directorio del sitio web**
+#### **1. Crear el directorio del sitio web**
 Ejecuta el siguiente comando para crear el directorio del dominio:
 ```bash
 sudo mkdir /var/www/your_domain
@@ -754,7 +754,7 @@ Luego, asigna la propiedad del directorio a tu usuario actual:
 sudo chown -R $USER:$USER /var/www/your_domain
 ```
 
-### **2. Crear un archivo de configuración en Apache**
+#### **2. Crear un archivo de configuración en Apache**
 Abre un nuevo archivo de configuración en el directorio `sites-available` de Apache:
 ```bash
 sudo nano /etc/apache2/sites-available/your_domain.conf
@@ -776,7 +776,7 @@ Dentro del archivo, pega la siguiente configuración básica:
 Este bloque de configuración le indica a Apache que sirva `your_domain` desde el directorio `/var/www/your_domain`.  
 Si solo deseas probar Apache sin un dominio personalizado, puedes comentar (`#`) las líneas `ServerName` y `ServerAlias`.
 
-### **3. Habilitar el nuevo host virtual**
+#### **3. Habilitar el nuevo host virtual**
 Para activar la nueva configuración, usa el comando:
 ```bash
 sudo a2ensite your_domain
@@ -787,7 +787,7 @@ Opcionalmente, deshabilita el sitio predeterminado de Apache:
 sudo a2dissite 000-default
 ```
 
-### **4. Verificar la configuración de Apache**
+#### **4. Verificar la configuración de Apache**
 Antes de aplicar los cambios, asegúrate de que la configuración es correcta:
 ```bash
 sudo apache2ctl configtest
@@ -797,13 +797,13 @@ Si todo está bien, deberías ver un mensaje similar a:
 Syntax OK
 ```
 
-### **5. Reiniciar Apache para aplicar cambios**
+#### **5. Reiniciar Apache para aplicar cambios**
 Recarga Apache con el siguiente comando:
 ```bash
 sudo systemctl reload apache2
 ```
 
-### **6. Crear una página de prueba**
+#### **6. Crear una página de prueba**
 El directorio `/var/www/your_domain` aún está vacío. Para verificar que el **host virtual** funciona correctamente, crea un archivo `index.html` de prueba:
 ```bash
 nano /var/www/your_domain/index.html
@@ -811,7 +811,7 @@ nano /var/www/your_domain/index.html
 Añadí el siguiente contenido:
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-19%20123855.png)
 
-### **7. Probar el sitio en el navegador**
+#### **7. Probar el sitio en el navegador**
 En la máquina clinete habres el navegador y accedes a la **IP del servidor**:
 ```
 http://10.20.30.106
@@ -822,6 +822,30 @@ Si todo está configurado correctamente, deberías ver la página de prueba con 
 
 Puedes mantener este archivo como una página de prueba temporal hasta que subas el contenido real del sitio.  
 Si luego agregas un `index.php`, recuerda **eliminar o renombrar `index.html`**, ya que Apache le da prioridad al archivo HTML sobre PHP por defecto.
+
+-----
+
+### Nota sobre DirectoryIndex en Apache
+
+Con la configuración predeterminada de DirectoryIndex en Apache, un archivo denominado index.html siempre tendrá prioridad sobre un archivo index.php. Esto es útil para establecer páginas de mantenimiento en aplicaciones PHP, dado que se puede crear un archivo index.html temporal que contenga un mensaje informativo para los visitantes. Como esta página tendrá precedencia sobre la página index.php, se convertirá en la página de destino de la aplicación. Una vez que el mantenimiento se completa, el archivo index.html se elimina del root de documentos, o se le cambia el nombre, para volver mostrar la página habitual de la aplicación.
+
+Si desea cambiar este comportamiento, deberá editar el archivo /etc/apache2/mods-enabled/dir.conf y modificar el orden en el que el archivo index.php se enumera en la directiva DirectoryIndex:
+#### 1. Abrir el archivo de configuración en nano
+
+```bash
+sudo nano /etc/apache2/mods-enabled/dir.conf
+```
+#### 2. Modificar la configuración del archivo /etc/apache2/mods-enabled/dir.conf
+```bash
+# Si el módulo mod_dir está habilitado, se define el orden de prioridad de los archivos index
+<IfModule mod_dir.c>
+    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+```
+#### 3. Recargar Apache para aplicar los cambios
+```bash
+sudo systemctl reload apache2
+```
 
 ---
 
