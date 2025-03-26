@@ -1,32 +1,109 @@
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
+<details>
+  <summary><h1>Hola</h1></summary>
+  sdggggggggoiñdsg
+  <details>
+    <summary><h1>fr</h1></summary>
+    sdhgshfgd
+  </details>
+</details>
+<details>
+  <summary><h1>📚 Índice</h1></summary> 
+<p>&nbsp; - Descripción General</p>
+<p>&nbsp; - Paso a Paso: - Implementación del Sistema de Streaming</p>
+<p>&nbsp; - Infraestructura del Proyecto</p>
+<p>&nbsp; - Configuración de la VM con Docker</p>
+<p>&nbsp; - Objetivos del Proyecto</p>
+<p>&nbsp;&nbsp;&nbsp; - Objetivos Principales</p>
+<p>&nbsp;&nbsp;&nbsp; - Objetivos Secundarios</p>
+<p>&nbsp; - Diagrama de Red</p>
+<p>&nbsp; - Estructura del Proyecto</p>
+<p>&nbsp; - Materiales Requeridos</p>
+<p>&nbsp; - Roles del Equipo</p>
+<p>&nbsp; - Tecnologías Implementadas</p>
+<p>&nbsp; - Especificaciones del Sistema</p>
+<p>&nbsp; - Diagrama de GANT</p>
+<p>&nbsp; - Guías de uso</p>
+<p>&nbsp;&nbsp;&nbsp; - DNS</p>
+<p>&nbsp;&nbsp;&nbsp; - DHCP</p>
+<p>&nbsp;&nbsp;&nbsp; - APACHE</p>
+<p>&nbsp;&nbsp;&nbsp; - PFSENCE</p>
+<p>&nbsp; - Diagrama de Red</p>
+<p>&nbsp; - Documentación y Recursos Adicionales</p>
+</details>
 
-## 📚 Índice
-- Descripción General
-- Paso a Paso: Implementación del Sistema de Streaming
-  - Infraestructura del Proyecto
-- Configuración de la VM con Docker
-- Objetivos del Proyecto
-  - Objetivos Principales
-  - Objetivos Secundarios
-- Diagrama de Red
-- Estructura del Proyecto
-- Materiales Requeridos
-- Roles del Equipo
-- Tecnologías Implementadas
-- Especificaciones del Sistema
-- Diagrama de GANT
-- Guías de uso
-  - DNS
-  - DHCP
-  - APACHE
-  - PFSENCE
-- Diagrama de Red
-- Documentación y Recursos Adicionales
-
-## 📜 Descripción General
+<details>
+  <summary><h1>📜 Descripción General</h1></summary>
 El objetivo de este proyecto es crear un sistema de streaming multimedia eficiente y seguro, utilizando Plex en un entorno virtualizado para gestionar contenido como videos, imágenes y más. Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de backups automatizados con TrueNAS, que realizará copias incrementales a medida que se añadan nuevos contenidos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
+</details>
 
-## 📌 Paso a Paso: Implementación del Sistema de Streaming
+<details>
+<summary><h1>📌 Paso a Paso: Implementación del Sistema de Streaming</h1></summary>
+<summary><h2>🖥️ Infraestructura del Proyecto</h2></summary>
+<p>&nbsp;✅ <strong>Máquinas Virtuales con Ubuntu Server:</strong></p>
+<p>&nbsp;<strong>VM 1:</strong> Docker con contenedores (Plex, MySQL + PHP, Web)</p>
+<p>&nbsp;&nbsp; - Hostea aplicaciones en contenedores Docker, incluyendo Plex para streaming multimedia y un servidor web para aplicaciones.</p>
+<p>&nbsp;<strong>VM 2:</strong> Pi-hole (Servidor DNS y bloqueador de publicidad)</p>
+<p>&nbsp;&nbsp; - Funciona como servidor DNS y bloquea anuncios no deseados en toda la red, mejorando la seguridad y el rendimiento.</p>
+<p>&nbsp;<strong>VM 3:</strong> pfSense (Firewall y servidor DHCP)</p>
+<p>&nbsp;&nbsp; - Aloja aplicaciones web con Apache, PHP para el backend y MySQL para la gestión de bases de datos.</p>
+<summary><h2>🚀 1. Configuración de la VM con Docker</h2></summary>
+
+<summary><h3>1.1. Instalación de Docker y Docker Compose</h3></summary>
+<p>&nbsp;[ ] Instalar Docker en Ubuntu Server</p>
+<p>&nbsp;[ ] Instalar Docker Compose</p>
+<p>&nbsp;[ ] Crear una red de Docker para comunicación entre los contenedores</p>
+
+<summary><h3>1.2. Implementación de Contenedores</h3></summary>
+<summary><h4>🟠 Contenedor 1: Plex (Servidor de Streaming)</h4></summary>
+<p>&nbsp;[ ] Descargar la imagen oficial de Plex</p>
+<p>&nbsp;[ ] Configurar volúmenes para almacenamiento de medios</p>
+<p>&nbsp;[ ] Asignar puertos para acceso web y streaming</p>
+<p>&nbsp;[ ] Probar la reproducción de contenido en la red local</p>
+
+<summary><h4>🟡 Contenedor 2: MySQL + PHP (Base de Datos y Backend)</h4></summary>
+<p>&nbsp;[ ] Descargar la imagen de MySQL</p>
+<p>&nbsp;[ ] Configurar usuarios y permisos en la base de datos</p>
+<p>&nbsp;[ ] Descargar la imagen de PHP y phpMyAdmin</p>
+<p>&nbsp;[ ] Configurar conexión entre PHP y MySQL</p>
+<p>&nbsp;[ ] Verificar acceso a la base de datos desde otros contenedores</p>
+
+<summary><h4>🔵 Contenedor 3: Página Web Promocional (HTML, CSS, JavaScript)</h4></summary>
+<p>&nbsp;[ ] Elegir y configurar el servidor web (Nginx o Apache)</p>
+<p>&nbsp;[ ] Crear y desplegar la página web con HTML, CSS y JavaScript</p>
+<p>&nbsp;[ ] Configurar el acceso desde la red local</p>
+<p>&nbsp;[ ] Implementar medidas básicas de seguridad (HTTPS, firewall, etc.)</p>
+
+<summary><h2>🌐 2. Configuración de Infraestructura Adicional</h2></summary>
+
+<summary><h3>2.1. VM con Pi-hole (Servidor DNS y Bloqueador de Publicidad)</h3></summary>
+<p>&nbsp;[ ] Instalar Pi-hole en Ubuntu Server</p>
+<p>&nbsp;[ ] Configurar como servidor DNS de la red</p>
+<p>&nbsp;[ ] Establecer reglas de bloqueo de anuncios</p>
+<p>&nbsp;[ ] Verificar que los dispositivos de la red usan Pi-hole</p>
+
+<summary><h3>2.2. VM con pfSense (Firewall y Servidor DHCP)</h3></summary>
+<p>&nbsp;[ ] Instalar pfSense en Ubuntu Server</p>
+<p>&nbsp;[ ] Configurar interfaces de red</p>
+<p>&nbsp;[ ] Activar y configurar el servidor DHCP</p>
+<p>&nbsp;[ ] Definir reglas de firewall para permitir tráfico a los servicios necesarios</p>
+<p>&nbsp;[ ] Habilitar NAT si es necesario</p>
+
+<summary><h2>✅ 3. Pruebas y Ajustes Finales</h2></summary>
+<p>&nbsp;✅ <strong>Verificar que cada servicio funciona correctamente:</strong></p>
+<p>&nbsp;[ ] Probar la reproducción de medios en Plex</p>
+<p>&nbsp;[ ] Acceder a la base de datos desde la web</p>
+<p>&nbsp;[ ] Asegurar que la web promocional carga sin problemas</p>
+<p>&nbsp;[ ] Comprobar que Pi-hole bloquea anuncios y funciona como DNS</p>
+<p>&nbsp;[ ] Probar conectividad a internet y filtrado de tráfico con pfSense</p>
+
+<summary><h2>🔥 4. Opcional (Mejoras y Optimización)</h2></summary>
+<p>&nbsp;[ ] Configurar backups automáticos en TrueNAS</p>
+<p>&nbsp;[ ] Implementar HTTPS con Let's Encrypt en la web</p>
+<p>&nbsp;[ ] Crear reglas avanzadas en pfSense para mayor seguridad</p>
+<p>&nbsp;[ ] Optimizar rendimiento de Docker con ajuste de recursos</p>
+
+</details>
 
 ### 🖥️ Infraestructura del Proyecto
 ✅ **Máquinas Virtuales con Ubuntu Server:**
