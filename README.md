@@ -7,6 +7,23 @@
     sdhgshfgd
   </details>
 </details>
+
+<details>
+
+<summary><h1>Tips for collapsed sections</h1></summary>
+
+### You can add a header
+
+You can add text within a collapsed section.
+
+You can add an image or a code block, too.
+
+```ruby
+   puts "Hello World"
+```
+
+</details>
+
 <details>
   <summary><h1>📚 Índice</h1></summary> 
 <p>&nbsp; - Descripción General</p>
@@ -105,6 +122,9 @@ El objetivo de este proyecto es crear un sistema de streaming multimedia eficien
 
 </details>
 
+<details>
+  <sumamary><h1>📌 Paso a Paso: Implementación del Sistema de Streaming</h1></sumamary>
+  
 ### 🖥️ Infraestructura del Proyecto
 ✅ **Máquinas Virtuales con Ubuntu Server:**
 - **VM 1:** Docker con contenedores (Plex, MySQL + PHP, Web)
@@ -113,8 +133,6 @@ El objetivo de este proyecto es crear un sistema de streaming multimedia eficien
   - Funciona como servidor DNS y bloquea anuncios no deseados en toda la red, mejorando la seguridad y el rendimiento.
 - **VM 3:** pfSense (Firewall y servidor DHCP)
   - Aloja aplicaciones web con Apache, PHP para el backend y MySQL para la gestión de bases de datos.
-
-
 
 ## 🚀 1. Configuración de la VM con Docker
 ### 1.1. Instalación de Docker y Docker Compose
@@ -176,16 +194,17 @@ El objetivo de este proyecto es crear un sistema de streaming multimedia eficien
 - [ ] Crear reglas avanzadas en pfSense para mayor seguridad
 - [ ] Optimizar rendimiento de Docker con ajuste de recursos
 
-
-
 :computer: Estructura del Proyecto:
 
 Maquinas Virtuales:
 - **Máquina Virtual 1 (Linux + Docker):** Alojamiento del servidor de streaming con Plex, configurado dentro de un contenedor Docker.
 - **Máquina Virtual 2 (TrueNAS):** Almacenamiento seguro de los datos con backups automáticos e incrementales.
 - **Máquina Virtual 3 (Servidor Web):**
-  
+</details>  
 
+<details>
+  <summary><h1>:dart: Objetivos del Proyecto</h1></summary>
+  
 ## :dart: Objetivos del Proyecto
 
 ### :one: Objetivos Principales
@@ -199,6 +218,7 @@ Maquinas Virtuales:
 - Optimizar el rendimiento del servidor Plex dentro de Docker para garantizar una experiencia fluida de streaming.
 - Configurar alertas en TrueNAS para notificar posibles problemas en los backups.
 - Proveer un diseño atractivo y responsive en la página web para mejorar la experiencia de usuario.
+  </details>
   
 ## 🛜 Diagrama de Red
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
