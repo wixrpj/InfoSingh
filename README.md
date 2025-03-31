@@ -653,6 +653,32 @@ TrueNAS CORE se fundamenta en:
 - Compatibilidad con estándares empresariales: Kerberos, SNMP, iSCSI.
   
 ### Instalacion Truenas
+## Paso 1: Crear la Máquina Virtual
+
+1. Abre tu software de virtualización.
+2. Crea una nueva máquina virtual con los siguientes parámetros:
+   - **Nombre:** TrueNAS
+   - **Tipo:** BSD
+   - **Versión:** FreeBSD (64-bit)
+   - **RAM:** Mínimo 2GB
+   - **Disco duro:** Crear un disco virtual de al menos 16GB para el sistema
+3. Agrega discos virtuales adicionales para el almacenamiento de datos.
+
+## Paso 2: Instalar TrueNAS
+
+1. Monta la ISO de TrueNAS en la máquina virtual.
+2. Inicia la máquina virtual y arranca desde la ISO.
+3. Selecciona la opción **Install/Upgrade**.
+4. Elige el disco donde se instalará TrueNAS (el disco de 16GB creado en el paso anterior).
+5. Confirma la instalación y espera a que finalice.
+
+## Paso 4: Finalización y Acceso
+
+- **Usuarios y Permisos:** Configura usuarios y permisos para controlar el acceso a los datos.
+- **Activa la opcion RSYNC y configurala con los usuarios creados.
+- **Monitorización:** Usa herramientas de monitoreo para supervisar el sistema.
+
+## Incidencias
 
 ---
 
