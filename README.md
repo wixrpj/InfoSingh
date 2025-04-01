@@ -1,28 +1,4 @@
 # Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
-<details>
-  <summary><h1>Hola</h1></summary>
-  sdggggggggoiñdsg
-  <details>
-    <summary><h1>fr</h1></summary>
-    sdhgshfgd
-  </details>
-</details>
-
-<details>
-
-<summary><h1>Tips for collapsed sections</h1></summary>
-
-### You can add a header
-
-You can add text within a collapsed section.
-
-You can add an image or a code block, too.
-
-```ruby
-   puts "Hello World"
-```
-
-</details>
 
 <details>
   <summary><h1>📚 Índice</h1></summary> 
@@ -55,76 +31,9 @@ El objetivo de este proyecto es crear un sistema de streaming multimedia eficien
 </details>
 
 <details>
+
 <summary><h1>📌 Paso a Paso: Implementación del Sistema de Streaming</h1></summary>
-<summary><h2>🖥️ Infraestructura del Proyecto</h2></summary>
-<p>&nbsp;✅ <strong>Máquinas Virtuales con Ubuntu Server:</strong></p>
-<p>&nbsp;<strong>VM 1:</strong> Docker con contenedores (Plex, MySQL + PHP, Web)</p>
-<p>&nbsp;&nbsp; - Hostea aplicaciones en contenedores Docker, incluyendo Plex para streaming multimedia y un servidor web para aplicaciones.</p>
-<p>&nbsp;<strong>VM 2:</strong> Pi-hole (Servidor DNS y bloqueador de publicidad)</p>
-<p>&nbsp;&nbsp; - Funciona como servidor DNS y bloquea anuncios no deseados en toda la red, mejorando la seguridad y el rendimiento.</p>
-<p>&nbsp;<strong>VM 3:</strong> pfSense (Firewall y servidor DHCP)</p>
-<p>&nbsp;&nbsp; - Aloja aplicaciones web con Apache, PHP para el backend y MySQL para la gestión de bases de datos.</p>
-<summary><h2>🚀 1. Configuración de la VM con Docker</h2></summary>
 
-<summary><h3>1.1. Instalación de Docker y Docker Compose</h3></summary>
-<p>&nbsp;[ ] Instalar Docker en Ubuntu Server</p>
-<p>&nbsp;[ ] Instalar Docker Compose</p>
-<p>&nbsp;[ ] Crear una red de Docker para comunicación entre los contenedores</p>
-
-<summary><h3>1.2. Implementación de Contenedores</h3></summary>
-<summary><h4>🟠 Contenedor 1: Plex (Servidor de Streaming)</h4></summary>
-<p>&nbsp;[ ] Descargar la imagen oficial de Plex</p>
-<p>&nbsp;[ ] Configurar volúmenes para almacenamiento de medios</p>
-<p>&nbsp;[ ] Asignar puertos para acceso web y streaming</p>
-<p>&nbsp;[ ] Probar la reproducción de contenido en la red local</p>
-
-<summary><h4>🟡 Contenedor 2: MySQL + PHP (Base de Datos y Backend)</h4></summary>
-<p>&nbsp;[ ] Descargar la imagen de MySQL</p>
-<p>&nbsp;[ ] Configurar usuarios y permisos en la base de datos</p>
-<p>&nbsp;[ ] Descargar la imagen de PHP y phpMyAdmin</p>
-<p>&nbsp;[ ] Configurar conexión entre PHP y MySQL</p>
-<p>&nbsp;[ ] Verificar acceso a la base de datos desde otros contenedores</p>
-
-<summary><h4>🔵 Contenedor 3: Página Web Promocional (HTML, CSS, JavaScript)</h4></summary>
-<p>&nbsp;[ ] Elegir y configurar el servidor web (Nginx o Apache)</p>
-<p>&nbsp;[ ] Crear y desplegar la página web con HTML, CSS y JavaScript</p>
-<p>&nbsp;[ ] Configurar el acceso desde la red local</p>
-<p>&nbsp;[ ] Implementar medidas básicas de seguridad (HTTPS, firewall, etc.)</p>
-
-<summary><h2>🌐 2. Configuración de Infraestructura Adicional</h2></summary>
-
-<summary><h3>2.1. VM con Pi-hole (Servidor DNS y Bloqueador de Publicidad)</h3></summary>
-<p>&nbsp;[ ] Instalar Pi-hole en Ubuntu Server</p>
-<p>&nbsp;[ ] Configurar como servidor DNS de la red</p>
-<p>&nbsp;[ ] Establecer reglas de bloqueo de anuncios</p>
-<p>&nbsp;[ ] Verificar que los dispositivos de la red usan Pi-hole</p>
-
-<summary><h3>2.2. VM con pfSense (Firewall y Servidor DHCP)</h3></summary>
-<p>&nbsp;[ ] Instalar pfSense en Ubuntu Server</p>
-<p>&nbsp;[ ] Configurar interfaces de red</p>
-<p>&nbsp;[ ] Activar y configurar el servidor DHCP</p>
-<p>&nbsp;[ ] Definir reglas de firewall para permitir tráfico a los servicios necesarios</p>
-<p>&nbsp;[ ] Habilitar NAT si es necesario</p>
-
-<summary><h2>✅ 3. Pruebas y Ajustes Finales</h2></summary>
-<p>&nbsp;✅ <strong>Verificar que cada servicio funciona correctamente:</strong></p>
-<p>&nbsp;[ ] Probar la reproducción de medios en Plex</p>
-<p>&nbsp;[ ] Acceder a la base de datos desde la web</p>
-<p>&nbsp;[ ] Asegurar que la web promocional carga sin problemas</p>
-<p>&nbsp;[ ] Comprobar que Pi-hole bloquea anuncios y funciona como DNS</p>
-<p>&nbsp;[ ] Probar conectividad a internet y filtrado de tráfico con pfSense</p>
-
-<summary><h2>🔥 4. Opcional (Mejoras y Optimización)</h2></summary>
-<p>&nbsp;[ ] Configurar backups automáticos en TrueNAS</p>
-<p>&nbsp;[ ] Implementar HTTPS con Let's Encrypt en la web</p>
-<p>&nbsp;[ ] Crear reglas avanzadas en pfSense para mayor seguridad</p>
-<p>&nbsp;[ ] Optimizar rendimiento de Docker con ajuste de recursos</p>
-
-</details>
-
-<details>
-  <sumamary><h1>📌 Paso a Paso: Implementación del Sistema de Streaming</h1></sumamary>
-  
 ### 🖥️ Infraestructura del Proyecto
 ✅ **Máquinas Virtuales con Ubuntu Server:**
 - **VM 1:** Docker con contenedores (Plex, MySQL + PHP, Web)
@@ -200,6 +109,7 @@ Maquinas Virtuales:
 - **Máquina Virtual 1 (Linux + Docker):** Alojamiento del servidor de streaming con Plex, configurado dentro de un contenedor Docker.
 - **Máquina Virtual 2 (TrueNAS):** Almacenamiento seguro de los datos con backups automáticos e incrementales.
 - **Máquina Virtual 3 (Servidor Web):**
+
 </details>  
 
 <details>
@@ -219,9 +129,17 @@ Maquinas Virtuales:
 - Configurar alertas en TrueNAS para notificar posibles problemas en los backups.
 - Proveer un diseño atractivo y responsive en la página web para mejorar la experiencia de usuario.
   </details>
-  
-## 🛜 Diagrama de Red
+
+<details>
+  <summary><h1>🛜 Diagrama de Redd</h1></summary>
+
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
+
+</details>
+
+<details>
+  <summary><h1>🛜 Diagrama de Redd</h1></summary>
+  
 ## 🏗️ Estructura del Proyecto
 
 ### 🐋 Máquina Virtual 1: Sistema Operativo Linux + Docker
@@ -248,8 +166,11 @@ Maquinas Virtuales:
   - **Frontend:** HTML, CSS, JavaScript (opcionalmente usar frameworks como Bootstrap).
   - **Hosting:** Uso de servicios gratuitos como GitHub Pages o servidores propios.
 
-## 🧱 Materiales Requeridos
+</details>
 
+<details>
+  <summary><h1>🧱 Materiales Requeridos</h1></summary>
+  
 ### 💪 Físicos
 
 - **Servidor o Hardware para Máquinas Virtuales:** Equipo capaz de ejecutar dos máquinas virtuales con los recursos necesarios.
@@ -262,14 +183,21 @@ Maquinas Virtuales:
 - **TrueNAS:** Sistema operativo para gestionar los backups en la Máquina Virtual 2.
 - **HTML, CSS, JavaScript:** Para desarrollar la página web promocional.
 - **Apache:** Para hostear la página web del proyecto, con dominio personalizado.
-## 🪪 Roles del equipo
+
+</details>
+
+<details>
+  <summary><h1>🪪 Roles del equipo</h1></summary>
+  
 | Nombre del miembro |       Roles de equipo       |     Trabajo de cada miembro   |
 |:-------------------|:----------------------------|:------------------------------|
 |Raul                |Administrador de sistemas    | Experimentar con las maquinas e instalar maquinas nuevas y diseñar la página.  |
 |Parwinder           |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la página.|
 
+</details>
+<details>
+  <summary><h1>🧑🏽‍💻 Tecnologías Implementadas</h1></summary>
 
-## 🧑🏽‍💻 Tecnologías Implementadas
 El sistema **SPT** se basa en una variedad de tecnologías modernas para garantizar un rendimiento óptimo y una gestión eficiente de incidencias. A continuación se detallan las principales tecnologías utilizadas:
 
 | Categoría        | Tecnología  | Descripción                                                                                       | Icono                                                                                   |
@@ -286,8 +214,10 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 |                 | DNS        | Sistema de nombres de dominio que traduce nombres legibles por humanos a direcciones IP.            | <img src= "https://libros.catedu.es/uploads/images/gallery/2023-02/pihole-logo.png" width="50" height="75" alt="DNS">|
 | Control de Versiones  | GitHub     | Plataforma para alojar repositorios Git y colaborar en proyectos.                             | <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub">|
 
-
-## 👨🏽‍💻 Especificaciones del Sistema
+</details>
+<details>
+  <summary><h1>👨🏽‍💻 Especificaciones del Sistema</h1></summary>
+  
 A continuación, se detallan las especificaciones de los componentes del sistema:
 Máquina Host: Es el equipo principal que tiene un Sistema Operativo Windows 11 y tiene una configuración de red DHCP con la IP 100.77.20.65.
 DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está configurado con la IP 10.1.2.10 y un gateway 10.1.2.1. Lo hemos elegido porque Pi-Hole es comúnmente utilizado para bloquear anuncios y rastreos a nivel de red.
@@ -299,12 +229,22 @@ DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está con
 | Apache        | Ubuntu SV 22.04.01  | 25 GB          | 2            | 3 GB | 10.20.30.105      | 10.20.30.100 |
 | Docker SV     | Ubuntu SV 22.04.01  | 25 GB          | 2            | 2 GB | 10.20.30.110      | 10.20.30.100 |
 
-## 📅 Diagrama de GANT
+</details>
+
+<details>
+  <summary><h1>📅 Diagrama de GANT</h1></summary>
+
 Este es nuestro diagrama de Gantt, un cronograma del proyecto. En él se detallan las tareas y su duración. Cada barra horizontal representa una actividad, y su longitud indica el tiempo estimado para su ejecución. Dentro de cada rango he especificado el rango de fecha en el que se va a trabajar aproximadamente.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-02-05%20125028.png)
 
-# 📚Guías de uso
-## 🛜DNS 
+</details>
+
+<details>
+  <summary><h1>📚Guías de uso</h1></summary>
+  
+  <details>
+  <summary><h2>🛜DNS</h2></summary>
+  
 #### 🤔¿Qué es DNS?
 El **Sistema de Nombres de Dominio (DNS, Domain Name System)** es un sistema que traduce los nombres de dominio de Internet (como www.google.com) en direcciones IP (como 192.168.1.2). Esto permite que los usuarios accedan a sitios web y otros servicios sin necesidad de recordar direcciones IP numéricas. Además, el DNS permite mejorar la privacidad y seguridad de tu red al bloquear solicitudes de dominios maliciosos o no deseados. Pi-hole actúa como un agujero negro para anuncios y rastreadores, filtrando las solicitudes DNS antes de que lleguen a servidores externos.
 
@@ -327,8 +267,11 @@ Primero, me informé a través de la guía oficial de Pi-hole. Luego, descargué
 Tuvimos una incidencia en la que perdimos la contraseña de acceso a la interfaz gráfica de Pi-hole. Afortunadamente, consultando la guía oficial de Pi-hole, encontré comandos útiles para resolver el problema. En particular, el comando sudo pihole -a -p me permitió restablecer la contraseña y continuar trabajando sin interrupciones en la máquina virtual.
 
 #### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
----
-## DHCP
+</details>
+
+<details>
+  <summary><h2>DHCP</h2></summary>
+  
 ### ¿Qué es DHCP?
 El **Protocolo de Configuración Dinámica de Host (DHCP, Dynamic Host Configuration Protocol)** es un protocolo que asigna automáticamente direcciones IP y otros parámetros de configuración de red (como la máscara de subred y la puerta de enlace) a los dispositivos en una red.
 
@@ -345,8 +288,12 @@ La instalación del DHCP ha sido muy sencilla, ya que venía preinstalado junto 
 Las incidencias que hemos experimentado han sido mínimas y se han debido principalmente a una falta de atención. El problema surgió porque, aunque configuramos el rango de IPs, al conectar el dominio se asignó un rango distinto. Esto ocurrió porque no activamos correctamente el rango de IP previamente configurado
 
 #### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026)
----
-## Apache
+
+</details>
+
+<details>
+  <summary><h2>Apache</h2></summary>
+
 #### ¿Qué es Apache?
 Apache es un servidor web de código abierto que se usa para alojar sitios y aplicaciones en Internet. Básicamente, es el software que se encarga de recibir las peticiones de los usuarios (cuando alguien entra a un sitio web) y responder enviando la información correspondiente (como páginas HTML, imágenes o archivos). Es uno de los servidores web más utilizados en el mundo por su flexibilidad, seguridad y estabilidad.  
 
@@ -532,7 +479,10 @@ Despues de haber seguido los pasos de instalacon con una maquina cliente accedem
 ```
 http://IP.DE.TU.SERVER (10.20.30.1)
 ```
-## Port forward
+</details>
+<details>
+  <summary><h2>Port forward</h2></summary>
+  
 #### ¿Qué es el port forward?
 El port forwarding (o reenvío de puertos) es una técnica que permite redirigir el tráfico de internet que llega a un puerto específico de un router o firewall hacia un dispositivo o servicio dentro de una red local. Esto es útil cuando necesitas que un servicio, como un servidor web, un juego en línea o una cámara IP, sea accesible desde fuera de tu red.
 
@@ -621,6 +571,8 @@ Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual 
 | Destination port|SSH (puerto 22 por defecto)|
 | Redirect target port|Address or Alias (Ip de la maquina que quieras añadir esta opcion)|
 | Description   |Mi Regla NAT - acceso SSH|
+
+</details>
 
 ## Diagrama de Red
 Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha contruido con esta instalacion de firewall.
