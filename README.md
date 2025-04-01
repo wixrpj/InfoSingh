@@ -131,14 +131,14 @@ Maquinas Virtuales:
   </details>
 
 <details>
-  <summary><h1>🛜 Diagrama de Redd</h1></summary>
+  <summary><h1>🛜 Diagrama de Red</h1></summary>
 
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
 
 </details>
 
 <details>
-  <summary><h1>🛜 Diagrama de Redd</h1></summary>
+  <summary><h1>🛜 Diagrama de Red</h1></summary>
   
 ## 🏗️ Estructura del Proyecto
 
