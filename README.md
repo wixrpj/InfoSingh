@@ -142,10 +142,8 @@ Maquinas Virtuales:
 </details>
 
 <details>
-  <summary><h1>🛜 Diagrama de Red</h1></summary>
+  <summary><h1>🏗️ Estructura del Proyecto</h1></summary>
   
-## 🏗️ Estructura del Proyecto
-
 ### 🐋 Máquina Virtual 1: Sistema Operativo Linux + Docker
 
 - **Sistema Operativo:** Distribución de Linux ligera (por ejemplo, Ubuntu Server o Debian).
