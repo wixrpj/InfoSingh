@@ -27,7 +27,11 @@
 
 <details>
   <summary><h1>📜 Descripción General</h1></summary>
-El objetivo de este proyecto es crear un sistema de streaming multimedia eficiente y seguro, utilizando Plex en un entorno virtualizado para gestionar contenido como videos, imágenes y más. Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de backups automatizados con TrueNAS, que realizará copias incrementales a medida que se añadan nuevos contenidos. Además, se desarrollará una **página web promocional** para destacar las características del sistema de streaming y redireccionar a los usuarios a las redes sociales del proyecto.
+El objetivo de este proyecto es desarrollar un sistema de streaming multimedia eficiente y seguro, basado en Plex y desplegado en un entorno virtualizado. Este sistema permitirá la gestión optimizada de contenido como videos, imágenes y otros archivos multimedia.
+
+Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de copias de seguridad automatizadas con TrueNAS, que realizará backups incrementales a medida que se añadan nuevos contenidos, minimizando el riesgo de pérdida de información.
+
+Además, se creará una página web promocional para resaltar las principales características del sistema de streaming y proporcionar enlaces directos a las redes sociales del proyecto, facilitando su difusión y acceso.
 </details>
 
 <details>
