@@ -1017,20 +1017,23 @@ SHOW DATABASES;
   <summary><h2>Mockups</h2></summary>
 
 Así es como se vería la página web promocional al ingresar por primera vez. En ella, los usuarios encontrarán las últimas novedades implementadas en Plex junto con sus reseñas.
+
 ![](https://github.com/wixrpj/InfoSingh/blob/main/P%C3%A1gina%20principal.png)
 
 Al hacer clic en las novedades de las peliculas podran ver su sinopsis, los comentarios y las reseñas de otros usuarios, podrán disfrutar del tráiler oficial y acceder a la película iniciando sesión.
+
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Sobre%20la%20peli.png)
 
 Si deciden ver la película y hacen clic en ella, serán redirigidos automáticamente a la pantalla de login.
+
 ![](https://github.com/wixrpj/InfoSingh/blob/main/login.png)
 
 En caso de no estar registrados, se les pedirá que se registren para poder continuar disfrutando de la película o serie que elijan.
+
 ![](https://github.com/wixrpj/InfoSingh/blob/main/registro.png)
 
 </details>
 
-  
 <details>
   <summary><h2>💼 Documentación y Recursos Adicionales</h2></summary>
 
