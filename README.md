@@ -1011,7 +1011,7 @@ SHOW DATABASES;
 
 #### 9. Inserte algunas filas de contenido en la tabla de prueba. (Es posible que quiera repetir el siguiente comando algunas veces, usando valores diferentes)
 
-<details>
+</details>
   
 <details>
   <summary><h2>Mockups</h2></summary>
@@ -1027,9 +1027,11 @@ SHOW DATABASES;
 
 ![](https://github.com/wixrpj/InfoSingh/blob/main/registro.png)
 
----
+</details>
 
-## 💼 Documentación y Recursos Adicionales
+  
+<details>
+  <summary><h2>💼 Documentación y Recursos Adicionales</h2></summary>
 
 - **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
@@ -1050,3 +1052,5 @@ SHOW DATABASES;
 - **LAMP:** [Configuración completa](https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu#step-6-%E2%80%94-testing-database-connection-from-php-(optional))
 - **LAMP:** [Configuración completa](https://www.hostinger.com/es/tutoriales/como-instalar-lamp-en-ubuntu)
 - **:** []()
+
+</details>
