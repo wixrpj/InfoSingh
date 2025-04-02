@@ -379,8 +379,11 @@ sudo systemctl reload apache2
 ```
 #### Manual [Guía oficial](https://www.php.net/manual/es/book.apache.php)
 
----
-## PFSense
+</details>
+  
+<details>
+  <summary><h2>PFSense</h2></summary>
+  
 #### ¿Qué es pfSense?
 pfSense es una distribución personalizada de FreeBSD adaptado para su uso como firewall y enrutador. Aparte es un programa de código abierto que funciona como un firewall de alto nivel, diseñado para proteger redes y dispositivos de amenazas externas. Se puede instalar en una máquina virtual, descargándolo directamente desde su página oficial, o adquirir como un dispositivo físico (appliance) que ya viene con el sistema preconfigurado y listo para usar. Su principal función es actuar como un cortafuegos, ubicándose entre internet y nuestros dispositivos para detectar y bloquear actividades sospechosas. Esto lo convierte en una herramienta esencial para mantener la seguridad, ya sea en entornos empresariales o incluso para uso personal.
 
@@ -482,6 +485,7 @@ Despues de haber seguido los pasos de instalacon con una maquina cliente accedem
 http://IP.DE.TU.SERVER (10.20.30.1)
 ```
 </details>
+
 <details>
   <summary><h2>Port forward</h2></summary>
   
@@ -576,7 +580,9 @@ Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual 
 
 </details>
 
-## Diagrama de Red
+<details>
+  <summary><h2>Diagrama de Red</h2></summary>
+
 Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha contruido con esta instalacion de firewall.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-06%20122451.png)
 
@@ -587,9 +593,11 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 - Muy importante: quita el adaptador puente en la máquina cliente; solo tiene que tener un adaptador y es el de la "RED interna".
 - Hay que instalar el "openssh.server" en la máquina cliente para que pueda funcionar el "SSH" correctamente.
 
----
+</details>
 
-## TrueNAS
+<details>
+  <summary><h2>TrueNAS</h2></summary>
+
 #### ¿Qué es TrueNAS?
 TrueNAS es un sistema operativo especializado en proporcionar servicios de almacenamiento en red (NAS) de manera segura y escalable. Originalmente conocido como FreeNAS, está diseñado para convertir hardware estándar en servidores de almacenamiento profesionales con funciones avanzadas.
 
@@ -654,9 +662,10 @@ TrueNAS CORE se fundamenta en:
 
 ## Incidencias
 
----
+</details>
 
-## PHP Y MYSQL
+<details>
+  <summary><h2>PHP Y MYSQL</h2></summary>
 
 #### ¿Qué és?
 
@@ -1002,15 +1011,21 @@ SHOW DATABASES;
 
 #### 9. Inserte algunas filas de contenido en la tabla de prueba. (Es posible que quiera repetir el siguiente comando algunas veces, usando valores diferentes)
 
+<details>
+  
+<details>
+  <summary><h2>Mockups</h2></summary>
+  
+![](https://github.com/wixrpj/InfoSingh/blob/main/P%C3%A1gina%20principal.png)
 
 
+![](https://github.com/wixrpj/InfoSingh/blob/main/Sobre%20la%20peli.png)
 
 
+![](https://github.com/wixrpj/InfoSingh/blob/main/login.png)
 
 
-
-
-
+![](https://github.com/wixrpj/InfoSingh/blob/main/registro.png)
 
 ---
 
