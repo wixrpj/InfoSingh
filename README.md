@@ -704,6 +704,46 @@ TrueNAS CORE se fundamenta en:
 
 
 ## Incidencias
+## Configuración de RSYNC en TrueNAS
+
+### 1. Creación de clave pública SSH
+
+Genera una clave pública SSH en el equipo cliente (desde el cual se ejecutará el `rsync`) para permitir la autenticación sin necesidad de introducir contraseña cada vez. Esto se realiza con el siguiente comando:
+
+```bash
+ssh-keygen -t rsa
+```
+
+```bash
+ssh-copy-id usuario@ip_truenas
+```
+Esto permite realizar conexiones automáticas y seguras sin necesidad de ingresar la contraseña manualmente.
+
+## 2. Asignación de permisos al usuario de RSYNC
+
+Asegúrate de que el usuario configurado en TrueNAS para gestionar RSYNC tenga los permisos adecuados sobre las rutas o datasets donde se almacenarán los datos. Esto incluye:
+
+- Permiso de **lectura/escritura** sobre el directorio de destino.
+- **Acceso SSH habilitado**, si se usará RSYNC sobre SSH.
+- Asociación al **grupo correcto**, si se trabaja con permisos compartidos.
+
+---
+
+## 3. Creación de un Pool para cada destino de RSYNC
+
+En TrueNAS, crea un **pool de almacenamiento (ZFS Pool)** para cada destino de sincronización RSYNC. Esto te permite:
+
+- Organizar y aislar los datos de diferentes fuentes o clientes.
+- Configurar políticas de **compresión**, **snapshots** y **cuotas** por separado.
+- Mejorar la gestión de volúmenes y recursos.
+
+### Pasos para crear un pool:
+
+1. Ingresa a la interfaz web de TrueNAS.
+2. Ve a `Storage > Pools > Add`.
+3. Asigna un **nombre representativo** al pool.
+4. Selecciona los discos o el espacio disponible.
+5. Aplica las configuraciones necesarias según el caso (RAID, compresión, etc.).
 
 </details>
 
