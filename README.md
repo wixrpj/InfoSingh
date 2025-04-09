@@ -646,19 +646,62 @@ TrueNAS CORE se fundamenta en:
    - **Disco duro:** Crear un disco virtual de al menos 16GB para el sistema
 3. Agrega discos virtuales adicionales para el almacenamiento de datos.
 
-## Paso 2: Instalar TrueNAS
+# Guía de Instalación y Configuración Básica de TrueNAS
 
-1. Monta la ISO de TrueNAS en la máquina virtual.
-2. Inicia la máquina virtual y arranca desde la ISO.
-3. Selecciona la opción **Install/Upgrade**.
-4. Elige el disco donde se instalará TrueNAS (el disco de 16GB creado en el paso anterior).
-5. Confirma la instalación y espera a que finalice.
+## Paso 2: Instalación de TrueNAS
 
-## Paso 4: Finalización y Acceso
+1. **Montar la ISO**  
+   Adjunta la imagen ISO de TrueNAS a la unidad de CD/DVD de la máquina virtual.
 
-- **Usuarios y Permisos:** Configura usuarios y permisos para controlar el acceso a los datos.
-- **Activa la opcion RSYNC y configurala con los usuarios creados.
-- **Monitorización:** Usa herramientas de monitoreo para supervisar el sistema.
+2. **Iniciar desde la ISO**  
+   Enciende la máquina virtual y asegúrate de arrancar desde la imagen ISO.
+
+3. **Seleccionar instalación**  
+   En el menú principal, selecciona la opción `Install/Upgrade` para comenzar el proceso de instalación.
+
+4. **Elegir disco de destino**  
+   Selecciona el disco virtual de **16 GB** que fue creado previamente para instalar el sistema operativo.
+
+5. **Confirmar instalación**  
+   Acepta las advertencias sobre la eliminación de datos en el disco seleccionado y confirma para iniciar la instalación.
+
+6. **Finalizar y reiniciar**  
+   Una vez finalizada la instalación, reinicia la máquina virtual y retira la ISO del arranque para iniciar desde el disco duro.
+
+---
+
+## Paso 3: Configuración Inicial y Acceso
+
+1. **Acceso vía Web**  
+   Una vez iniciado TrueNAS, en la consola aparecerá una dirección IP. Accede a esa dirección desde tu navegador web para entrar a la interfaz de administración.
+
+2. **Configuración de red (opcional)**  
+   Si es necesario, ajusta los parámetros de red desde la interfaz web para integrarlo correctamente en tu red local.
+
+3. **Usuarios y permisos**  
+   Crea los usuarios necesarios y asigna los permisos adecuados para controlar el acceso a los recursos compartidos.
+
+4. **Habilitar y configurar RSYNC**  
+   - Dirígete a **Services** y activa el servicio **RSYNC**.  
+   - Configura los módulos y permisos de RSYNC utilizando los usuarios previamente creados.  
+   - Asegúrate de que el puerto correspondiente esté habilitado en el firewall si aplica.
+
+5. **Monitorización del sistema**  
+   Utiliza las herramientas integradas de TrueNAS para monitorear:  
+   - Uso de CPU y RAM  
+   - Estado de los discos  
+   - Actividad de red  
+   - Logs del sistema y alertas
+
+---
+
+## Recomendaciones
+
+- **Realiza backups periódicos.**
+- **Mantén el sistema actualizado desde la sección de actualizaciones.**
+- **Consulta la documentación oficial para configuraciones más avanzadas.**
+
+
 
 ## Incidencias
 
