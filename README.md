@@ -681,12 +681,14 @@ TrueNAS CORE se fundamenta en:
 3. **Usuarios y permisos**  
    Crea los usuarios necesarios y asigna los permisos adecuados para controlar el acceso a los recursos compartidos.
 
-4. **Habilitar y configurar RSYNC**  
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-22%20104858.png)
+
+5. **Habilitar y configurar RSYNC**  
    - Dirígete a **Services** y activa el servicio **RSYNC**.  
    - Configura los módulos y permisos de RSYNC utilizando los usuarios previamente creados.  
    - Asegúrate de que el puerto correspondiente esté habilitado en el firewall si aplica.
 
-5. **Monitorización del sistema**  
+6. **Monitorización del sistema**  
    Utiliza las herramientas integradas de TrueNAS para monitorear:  
    - Uso de CPU y RAM  
    - Estado de los discos  
@@ -720,7 +722,7 @@ ssh-copy-id usuario@ip_truenas
 ```
 Esto permite realizar conexiones automáticas y seguras sin necesidad de ingresar la contraseña manualmente.
 
-![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-01%20102330.png)
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-22%20104858.png)
 
 ## 2. Asignación de permisos al usuario de RSYNC
 
