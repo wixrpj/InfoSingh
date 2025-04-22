@@ -704,6 +704,7 @@ TrueNAS CORE se fundamenta en:
 
 
 ## Incidencias
+-  
 ## Configuración de RSYNC en TrueNAS
 
 ### 1. Creación de clave pública SSH
@@ -718,6 +719,7 @@ ssh-keygen -t rsa
 ssh-copy-id usuario@ip_truenas
 ```
 Esto permite realizar conexiones automáticas y seguras sin necesidad de ingresar la contraseña manualmente.
+
 
 ## 2. Asignación de permisos al usuario de RSYNC
 
