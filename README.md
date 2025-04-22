@@ -680,7 +680,6 @@ TrueNAS CORE se fundamenta en:
 
 3. **Usuarios y permisos**  
    Crea los usuarios necesarios y asigna los permisos adecuados para controlar el acceso a los recursos compartidos.
-
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-22%20104858.png)
 
 5. **Habilitar y configurar RSYNC**  
