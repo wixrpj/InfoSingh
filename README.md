@@ -720,6 +720,7 @@ ssh-copy-id usuario@ip_truenas
 ```
 Esto permite realizar conexiones automáticas y seguras sin necesidad de ingresar la contraseña manualmente.
 
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-01%20102330.png)
 
 ## 2. Asignación de permisos al usuario de RSYNC
 
@@ -728,7 +729,7 @@ Asegúrate de que el usuario configurado en TrueNAS para gestionar RSYNC tenga l
 - Permiso de **lectura/escritura** sobre el directorio de destino.
 - **Acceso SSH habilitado**, si se usará RSYNC sobre SSH.
 - Asociación al **grupo correcto**, si se trabaja con permisos compartidos.
-
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-01%20102330.png)
 ---
 
 ## 3. Creación de un Pool para cada destino de RSYNC
@@ -746,6 +747,8 @@ En TrueNAS, crea un **pool de almacenamiento (ZFS Pool)** para cada destino de s
 3. Asigna un **nombre representativo** al pool.
 4. Selecciona los discos o el espacio disponible.
 5. Aplica las configuraciones necesarias según el caso (RAID, compresión, etc.).
+
+![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-01%20102207.png)
 
 </details>
 
