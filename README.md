@@ -705,7 +705,16 @@ TrueNAS CORE se fundamenta en:
 
 
 ## Incidencias
--  
+# Permisos de usuario
+Al crear un nuevo usuario, es importante asignarle los permisos adecuados desde el principio. Esto evitará errores posteriores relacionados con el acceso o la ejecución de tareas.
+
+# Creación de subcarpeta
+Al generar un usuario, se le asigna una ruta raíz vacía por defecto. Dentro de esta ruta, es recomendable crear una subcarpeta específica donde se almacenará su información o archivos, asegurando una organización más eficiente.
+
+# Servicio Rsync
+Es fundamental habilitar el servicio `rsync` al configurar un sistema de copias de seguridad en el servidor. Rsync permite realizar backups de manera eficiente y segura, sincronizando archivos entre sistemas de forma rápida y confiable.
+
+
 ## Configuración de RSYNC en TrueNAS
 
 ### 1. Creación de clave pública SSH
