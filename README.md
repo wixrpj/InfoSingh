@@ -763,7 +763,7 @@ En TrueNAS, crea un **pool de almacenamiento (ZFS Pool)** para cada destino de s
 </details>
 
 <details>
-  <summary><h2>PHP Y MYSQL</h2></summary>
+  <summary><h2>🗃️PHP Y MYSQL</h2></summary>
 
 #### 🤔¿Qué és?
 
@@ -801,7 +801,7 @@ Además, PHP y MySQL son ideales para mi proyecto debido a su facilidad de uso y
 - Herramientas de administración gráfica como phpMyAdmin y MySQL Workbench.
 - Comunidad activa y amplia documentación.
 
-## Instalación
+## 🛠️Instalación
 
 ### Instalación de MySQL
 
@@ -1112,7 +1112,7 @@ SHOW DATABASES;
 </details>
   
 <details>
-  <summary><h2>Mockups</h2></summary>
+  <summary><h2>🎨Mockups</h2></summary>
 
 Así es como se vería la página web promocional al ingresar por primera vez. En ella, los usuarios encontrarán las últimas novedades implementadas en Plex junto con sus reseñas.
 
