@@ -420,15 +420,26 @@ https://www.pfsense.org/download/
 
 ----
 
-También tenemos que seleccionar el tipo de imagen, si queremos una imagen ISO para copiar en un DVD o pendrive, o directamente una imagen USB, nosotros hemos seleccionado la imagen ISO DVD. A continuación, deberemos elegir el servidor desde donde realizar la descarga, es recomendable que siempre sea el más cercano físicamente de tu ubicación actual.
-
 Una vez que hayamos descargado la imagen, deberemos descomprimirla ya que viene en formato iso.gz, y deberemos extraer la imagen ISO directamente.
 
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121757.png)
 
 ----
 
-Una vez que lo hayamos descargado, podremos guardarlo en un disco duro o en una carpeta segura para que no lo eliminen. Vamos a instalar pfSense en una máquina virtual con Oracle VM VirtualBox. La máquina server tiene que crear dos tarjetas de red, REVISAR!!!!!! una en modo bridge y otra en modo host-only para poder acceder vía web desde nuestro ordenador, sin depender de la red local.
+La máquina server tiene dos adaptadores de red:Recursos:
+- Adaptador puente (WAN)
+- Red interna (LAN)
+  
+Recursos:
+- RAM: 4094
+- Procesadores: 3
+- HDD: 16 GB
+
+S.O
+- fREEBSD (64-bit)
+
+
+
 
 Configuración de la máquina virtual:
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20123034.png)
@@ -436,7 +447,7 @@ Configuración de la máquina virtual:
 ----
 
 Instalación de pfSense en VM
-Cuando arrancamos la máquina virtual, podremos ver un menú con varias opciones de arranque, no debemos tocar nada y esperar a que pasen los segundos. Posteriormente cargará, y ya podremos ver las diferentes opciones que nos brinda la imagen ISO para la instalación de pfSense.
+Cuando arrancamos la máquina virtual, podremos ver las diferentes opciones que nos brinda la imagen ISO para la instalación de pfSense.
 
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121834.png)
 
