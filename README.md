@@ -204,7 +204,7 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 
 | Categoría        | Tecnología  | Descripción                                                                                       | Icono                                                                                   |
 |------------------|-------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| Infraestructura | Virtual Box  | Plataforma de virtualización que permite gestionar máquinas virtuales.                            | <img src="https://img.icons8.com/color/48/000000/proxmox.png" width="50" height="50" alt="Proxmox">|
+| Infraestructura | Virtual Box  | Plataforma de virtualización que permite gestionar máquinas virtuales.                            | <img src="https://github.com/wixrpj/InfoSingh/blob/main/VirtualBox.png" width="50" height="50" alt="VitualBox">|
 |                  ||            ||
 | Desarrollo      | HTML       | Estructura básica de las páginas web.                                                               | <img src="https://img.icons8.com/color/48/000000/html-5.png" width="50" height="50" alt="HTML">|
 |                 | CSS        | Estilos y diseño visual para una experiencia de usuario atractiva.                                  | <img src="https://img.icons8.com/color/48/000000/css3.png" width="50" height="50" alt="CSS">|
