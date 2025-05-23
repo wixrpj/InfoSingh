@@ -1161,7 +1161,7 @@ En caso de no estar registrados, se les pedirá que se registren para poder cont
 </details>
 
 <details>
-  <summary><h2>💼 Documentación y Recursos Adicionales</h2></summary>
+  <summary><h1>💼 Documentación y Recursos Adicionales</h1></summary>
 
 - **Plex Media Server:** [Guía oficial](https://www.plex.tv/)
 - **Docker:** [Documentación oficial](https://docs.docker.com/)
