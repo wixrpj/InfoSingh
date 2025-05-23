@@ -137,7 +137,7 @@ Maquinas Virtuales:
 <details>
   <summary><h1>🛜 Diagrama de Red</h1></summary>
 
-![](https://github.com/wixrpj/InfoSingh/blob/main/Diagrama%20de%20seguridad%20de%20red.png)
+![](https://github.com/wixrpj/InfoSingh/blob/main/Diagram%20de%20red.png)
 
 </details>
 
