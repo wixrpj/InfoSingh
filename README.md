@@ -27,7 +27,7 @@
 
 <details>
   <summary><h1>📜 Descripción General</h1></summary>
-El objetivo de este proyecto es desarrollar un sistema de streaming multimedia eficiente y seguro, basado en Plex y desplegado en un entorno virtualizado. Este sistema permitirá la gestión optimizada de contenido como videos, imágenes y otros archivos multimedia.
+El objetivo de este proyecto es desarrollar un sistema de streaming multimedia eficiente y seguro, basado en Plex y desplegado en un entorno virtualizado. Este sistema permitirá la gestión optimizada de contenido como vídeos, imágenes y otros archivos multimedia.
 
 Para garantizar la seguridad y disponibilidad de los datos, se implementará un sistema de copias de seguridad automatizadas con TrueNAS, que realizará backups incrementales a medida que se añadan nuevos contenidos, minimizando el riesgo de pérdida de información.
 
@@ -42,14 +42,14 @@ Además, se creará una página web promocional para resaltar las principales ca
 ### :one: Objetivos Principales
 
 1. **Implementar un servidor de streaming:** Configurar Plex dentro de un contenedor Docker para ofrecer un sistema eficiente y accesible de transmisión de contenidos multimedia.
-2. **Seguridad y Backup:** Utilizar TrueNAS para realizar backups incrementales del contenido del servidor Plex, asegurando la integridad y disponibilidad de los datos.
+2. **Seguridad y Backup:** Utilizar TrueNAS para realizar copias de seguridad incrementales del contenido del servidor Plex, asegurando la integridad y disponibilidad de los datos.
 3. **Desarrollar una página web promocional:** Crear un sitio web para promocionar el contenedor de streaming y redirigir a las redes sociales del proyecto.
 
 ### :two: Objetivos Secundarios
 
 - Optimizar el rendimiento del servidor Plex dentro de Docker para garantizar una experiencia fluida de streaming.
 - Configurar alertas en TrueNAS para notificar posibles problemas en los backups.
-- Proveer un diseño atractivo y responsive en la página web para mejorar la experiencia de usuario.
+- Proveer un diseño atractivo y que se adapte a dispositivos móviles en la página web para mejorar la experiencia de usuario.
   </details>
 
 <details>
@@ -67,70 +67,70 @@ Además, se creará una página web promocional para resaltar las principales ca
 
 ## 🚀 1. Configuración de la VM con Docker
 ### 1.1. Instalación de Docker y Docker Compose
-- [ ] Instalar Docker en Ubuntu Server
-- [ ] Instalar Docker Compose
-- [ ] Crear una red de Docker para comunicación entre los contenedores
+- [✅] Instalar Docker en Ubuntu Server
+- [✅] Instalar Docker Compose
+- [✅] Crear una red de Docker para comunicación entre los contenedores
 
 ### 1.2. Implementación de Contenedores
 #### 🟠 **Contenedor 1: Plex (Servidor de Streaming)**
-- [ ] Descargar la imagen oficial de Plex
-- [ ] Configurar volúmenes para almacenamiento de medios
-- [ ] Asignar puertos para acceso web y streaming
-- [ ] Probar la reproducción de contenido en la red local
+- [✅] Descargar la imagen oficial de Plex
+- [✅] Configurar volúmenes para almacenamiento de medios
+- [✅] Asignar puertos para acceso web y streaming
+- [✅] Probar la reproducción de contenido en la red local
 
 #### 🟡 **Contenedor 2: MySQL + PHP (Base de Datos y Backend)**
-- [ ] Descargar la imagen de MySQL
-- [ ] Configurar usuarios y permisos en la base de datos
-- [ ] Descargar la imagen de PHP y phpMyAdmin
-- [ ] Configurar conexión entre PHP y MySQL
-- [ ] Verificar acceso a la base de datos desde otros contenedores
+- [✅] Descargar la imagen de MySQL
+- [✅] Configurar usuarios y permisos en la base de datos
+- [✅] Descargar la imagen de PHP y phpMyAdmin
+- [✅] Configurar conexión entre PHP y MySQL
+- [✅] Verificar acceso a la base de datos desde otros contenedores
 
 #### 🔵 **Contenedor 3: Página Web Promocional (HTML, CSS, JavaScript)**
-- [ ] Elegir y configurar el servidor web (Nginx o Apache)
-- [ ] Crear y desplegar la página web con HTML, CSS y JavaScript
-- [ ] Configurar el acceso desde la red local
-- [ ] Implementar medidas básicas de seguridad (HTTPS, firewall, etc.)
+- [✅] Elegir y configurar el servidor web (Nginx o Apache)
+- [✅] Crear y desplegar la página web con HTML, CSS y JavaScript
+- [✅] Configurar el acceso desde la red local
+- [✅] Implementar medidas básicas de seguridad (HTTPS, firewall, etc.)
 
 ---
 
 ## 🌐 2. Configuración de Infraestructura Adicional
 ### 2.1. **VM con Pi-hole (Servidor DNS y Bloqueador de Publicidad)**
-- [ ] Instalar Pi-hole en Ubuntu Server
-- [ ] Configurar como servidor DNS de la red
-- [ ] Establecer reglas de bloqueo de anuncios
-- [ ] Verificar que los dispositivos de la red usan Pi-hole
+- [✅] Instalar Pi-hole en Ubuntu Server
+- [✅] Configurar como servidor DNS de la red
+- [✅] Establecer reglas de bloqueo de anuncios
+- [✅] Verificar que los dispositivos de la red usan Pi-hole
 
 ### 2.2. **VM con pfSense (Firewall y Servidor DHCP)**
-- [ ] Instalar pfSense en Ubuntu Server
-- [ ] Configurar interfaces de red
-- [ ] Activar y configurar el servidor DHCP
-- [ ] Definir reglas de firewall para permitir tráfico a los servicios necesarios
-- [ ] Habilitar NAT si es necesario
+- [✅] Instalar pfSense en una VM dedicada
+- [✅] Configurar interfaces de red
+- [✅] Activar y configurar el servidor DHCP
+- [✅] Definir reglas de firewall para permitir tráfico a los servicios necesarios
+- [✅] Habilitar NAT si es necesario
 
 ---
 
 ## ✅ 3. Pruebas y Ajustes Finales
 ✅ **Verificar que cada servicio funciona correctamente:**
-- [ ] Probar la reproducción de medios en Plex
-- [ ] Acceder a la base de datos desde la web
-- [ ] Asegurar que la web promocional carga sin problemas
-- [ ] Comprobar que Pi-hole bloquea anuncios y funciona como DNS
-- [ ] Probar conectividad a internet y filtrado de tráfico con pfSense
+- [✅] Probar la reproducción de medios en Plex
+- [✅] Acceder a la base de datos desde la web
+- [✅] Asegurar que la web promocional carga sin problemas
+- [✅] Comprobar que Pi-hole bloquea anuncios y funciona como DNS
+- [✅] Probar conectividad a internet y filtrado de tráfico con pfSense
 
 ---
 
 ## 🔥 4. Opcional (Mejoras y Optimización)
-- [ ] Configurar backups automáticos en TrueNAS
-- [ ] Implementar HTTPS con Let's Encrypt en la web
-- [ ] Crear reglas avanzadas en pfSense para mayor seguridad
-- [ ] Optimizar rendimiento de Docker con ajuste de recursos
+- [✅] Configurar backups automáticos en TrueNAS
+- [✅] Implementar HTTPS con Let's Encrypt en la web
+- [✅] Crear reglas avanzadas en pfSense para mayor seguridad
+- [✅] Optimizar rendimiento de Docker con ajuste de recursos
 
 :computer: Estructura del Proyecto:
 
-Maquinas Virtuales:
+Máquinas Virtuales:
 - **Máquina Virtual 1 (Linux + Docker):** Alojamiento del servidor de streaming con Plex, configurado dentro de un contenedor Docker.
 - **Máquina Virtual 2 (TrueNAS):** Almacenamiento seguro de los datos con backups automáticos e incrementales.
-- **Máquina Virtual 3 (Servidor Web):**
+- **Máquina Virtual 3 (Servidor Web):** Alojamiento del sitio web promocional y servicios asociados.
 
 </details>  
 
@@ -148,7 +148,7 @@ Maquinas Virtuales:
 
 - **Sistema Operativo:** Distribución de Linux ligera (por ejemplo, Ubuntu Server o Debian).
 - **Docker:** Configuración de un contenedor que ejecute Plex para la transmisión de contenido multimedia.
-- **Almacenamiento:** Montaje de volúmenes en Docker para gestionar la carga y organización de los contenidos (videos, imágenes, etc.).
+- **Almacenamiento:** Montaje de volúmenes en Docker para gestionar la carga y organización de los contenidos (vídeos, imágenes, etc.).
 
 ### ☁️ Máquina Virtual 2: TrueNAS
 
@@ -161,7 +161,8 @@ Maquinas Virtuales:
 ⚙️ **Funcionalidades:**
   - Información del servidor de streaming (ventajas, características, tecnología utilizada).
   - Promoción de los contenidos disponibles y ventajas de usar Plex.
-  - Redirección a redes sociales del proyecto.
+  - Redirección a las redes sociales del proyecto.
+    
 🖌️ **Diseño:** Responsive y enfocado en la usabilidad.
 
 🖥️ **Tecnologías:**
@@ -175,7 +176,7 @@ Maquinas Virtuales:
   
 ### 💪 Físicos
 
-- **Servidor o Hardware para Máquinas Virtuales:** Equipo capaz de ejecutar dos máquinas virtuales con los recursos necesarios.
+- **Servidor o Hardware para Máquinas Virtuales:** Equipo capaz de ejecutar las máquinas virtuales con los recursos necesarios.
 - **Conexión a Internet:** Para garantizar un acceso fluido al servidor Plex y sincronización de backups con TrueNAS.
 
 ### 🧠 Lógicos
@@ -184,7 +185,7 @@ Maquinas Virtuales:
 - **Plex Media Server:** Herramienta principal de transmisión de contenido.
 - **TrueNAS:** Sistema operativo para gestionar los backups en la Máquina Virtual 2.
 - **HTML, CSS, JavaScript:** Para desarrollar la página web promocional.
-- **Apache:** Para hostear la página web del proyecto, con dominio personalizado.
+- **Apache:** Para alojar la página web del proyecto, con dominio personalizado.
 
 </details>
 
@@ -193,8 +194,8 @@ Maquinas Virtuales:
   
 | Nombre del miembro |       Roles de equipo       |     Trabajo de cada miembro   |
 |:-------------------|:----------------------------|:------------------------------|
-|Raul y Parwinder    |Administrador de sistemas    | Experimentar con las maquinas e instalar maquinas nuevas y diseñar la página.  |
-|Parwinder y Raul    |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al dia el trello y diseñar la página.|
+|Raul y Parwinder    |Administrador de sistemas    | Experimentar con las máquinas e instalar máquinas nuevas y diseñar la página.  |
+|Parwinder y Raul    |Diseñador web y diagramas    | Diseñar el diagrama del proyecto y llevar al día el trello y diseñar la página.|
 
 </details>
 <details>
@@ -210,7 +211,7 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 |                 | CSS        | Estilos y diseño visual para una experiencia de usuario atractiva.                                  | <img src="https://img.icons8.com/color/48/000000/css3.png" width="50" height="50" alt="CSS">|
 |                 | JavaScript | Interactividad y dinamismo en la interfaz del usuario.                                              | <img src="https://img.icons8.com/color/48/000000/javascript.png" width="50" height="50" alt="JavaScript">|
 |                  ||            ||
-| Base de Datos   | MySQL      | Sistema de gestión de bases de datos relacional utilizado para almacenar datos.                     | <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" width="50" height="50" alt="MySQL">|
+| Base de Datos   | MySQL      | Sistema de gestión de bases de datos relacional utilizado para almacenamiento de datos.             | <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" width="50" height="50" alt="MySQL">|
 |                  ||            ||
 | Redes           | DHCP       | Protocolo utilizado para asignar dinámicamente direcciones IP a dispositivos en la red.             | <img src= "https://github.com/wixrpj/InfoSingh/blob/main/dhcp.png" width="50" height="50" alt="DHCP">|
 |                 | DNS        | Sistema de nombres de dominio que traduce nombres legibles por humanos a direcciones IP.            | <img src= "https://libros.catedu.es/uploads/images/gallery/2023-02/pihole-logo.png" width="50" height="75" alt="DNS">|
@@ -223,13 +224,13 @@ El sistema **SPT** se basa en una variedad de tecnologías modernas para garanti
 A continuación, se detallan las especificaciones de los componentes del sistema:
 Máquina Host: Es el equipo principal que tiene un Sistema Operativo Windows 11 y tiene una configuración de red DHCP con la IP 100.77.20.65.
 DNS (Pi-Hole): Es un servidor DNS que utiliza Ubuntu Server 22.04.01 y está configurado con la IP 10.1.2.10 y un gateway 10.1.2.1. Lo hemos elegido porque Pi-Hole es comúnmente utilizado para bloquear anuncios y rastreos a nivel de red.
-| COMPONENTE    | SO                  | ALMACENAMIENTO | CPU          | RAM  | IP                | GATEWAY      |
-|---------------|---------------------|----------------|--------------|------|-------------------|--------------|
-| MAQUINA HOST  | Windows 11          | 465 GB         | 4            | 8 GB | 100.77.20.65      | 100.77.20.1  |
-| DNS(Pi-Hole)  | Ubuntu SV 22.04.01  | 25 GB          | 2            | 2 GB | 10.20.30.101      | 10.20.30.100 |
-| PFSENSE       | FREEBSD 64bit       | 16 GB          | 1            | 1 GB | 10.20.30.100      | 10.20.30.100 |
-| Apache        | Ubuntu SV 22.04.01  | 25 GB          | 2            | 3 GB | 10.20.30.105      | 10.20.30.100 |
-| Docker SV     | Ubuntu SV 22.04.01  | 25 GB          | 2            | 2 GB | 10.20.30.110      | 10.20.30.100 |
+| COMPONENTE    | SO                  | ALMACENAMIENTO (GB) | CPU          | RAM  | IP                | GATEWAY      |
+|---------------|---------------------|---------------------|--------------|------|-------------------|--------------|
+| MÁQUINA HOST  | Windows 11          | 465 GB              | 4            | 8 GB | 100.77.20.65      | 100.77.20.1  |
+| DNS(Pi-Hole)  | Ubuntu SV 22.04.01  | 25 GB               | 2            | 2 GB | 10.20.30.101      | 10.20.30.100 |
+| PFSENSE       | FREEBSD 64bit       | 16 GB               | 1            | 1 GB | 10.20.30.100      | 10.20.30.100 |
+| Apache        | Ubuntu SV 22.04.01  | 25 GB               | 2            | 3 GB | 10.20.30.105      | 10.20.30.100 |
+| Docker SV     | Ubuntu SV 22.04.01  | 25 GB               | 2            | 2 GB | 10.20.30.110      | 10.20.30.100 |
 
 </details>
 
@@ -266,7 +267,7 @@ Después de seleccionar los servidores DNS, guardé los cambios y reinicié el s
 Primero, me informé a través de la guía oficial de Pi-hole. Luego, descargué e instalé una **OVA** de Ubuntu Server. Siguiendo las instrucciones de la guía, fui ejecutando los comandos necesarios hasta completar la instalación. Una vez finalizada, pude acceder al menú gráfico, desde donde es posible conectarse a la interfaz gráfica para configurar tanto el DNS como el DHCP.
 
 ### Incidencias
-Tuvimos una incidencia en la que perdimos la contraseña de acceso a la interfaz gráfica de Pi-hole. Afortunadamente, consultando la guía oficial de Pi-hole, encontré comandos útiles para resolver el problema. En particular, el comando sudo pihole -a -p me permitió restablecer la contraseña y continuar trabajando sin interrupciones en la máquina virtual.
+Tuvimos una incidencia en la que perdimos la contraseña de acceso a la interfaz gráfica de Pi-hole. Afortunadamente, consultando la guía oficial de Pi-hole, encontré comandos útiles para resolver el problema. En particular, el comando 'sudo pihole -a -p' me permitió restablecer la contraseña y continuar trabajando sin interrupciones en la máquina virtual.
 
 #### Manual [Guía oficial](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
 </details>
@@ -491,7 +492,7 @@ Por supuesto, debemos realizar la configuración desde cero, asignando la interf
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-03-05%20121916.png)
 
 ----
-Despues de haber seguido los pasos de instalacon con una maquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
+Despues de haber seguido los pasos de instalacon con una máquina cliente accedemos a la interfaz grafica de PfSense para empezar a configurarlo
 ```
 http://IP.DE.TU.SERVER (10.20.30.1)
 ```
@@ -573,12 +574,12 @@ En este apartado voy a ofreceros 2 reglas adcionales para que podais mejorar vue
 | Protocol      | TCP/UDP             |
 | Destination   | WAN address         |
 | Destination port|HTTP (puerto 80 por defecto) |
-| Redirect target ip|Address or Alias (Ip de la maquina que quieras añadir esta opcion)|
+| Redirect target ip|Address or Alias (Ip de la máquina que quieras añadir esta opcion)|
 | Description   |Mi Regla NAT - acceso HTTP|
 
 
 #### Puerto SSH
-Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual para que te sea mas accesible la transmision de textos y las configuraciones.
+Esta regla SSH te permite conectarte desde tu máquina host a tu máquina virtual para que te sea mas accesible la transmision de textos y las configuraciones.
 | Opcion        | Descripcion         |
 |---------------|---------------------|
 | Interfaz      | WAN                 |
@@ -586,7 +587,7 @@ Esta regla SSH te permite conectarte desde tu maquina host a tu maquina virtual 
 | Protocol      | TCP                 |
 | Destination   | WAN address         |
 | Destination port|SSH (puerto 22 por defecto)|
-| Redirect target port|Address or Alias (Ip de la maquina que quieras añadir esta opcion)|
+| Redirect target port|Address or Alias (Ip de la máquina que quieras añadir esta opcion)|
 | Description   |Mi Regla NAT - acceso SSH|
 
 </details>
