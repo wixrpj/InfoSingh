@@ -607,7 +607,6 @@ Aqui se ve puede apreciar mas visualmente la infrastructura de red que se ha con
 
 </details>
 
-
 <details>
   <summary><h2>VPN</h2></summary>
   
@@ -622,12 +621,7 @@ Creamos las certificaiones para que la VPN funcione correctamente.
 Creamos un usuario destinado a conectarse a través del servicio OpenVPN. Después, generamos un certificado único asociado a este usuario para garantizar la conexión.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/certificaciones.png)
 
-
-
-
-
-
-/details>
+</details>
 
 <details>
   <summary><h2>🗄️TrueNAS</h2></summary>
