@@ -3,12 +3,12 @@
 <details>
   <summary><h1>📚 Índice</h1></summary> 
 <p>&nbsp; - Descripción General</p>
-<p>&nbsp; - Paso a Paso: - Implementación del Sistema de Streaming</p>
-<p>&nbsp; - Infraestructura del Proyecto</p>
-<p>&nbsp; - Configuración de la VM con Docker</p>
 <p>&nbsp; - Objetivos del Proyecto</p>
 <p>&nbsp;&nbsp;&nbsp; - Objetivos Principales</p>
 <p>&nbsp;&nbsp;&nbsp; - Objetivos Secundarios</p>
+<p>&nbsp; - Paso a Paso: - Implementación del Sistema de Streaming</p>
+<p>&nbsp; - Infraestructura del Proyecto</p>
+<p>&nbsp; - Configuración de la VM con Docker</p>
 <p>&nbsp; - Diagrama de Red</p>
 <p>&nbsp; - Estructura del Proyecto</p>
 <p>&nbsp; - Materiales Requeridos</p>
@@ -33,6 +33,24 @@ Para garantizar la seguridad y disponibilidad de los datos, se implementará un 
 
 Además, se creará una página web promocional para resaltar las principales características del sistema de streaming y proporcionar enlaces directos a las redes sociales del proyecto, facilitando su difusión y acceso.
 </details>
+
+<details>
+  <summary><h1>:dart: Objetivos del Proyecto</h1></summary>
+  
+## :dart: Objetivos del Proyecto
+
+### :one: Objetivos Principales
+
+1. **Implementar un servidor de streaming:** Configurar Plex dentro de un contenedor Docker para ofrecer un sistema eficiente y accesible de transmisión de contenidos multimedia.
+2. **Seguridad y Backup:** Utilizar TrueNAS para realizar backups incrementales del contenido del servidor Plex, asegurando la integridad y disponibilidad de los datos.
+3. **Desarrollar una página web promocional:** Crear un sitio web para promocionar el contenedor de streaming y redirigir a las redes sociales del proyecto.
+
+### :two: Objetivos Secundarios
+
+- Optimizar el rendimiento del servidor Plex dentro de Docker para garantizar una experiencia fluida de streaming.
+- Configurar alertas en TrueNAS para notificar posibles problemas en los backups.
+- Proveer un diseño atractivo y responsive en la página web para mejorar la experiencia de usuario.
+  </details>
 
 <details>
 
@@ -115,24 +133,6 @@ Maquinas Virtuales:
 - **Máquina Virtual 3 (Servidor Web):**
 
 </details>  
-
-<details>
-  <summary><h1>:dart: Objetivos del Proyecto</h1></summary>
-  
-## :dart: Objetivos del Proyecto
-
-### :one: Objetivos Principales
-
-1. **Implementar un servidor de streaming:** Configurar Plex dentro de un contenedor Docker para ofrecer un sistema eficiente y accesible de transmisión de contenidos multimedia.
-2. **Seguridad y Backup:** Utilizar TrueNAS para realizar backups incrementales del contenido del servidor Plex, asegurando la integridad y disponibilidad de los datos.
-3. **Desarrollar una página web promocional:** Crear un sitio web para promocionar el contenedor de streaming y redirigir a las redes sociales del proyecto.
-
-### :two: Objetivos Secundarios
-
-- Optimizar el rendimiento del servidor Plex dentro de Docker para garantizar una experiencia fluida de streaming.
-- Configurar alertas en TrueNAS para notificar posibles problemas en los backups.
-- Proveer un diseño atractivo y responsive en la página web para mejorar la experiencia de usuario.
-  </details>
 
 <details>
   <summary><h1>🛜 Diagrama de Red</h1></summary>
