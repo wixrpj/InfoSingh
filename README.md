@@ -727,9 +727,6 @@ TrueNAS CORE se fundamenta en:
 Este es el script que se hace en el apache para que se haga la copia de seguridad y se guarde en el truenas.
 ![](https://github.com/wixrpj/InfoSingh/blob/main/backup.png)
 
-Aquí se pueden ver los pool que se han echo.
-![](https://github.com/wixrpj/InfoSingh/blob/main/Pools.png)
-
 ---
 
 ## Recomendaciones
