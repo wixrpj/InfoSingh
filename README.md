@@ -708,6 +708,7 @@ TrueNAS CORE se fundamenta en:
 
 3. **Usuarios y permisos**  
    Crea los usuarios necesarios y asigna los permisos adecuados para controlar el acceso a los recursos compartidos.
+   
 ![](https://github.com/wixrpj/InfoSingh/blob/main/Captura%20de%20pantalla%202025-04-22%20104858.png)
 
 5. **Habilitar y configurar RSYNC**  
@@ -1182,6 +1183,5 @@ En caso de no estar registrados, se les pedirá que se registren para poder cont
 - **Truenas:** [Configuración completa](https://www.redeszone.net/tutoriales/servidores/truenas-core-guia-instalacion-configuracion-nas/)
 - **LAMP:** [Configuración completa](https://www.digitalocean.com/community/tutorials/how-to-install-lamp-stack-on-ubuntu#step-6-%E2%80%94-testing-database-connection-from-php-(optional))
 - **LAMP:** [Configuración completa](https://www.hostinger.com/es/tutoriales/como-instalar-lamp-en-ubuntu)
-- **:** []()
 
 </details>
