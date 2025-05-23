@@ -1,4 +1,4 @@
-# Briefing del Proyecto: Sistema de Streaming con Plex, TrueNAS y Página Web Promocional
+# INFOSINGH
 ![](https://github.com/wixrpj/InfoSingh/blob/main/FotoProyecto.jpg)
 <details>
   <summary><h1>📚 Índice</h1></summary> 
