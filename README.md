@@ -674,9 +674,9 @@ TrueNAS CORE se fundamenta en:
    - **Disco duro:** Crear un disco virtual de al menos 16GB para el sistema
 3. Agrega discos virtuales adicionales para el almacenamiento de datos.
 
-# Guía de Instalación y Configuración Básica de TrueNAS
+## Guía de Instalación y Configuración Básica de TrueNAS
 
-## Paso 2: Instalación de TrueNAS
+### Paso 2: Instalación de TrueNAS
 
 1. **Montar la ISO**  
    Adjunta la imagen ISO de TrueNAS a la unidad de CD/DVD de la máquina virtual.
@@ -698,7 +698,7 @@ TrueNAS CORE se fundamenta en:
 
 ---
 
-## Paso 3: Configuración Inicial y Acceso
+### Paso 3: Configuración Inicial y Acceso
 
 1. **Acceso vía Web**  
    Una vez iniciado TrueNAS, en la consola aparecerá una dirección IP. Accede a esa dirección desde tu navegador web para entrar a la interfaz de administración.
@@ -722,6 +722,13 @@ TrueNAS CORE se fundamenta en:
    - Estado de los discos  
    - Actividad de red  
    - Logs del sistema y alertas
+
+### Script
+Este es el script que se hace en el apache para que se haga la copia de seguridad y se guarde en el truenas.
+![](https://github.com/wixrpj/InfoSingh/blob/main/backup.png)
+
+Aquí se pueden ver los pool que se han echo.
+![](https://github.com/wixrpj/InfoSingh/blob/main/Pools.png)
 
 ---
 
