@@ -54,7 +54,7 @@ Además, se creará una página web promocional para resaltar las principales ca
 
 <details>
 
-<summary><h1> 📌 Paso a Paso: Implementación del Sistema de Streaming</h1></summary>
+<summary><h1>📌 Paso a Paso</h1></summary>
 
 ### 🖥️ Infraestructura del Proyecto
 ✅ **Máquinas Virtuales con Ubuntu Server:**
