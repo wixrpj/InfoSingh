@@ -1160,6 +1160,7 @@ En caso de no estar registrados, se les pedirá que se registren para poder cont
 
 </details>
 
+</details>
 <details>
   <summary><h1>💼 Documentación y Recursos Adicionales</h1></summary>
 
